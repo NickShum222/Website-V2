@@ -25,16 +25,23 @@ const slideUpFirst = {
     y: 0,
   },
 };
-const slideUpLast = {
+const slideUpSecond = {
   initial: {
     y: 0,
   },
   enter: (index) => ({
     y: -150,
+    x: index === 0 ? 260 : index === 8 ? -360 : 0,
     transition: { 
-      delay: (index * 0.05) + 1.05, 
-      duration: 0.4,
-      // ease: [0.61, 1, 0.88, 1],  
+      delay: (index * 0.03) +1, 
+      duration: 1,
+      ease: [0.22, 1, 0.36, 1],
+      x: {
+        delay: 1.9,
+        duration: 0.7,
+        ease: [0.68, -0.6, 0.32, 1.6],
+      }
+      
     },
   }),
   exit: {
@@ -44,7 +51,7 @@ const slideUpLast = {
 export default function Home() {
   return (
     <div className="h-[100dvh] w-100 flex flex-col justify-center items-center bg-secondary">
-      <div className="h-[164px] overflow-hidden flex-col flex justify-start items-center">
+      <div className="h-[164px] overflow-y-clip flex-col flex justify-start items-center">
         <div className="text-primary uppercase flex font-bold text-[150px] leading-[150px]">
           {firstName.map((letter, index) => (
             <motion.div
@@ -58,19 +65,7 @@ export default function Home() {
               {letter}
             </motion.div>
           ))}
-          {/* {lastName.map((letter, index) => (
-            <motion.div
-              key={index}
-              custom={index}
-              variants={slideUpLast}
-              initial="initial"
-              animate="enter"
-              exit="exit"
-              className={`${index === 0 ? "ml-[40px]" : ""}`}
-            >
-              {letter}
-            </motion.div>
-          ))} */}
+  
         </div>
 
         <div className="text-primary uppercase flex font-bold text-[150px] leading-[150px]">
@@ -78,7 +73,7 @@ export default function Home() {
             <motion.span
               key={index}
               custom={index}
-              variants={slideUpFirst}
+              variants={slideUpSecond}
               initial="initial"
               animate="enter"
               exit="exit"
