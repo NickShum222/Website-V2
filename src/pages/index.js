@@ -38,7 +38,7 @@ const slideUpSecond = {
       ease: [0.22, 1, 0.36, 1],
       x: {
         delay: 1.9,
-        duration: 0.7,
+        duration: 1,
         ease: [0.68, -0.6, 0.32, 1.6],
       }
       
@@ -48,9 +48,30 @@ const slideUpSecond = {
     y: 0,
   },
 };
+
+
+const slideDownLast = {
+  initial: {
+    y: '-100%',
+  },
+  enter: {
+    y: 0,
+    transition: { 
+      delay: 2.4, 
+      duration: 1.5,
+      ease: [0.22, 1, 0.36, 1],
+      
+    },
+  },
+  exit: {
+    y: 0,
+  },
+}
 export default function Home() {
   return (
-    <div className="h-[100dvh] w-100 flex flex-col justify-center items-center bg-secondary">
+    <>
+    <div className="relative z-0 h-[100dvh] w-[100dvw] flex flex-col justify-center items-center bg-secondary"
+    >
       <div className="h-[164px] overflow-y-clip flex-col flex justify-start items-center">
         <div className="text-primary uppercase flex font-bold text-[150px] leading-[150px]">
           {firstName.map((letter, index) => (
@@ -98,6 +119,16 @@ export default function Home() {
         </div>
       </div>
     </div>
+    <motion.div className="h-[100dvh] absolute top-0 left-0 bg-white w-full flex justify-center items-center"
+    variants={slideDownLast}
+    initial="initial"
+    animate="enter"
+    exit="exit"
+    >
+      TEST
+    </motion.div>
+    </>
+    
   );
 }
 
