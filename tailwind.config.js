@@ -14,6 +14,10 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-satoshi)']
+      },
+      fontSize: {
+        clamp: "clamp(25px, 4wv, 100px)",
+        landingClampH5: "clamp(20px, 4vw, 100px)"
       }
     },
   },
