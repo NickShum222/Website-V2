@@ -17,7 +17,8 @@ module.exports = {
       },
       fontSize: {
         clamp: "clamp(25px, 4wv, 100px)",
-        landingClampH5: "clamp(20px, 4vw, 100px)"
+        landingClampH5: "clamp(20px, 4vw, 100px)",
+        subsectionClamp: "clamp(64px, 4.3vw, 100px)"
       }
     },
   },

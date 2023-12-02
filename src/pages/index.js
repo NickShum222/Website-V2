@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Loading } from "@/sections";
+import { styles } from "@/styles";
 
 const slideDownLast = {
   initial: {
@@ -53,6 +54,9 @@ export default function Home() {
         <div className="leading-[10px] font-bold text-[50vw] tracking-tighter text-[#B6b7B9] opacity-[24%]">
           NS.
         </div>
+      </div>
+      <div className={`lg:px-[128px] md:px-[64px] px-[24px] bg-secondary  py-[200px] lg:text-subsectionClamp md:text-[5.3vw] text-[40.6px] leading-[1.2] tracking-tight text-primary font-bold`}>
+        I build seamless digital experiences that bridge the gap between people and technology through development and design.
       </div>
     </>
   );
