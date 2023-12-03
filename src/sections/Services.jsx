@@ -1,5 +1,7 @@
 import React from "react";
 
+const skills = ["React", "Next", "Vue", "Spring", "Express", "Django", "Figma", "Tailwind CSS"]
+
 const Services = () => {
   return (
     <div
@@ -25,12 +27,17 @@ const Services = () => {
           <div className="text-secondary font-[700] text-[68px] leading-[1.2] tracking-tight">
             my tech stack.
           </div>
-          <div className="font-[500]  text-[45px] text-grey2 leading-[1.2] tracking-tight">Here are my go-to tools used for web development.</div>
+          <div className="font-[500]  text-[45px] text-grey2 leading-[1.2] tracking-tight">Here are just some of my go-to tools used for web development.</div>
           </div> 
           <div className="flex flex-col justify-start w-full ">
           <div className="font-[500] text-[45px] text-grey2 leading-[1.2] tracking-tight">You can see the rest of my skills here.</div>
           <div className="w-full text-center text-primary bg-tertiary font-[700] py-2">RESUME</div>
           </div>
+        </div>
+        <div className="flex flex-col items-end w-[50%]">
+          {skills.map((skill, index) => (
+            <div className="font-bold text-tertiary" key={index}>{skill}</div>
+          ))}
         </div>
       </div>
     </div>
