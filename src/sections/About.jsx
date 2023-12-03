@@ -13,7 +13,7 @@ const About = () => {
         italic tracking-tighter font-[500] leading-[0.9] lg:mt-1">
           0.1
         </div>
-        <div className="lg:text-headingLgClamp md:text-[10vw] text-headingSmClamp leading-[0.8] tracking-tight font-bold text-tertiary border-b-2 border-solid w-full border-tertiary pb-[4%]">
+        <div className="lg:text-headingLgClamp md:text-[10vw] text-headingSmClamp leading-[0.8] tracking-tight font-[700] text-tertiary border-b-2 border-solid w-full border-tertiary pb-[4%]">
           ABOUT ME
         </div>
       </div>
