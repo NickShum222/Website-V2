@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { Loading, Landing, About } from "@/sections";
+import { Loading, Landing, About, Services } from "@/sections";
 import { styles } from "@/styles";
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
     <div className="flex flex-col">
       <Landing />
       <About />
+      {/* <Services /> */}
     </div>
   );
 }
