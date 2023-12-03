@@ -1,5 +1,6 @@
 import React from "react";
-import {motion} from "framer-motion";
+import {
+  motion,} from "framer-motion";
 const firstName = ["N", "I", "C", "K", "S", "H", "U", "M", "."];
 const slideUpFirst = {
   initial: {
