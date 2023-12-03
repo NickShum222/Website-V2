@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 const satoshi = localFont({ src: "../../public/fonts/Satoshi-Variable.ttf",
 variable: '--font-satoshi'
 
-
 });
 
 export default function App({ Component, pageProps }) {

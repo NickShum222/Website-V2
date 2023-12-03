@@ -7,17 +7,19 @@ const About = () => {
     className={`lg:px-[128px] md:px-[64px] px-[24px] py-[42px] flex flex-col justify-start bg-primary  w-full`}
   >
     <div className="flex w-full justify-end mb-12">
-      <div className="flex justify-start items-start w-[80%] gap-6">
-        <div className="text-tertiary text-[45px]  italic tracking-tighter font-[500] leading-[0.9]">
-          0.1.
+      <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">
+        <div className="text-tertiary lg:text-[3vw]
+        md:text-[4.2vw] text-headingNumber
+        italic tracking-tighter font-[500] leading-[0.9] lg:mt-1">
+          0.1
         </div>
-        <div className="text-[140px] leading-[0.8] tracking-tighter font-bold text-tertiary border-b-2 border-solid w-full border-tertiary pb-12">
-          ABOUT ME{" "}
+        <div className="lg:text-headingLgClamp md:text-[10vw] text-headingSmClamp leading-[0.8] tracking-tight font-bold text-tertiary border-b-2 border-solid w-full border-tertiary pb-[4%]">
+          ABOUT ME
         </div>
       </div>
     </div>
-    <div className="flex justify-between items-start">
-      <div className="w-[40%] relative">
+    <div className="flex md:flex-row flex-col md:justify-between justify-center items-start lg:gap-0 md:gap-4 gap-6">
+      <div className="lg:w-[45%] md:w-[50%] w-[100%] rounded-[7px] relative md:inline hidden">
         <Image
           src="/ProfilePhotoDesktop.jpeg"
           loading="lazy"
@@ -27,13 +29,29 @@ const About = () => {
           style={{objectFit: "contain"}}
         />
       </div>
-      <div className="flex flex-col justify-start w-[55%]">
-        <div className="text-[75px] leading-[1.1] font-bold text-secondary">
+      <div className='w-full relative md:hidden rounded-[7px] inline'>
+      <Image
+          src="/ProfilePhotoMobile.jpeg"
+          loading="lazy"
+          width={1000}
+          height={1000}
+          alt="Picture of the author"
+          style={{objectFit: "contain"}}
+        />
+      </div>
+      <div className="flex flex-col justify-start md:w-[50%] w-full">
+        <div className="md:text-[4vw] text-[8vw] leading-[1.1] font-[700] text-secondary">
           Hi! Nice to meet you, I'm Nick Shum.
         </div>
-        <div className="flex flex-col justify-normal w-full mt-7">
-          <div className="text-grey2 text-[42px] leading-[1.4]">
-            I am an independent full-stack developer, UI/UX designer and full-time student based in Toronto, Canada.
+        <div className="flex flex-col justify-normal w-full lg:mt-7 mt-4 lg:gap-6 gap-3 ">
+          <div className="text-grey2 lg:text-[2vw] font-[400] md:text-[2.9vw] text-[5.2vw] leading-[1.3] tracking-tight">
+            I am an independent full-stack developer, UI/UX designer and full-time computer engineering student at University of Waterloo.
+          </div>
+          <div className="text-grey2 lg:text-[2vw] font-[400] md:text-[2.9vw] text-[5.2vw] leading-[1.3] tracking-tight">
+          My goal is to create innovative solutions and applications that leave a lasting impact on users and the field of technology.
+          </div>
+          <div className='text-grey2 lg:text-[2vw] font-[400] md:text-[2.9vw] text-[5.2vw] leading-[1.3] tracking-tight'>
+          When I'm not programming, you can find me curating spotify playlists, skateboarding, or lurking on awwwards.com.
           </div>
         </div>
       </div>

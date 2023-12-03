@@ -38,7 +38,7 @@ const Landing = () => {
         </div>
       </div>
       <div className={`lg:px-[128px] md:px-[64px] px-[24px] bg-secondary  py-[200px] lg:text-subsectionClamp md:text-[5.3vw] text-[40.6px] leading-[1.2] tracking-tight text-primary font-bold`}>
-        I build seamless digital experiences that bridge the gap between people and technology through development and design.
+        I build seamless digital experiences by bridging the gap between people and technology through development and design.
       </div>
    </>
   )
