@@ -21,9 +21,8 @@ module.exports = {
         clamp: "clamp(25px, 4wv, 100px)",
         landingClampH5: "clamp(20px, 4vw, 100px)",
         subsectionClamp: "clamp(64px, 4.3vw, 100px)",
-        headingLgClamp: "clamp(100px, 9vw, 180px)",
+        headingLgClamp: "clamp(100px, 9vw, 120px)",
         headingSmClamp: "clamp(48.84px, 11vw, 200px)",
-        headingNumber: "clamp(20px, 5.3vw, 50px)"
       }
     },
   },

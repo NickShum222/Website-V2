@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { Loading, Landing, About, Services } from "@/sections";
+import { Loading, Landing, About, Services, Projects } from "@/sections";
 import { styles } from "@/styles";
 
 export default function Home() {
@@ -11,6 +11,7 @@ export default function Home() {
       <Landing />
       <About />
       <Services />
+      <Projects />
     </div>
   );
 }
