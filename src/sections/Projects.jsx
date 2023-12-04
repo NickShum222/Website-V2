@@ -5,9 +5,9 @@ const projects = ["RESU.ME", "SPOTITRACK", "WEBSITE V1"]
 const Projects = () => {
   return (
     <div
-      className={`lg:px-[128px] md:px-[64px] px-[24px] py-[42px] flex flex-col justify-start bg-primary  w-full`}
+      className={`flex flex-col justify-start bg-primary py-[42px] w-full`}
     >
-      <div className="flex w-full justify-end md:mb-12 sm:mb-8 mb-4">
+      <div className="lg:px-[128px] md:px-[64px] px-[24px] py-[42px] flex w-full justify-end md:mb-12 sm:mb-8 mb-4">
         <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">
           <div
             className="text-tertiary md:text-[3.125vw]
@@ -24,7 +24,7 @@ const Projects = () => {
       <div className="w-full flex flex-col"
       >
         {projects.map((project, index) => (
-          <div className={`text-tertiary lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight py-[3%]  font-[700] border-t-[1px] border-solid border-secondary
+          <div className={`text-tertiary lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight py-[3%]  font-[700] border-t-[1px] border-solid border-secondary lg:px-[128px] md:px-[64px] px-[24px]
         ${index === 2 ? "border-b-[1px]":""}`}>{project}</div>
         ))}
       </div>

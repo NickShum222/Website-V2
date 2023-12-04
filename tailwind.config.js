@@ -12,7 +12,9 @@ module.exports = {
         primary: '#E4E5E7',
         secondary: '#232323',
         tertiary: '#273D57',
-        grey2: '#444545'
+        grey2: '#444545',
+        grey3: '#B6B7B9',
+        grey4: '#89898B',
       },
       fontFamily: {
         sans: ['var(--font-satoshi)']

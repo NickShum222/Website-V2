@@ -32,7 +32,7 @@ const slideUpSecond = {
       x: {
         delay: 1.9,
         duration: 1,
-        ease: [0.68, -0.6, 0.32, 1.6],
+        ease: [0.64, 0, 0.78, 0],
       },
     },
   }),
