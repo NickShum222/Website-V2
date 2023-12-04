@@ -8,7 +8,7 @@ const experiences = [
     title: 'Full Stack Developer',
     company: 'CI Technologies',
     date: 'Sept 2023 - Dec 2023',
-    description: ['Designed and developed multiple web features for the company\'s services, IAPro, BlueTeam and EIPro, currently in use by over 950 law enforcement agencies in North America.'],
+    description: ['Designed and developed multiple web features for the company\'s services, IAPro, BlueTeam and EIPro, currently in use by over 950 law enforcement agencies across North America.'],
     tools: "Vue.js, Vuex, Spring Boot, Hibernate, Microsoft SQL Server"
   },
   {
@@ -27,7 +27,7 @@ const Experiences = () => {
 
   return (
     <div
-      className={`lg:px-[128px] md:px-[64px] px-[24px] py-[42px] flex flex-col justify-start bg-secondary w-full`}
+      className={`lg:px-[128px] md:px-[64px] px-[24px] py-[12%] flex flex-col justify-start bg-secondary w-full`}
     >
       <div className="flex w-full justify-end md:mb-12 sm:mb-8 mb-4">
         <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">
@@ -36,7 +36,7 @@ const Experiences = () => {
             sm:text-[3.980vw] text-[5.089vw]
             italic tracking-tighter font-[500] leading-[0.9] lg:mt-1"
           >
-            0.4
+            04.
           </div>
           <div className="lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] sm:inline hidden leading-[0.8] tracking-tight  font-[700] text-primary border-b-2 border-solid w-full border-primary pb-[4%]">
             EXPERIENCES

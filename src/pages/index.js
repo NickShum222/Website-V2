@@ -2,18 +2,26 @@
 
 import Image from "next/image";
 
-import { Loading, Landing, About, Services, Projects, Experiences } from "@/sections";
+import { 
+  Loading, 
+  Landing, 
+  About, 
+  Services, 
+  Projects, 
+  Experiences, 
+  Contact } from "@/sections";
 import { styles } from "@/styles";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       {/* <Loading /> */}
-      {/* <Landing />
+      <Landing />
       <About />
       <Services />
-      <Projects /> */}
+      <Projects />
       <Experiences />
+      <Contact />
     </div>
   );
 }
