@@ -24,7 +24,7 @@ const Projects = () => {
       <div className="w-full flex flex-col"
       >
         {projects.map((project, index) => (
-          <div className={`text-tertiary lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight py-[3%]  font-[700] border-t-[1px] border-solid border-secondary lg:px-[128px] md:px-[64px] px-[24px]
+          <div key={index} className={`text-tertiary lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight py-[3%]  font-[700] border-t-[1px] border-solid border-secondary lg:px-[128px] md:px-[64px] px-[24px]
         ${index === 2 ? "border-b-[1px]":""}`}>{project}</div>
         ))}
       </div>
