@@ -29,7 +29,7 @@ const Experiences = () => {
     <div
       className={`lg:px-[128px] md:px-[64px] px-[24px] py-[12%] flex flex-col justify-start bg-secondary w-full`}
     >
-      <div className="flex w-full justify-end mb-[2%]">
+      <div className="flex w-full justify-end md:mb-[2%] mb-[7%]">
         <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">
           <div
             className="text-primary md:text-[3.125vw]
@@ -56,12 +56,12 @@ const Experiences = () => {
             >{experience.id}</div>
           ))}
         </div>
-        <div className='flex flex-col sm:w-[80%] w-full items-start'>
+        <div className='flex flex-col md:w-[80%] w-full items-start'>
             <div className='font-[700] text-primary lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw]  tracking-tight leading-[1.2]'>{experiences[selected].title} @ {experiences[selected].company}</div>
             <div className='font-[400] text-grey3 tracking-tight lg:text-[2.083vw] sm:text-[3.980vw] text-[6.361vw] leading-[1.2] mb-[3.4%]'>{experiences[selected].date}</div>
             <ul className='lg:mb-[2%] mb-[5%]'>
               {experiences[selected].description.map((description, index) => (
-                <li key={index} className='font-[300] text-grey4 tracking-tight lg:text-[2.083vw] sm:text-[2.985vw] text-[5.089vw] leading-[1.2]'>{description}</li>
+                <li key={index} className='font-[300] text-grey4 tracking-tight lg:text-[2.083vw] sm:text-[2.985vw] text-[5.089vw] leading-[1.5]'>{description}</li>
               ))}
             </ul>
             <div className='font-[400] text-grey3 tracking-tight lg:text-[2.083vw] sm:text-[3.980vw] text-[6.361vw] leading-[1.2]'>Tools:</div>

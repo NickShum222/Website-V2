@@ -48,7 +48,7 @@ const Contact = () => {
     <div
       className={`lg:px-[128px] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary  w-full`}
     >
-      <div className="flex w-full justify-end mb-[2%]">
+      <div className="flex w-full justify-end md:mb-[4%] mb-[5%]">
         <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">
           <div
             className="text-tertiary md:text-[3.125vw]

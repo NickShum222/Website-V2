@@ -6,7 +6,7 @@ const About = () => {
     <div
     className={`lg:px-[128px] md:px-[64px] px-[24px] py-[12%] flex flex-col justify-start bg-primary  w-full`}
   >
-    <div className="flex w-full justify-end mb-[2%]">
+    <div className="flex w-full justify-end md:mb-[4%] mb-[7%]">
       <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">
         <div className="text-tertiary md:text-[3.125vw]
         sm:text-[3.980vw] text-[5.089vw]

@@ -7,7 +7,7 @@ const Projects = () => {
     <div
       className={`flex flex-col justify-start bg-primary py-[4%] w-full`}
     >
-      <div className="lg:px-[128px] md:px-[64px] px-[24px] py-[42px] flex w-full justify-end mb-[2%]">
+      <div className="lg:px-[128px] md:px-[64px] px-[24px] py-[42px] flex w-full justify-end md:mb-[2%] mb-0">
         <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">
           <div
             className="text-tertiary md:text-[3.125vw]
