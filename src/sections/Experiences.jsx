@@ -29,7 +29,7 @@ const Experiences = () => {
     <div
       className={`lg:px-[128px] md:px-[64px] px-[24px] py-[12%] flex flex-col justify-start bg-secondary w-full`}
     >
-      <div className="flex w-full justify-end md:mb-12 sm:mb-8 mb-4">
+      <div className="flex w-full justify-end mb-[2%]">
         <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">
           <div
             className="text-primary md:text-[3.125vw]
