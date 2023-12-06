@@ -5,13 +5,7 @@ import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Input } from "@material-tailwind/react";
-import { 
-  FaLinkedin,
-  FaInstagram,
-  FaGithub,
-  FaIntercom,
-
-} from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaGithub, FaIntercom } from "react-icons/fa";
 
 const Contact = () => {
   const formik = useFormik({
@@ -71,7 +65,8 @@ const Contact = () => {
       <div className="flex lg:flex-row flex-col justify-between items-start w-full">
         <div className="flex flex-col items-start lg:w-[65%] w-full">
           <div className="lg:text-[4.722vw] sm:text-[5.305vw] text-[7.952vw] w-full font-[700] text-secondary leading-[1.1] tracking-tighter mb-[2%]">
-            Want to say hello? <br className="lg:inline hidden" /> Feel free to reach out!
+            Want to say hello? <br className="lg:inline hidden" /> Feel free to
+            reach out!
           </div>
           <div className="lg:text-[3.125vw] sm:text-[3.980vw] text-[6.361vw] font-[500] text-grey2 leading-[1.2] tracking-tight mb-[4%]">
             I am looking for Summer 2024 internship opportunities.
@@ -116,33 +111,45 @@ const Contact = () => {
             <button
               type="submit"
               onClick={formik.handleSubmit}
-              className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw]"
+              className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw] md:mb-0 mb-[10%] "
             >
               SUBMIT
             </button>
           </div>
         </div>
-        <div className="flex flex-col items-end justify-end lg:w-[25%]  w-full gap-24">
+        <div className="flex flex-col items-end justify-end lg:w-[25%]  w-full md:gap-24 gap-12">
           <div className="flex flex-col items-start w-full gap-2">
-            <div className="font-[700] text-grey2 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw]">My Resume</div>
-            <div className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw]">RESUME</div>
+            <div className="font-[700] text-grey2 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw]">
+              My Resume
+            </div>
+            <div className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw]">
+              RESUME
+            </div>
           </div>
           <div className="flex flex-col items-start w-full">
-          <div className="font-[700] text-grey2 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw] lg:mb-[8%] mb-[4%]">My Socials</div>
-          <div className="w-full flex lg:flex-col flex-row lg:items-start justify-start lg:gap-8  items-center">
-          <div className="flex lg:justify-start justify-center w-full items-center lg:gap-2 gap-1">
-            <FaLinkedin className="lg:text-[2.778vw]  sm:text-[5.305vw] text-[6.361vw] text-grey4"/>
-            <div className="text-grey4 lg:text-[2.083vw]  sm:text-[5.305vw] text-[6.361vw] font-[500] tracking-tight">LinkedIn</div>
-          </div>
-          <div className="flex lg:justify-start justify-center w-full items-center lg:gap-2 gap-1">
-            <FaInstagram className="lg:text-[2.778vw]  sm:text-[5.305vw] text-[6.361vw] text-grey4"/>
-            <div className="text-grey4 lg:text-[2.083vw]  sm:text-[5.305vw] text-[6.361vw] font-[500] tracking-tight">Instagram</div>
-          </div>
-          <div className="flex lg:justify-start justify-center w-full items-center lg:gap-2 gap-1">
-            <FaGithub className="lg:text-[2.778vw]  sm:text-[5.305vw] text-[6.361vw] text-grey4"/>
-            <div className="text-grey4 lg:text-[2.083vw]  sm:text-[5.305vw] text-[6.361vw] font-[500] tracking-tight">Github</div>
-          </div>
-          </div>
+            <div className="font-[700] text-grey2 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw] lg:mb-[8%] mb-[4%]">
+              My Socials
+            </div>
+            <div className="w-full flex flex-col justify-start items-start lg:gap-8 ">
+              <div className="flex justify-start w-full items-center lg:gap-2 gap-1">
+                <FaLinkedin className="lg:text-[2.778vw]  sm:text-[5.305vw] text-[6.361vw] text-grey4" />
+                <div className="text-grey4 lg:text-[2.083vw]  sm:text-[5.305vw] text-[6.361vw] font-[500] tracking-tight">
+                  LinkedIn
+                </div>
+              </div>
+              <div className="flex justify-start w-full items-center lg:gap-2 gap-1">
+                <FaInstagram className="lg:text-[2.778vw]  sm:text-[5.305vw] text-[6.361vw] text-grey4" />
+                <div className="text-grey4 lg:text-[2.083vw]  sm:text-[5.305vw] text-[6.361vw] font-[500] tracking-tight">
+                  Instagram
+                </div>
+              </div>
+              <div className="flex justify-start w-full items-center lg:gap-2 gap-1">
+                <FaGithub className="lg:text-[2.778vw]  sm:text-[5.305vw] text-[6.361vw] text-grey4" />
+                <div className="text-grey4 lg:text-[2.083vw]  sm:text-[5.305vw] text-[6.361vw] font-[500] tracking-tight">
+                  Github
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
