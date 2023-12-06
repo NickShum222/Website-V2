@@ -40,17 +40,17 @@ const About = () => {
         />
       </div>
       <div className="flex flex-col justify-start md:w-[50%] w-full">
-        <div className="md:text-[4vw] text-[8vw] leading-[1.1] font-[700] text-secondary">
+        <div className="lg:text-[3.125vw] md:text-[3.980vw] text-[7.952vw] leading-[1.2] font-[700] text-secondary">
           Hi! Nice to meet you, I'm Nick Shum.
         </div>
-        <div className="flex flex-col justify-normal w-full lg:mt-7 mt-4 lg:gap-6 gap-5 ">
-          <div className="text-grey2 lg:text-[2vw] font-[400] md:text-[2.9vw] text-[5.2vw] leading-[1.3] tracking-tight">
+        <div className="flex flex-col justify-normal w-full mt-[3%] lg:gap-6 gap-5 ">
+          <div className="text-grey2 lg:text-[2.083vw] font-[400] md:text-[2.576vw] text-[5.089vw] leading-[1.3] tracking-tight">
             I am an independent full-stack developer, UI/UX designer and full-time computer engineering student at University of Waterloo.
           </div>
-          <div className="text-grey2 lg:text-[2vw] font-[400] md:text-[2.9vw] text-[5.2vw] leading-[1.3] tracking-tight">
+          <div className="text-grey2 lg:text-[2.083vw] font-[400] md:text-[2.576vw] text-[5.089vw] leading-[1.3] tracking-tight">
           My goal is to create innovative solutions and applications that leave a lasting impact on users and the field of technology.
           </div>
-          <div className='text-grey2 lg:text-[2vw] font-[400] md:text-[2.9vw] text-[5.2vw] leading-[1.3] tracking-tight'>
+          <div className='text-grey2 lg:text-[2.083vw] font-[400] md:text-[2.576vw] text-[5.089vw] leading-[1.3] tracking-tight'>
           When I'm not programming, you can find me curating spotify playlists, skateboarding, or lurking on awwwards.com.
           </div>
         </div>

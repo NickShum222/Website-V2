@@ -50,7 +50,7 @@ const Experiences = () => {
         <div className='flex lg:flex-col flex-row justify-start items-start lg:w-[30%] w-full lg:gap-3 sm:gap-12 gap-4 lg:pl-[5%]'>
           {experiences.map((experience, index) => (
             <div key={index} className={`font-[700] cursor-pointer transition-colors duration-[250ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight lg:px-[5%] max-lg:pb-[1%]
-              ${index === selected ? 'text-primary lg:border-r-[3px] max-lg:border-b-[3px] border-solid border-primary' : 'text-grey3 hover:text-primary'}
+              ${index === selected ? 'text-primary lg:border-r-[3px] border-r-0 lg:border-b-0 border-b-[3px] border-solid border-primary' : 'text-grey4 hover:text-primary'}
             `}
             onClick={() => setSelected(index)}
             >{experience.id}</div>

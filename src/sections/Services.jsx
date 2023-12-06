@@ -30,16 +30,16 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full sm:flex-row flex-col justify-between items-start">
-        <div className="flex flex-col justify-between items-start gap-8 sm:w-[50%] h-full w-full">
+      <div className="flex w-full md:flex-row flex-col justify-between items-start">
+        <div className="flex flex-col justify-between items-start gap-8 md:w-[50%] h-full w-full">
           <div className="flex flex-col items-start justify-between h-full w-full">
-            <div className="text-secondary font-[700] md:text-[4.722vw] sm:text-[5.680vw]  text-[9.939vw] leading-[1.2] tracking-tight">
+            <div className="text-secondary font-[700] lg:text-[4.857vw] md:text-[5.305vw] text-[9.939vw] leading-[1.2] tracking-tight">
               my tech stack.
             </div>
-            <div className="font-[500]  md:text-[3.125vw] sm:text-[4.261vw] text-[7.952vw] text-grey2 leading-[1.2] tracking-tight sm:mb-0 mb-[7%]">
+            <div className="font-[500]  lg:text-[3.125vw] md:text-[3.980vw] text-[7.952vw] text-grey2 leading-[1.2] tracking-tight sm:mb-0 mb-[7%]">
               Here are just some of my go-to tools used for web development.
             </div>
-            <div className="w-full flex sm:hidden justify-between items-start">
+            <div className="w-full flex md:hidden justify-between items-start">
               <div className="w-[50%] flex flex-col items-start ">
                 {skills.slice(0, 4).map((skill, index) => (
                   <div
@@ -63,7 +63,7 @@ const Services = () => {
             </div>
           </div>
           <div className="flex flex-col justify-start w-full ">
-            <div className="font-[500] md:text-[3.125vw] sm:text-[4.261vw] text-[7.952vw] text-grey2 leading-[1.2] tracking-tight mb-[6%]">
+            <div className="font-[500] lg:text-[3.125vw] md:text-[3.980vw] text-[7.952vw] text-grey2 leading-[1.2] tracking-tight mb-[6%]">
               You can see the rest of my skills here.
             </div>
             <div className="w-full text-center text-primary bg-tertiary font-[700] md:text-[2.083vw] sm:text-[4.261vw] text-[6.361vw]  py-2">
@@ -71,10 +71,10 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div className=" flex-col items-end sm:w-[50%] sm:flex hidden">
+        <div className=" flex-col items-end md:w-[50%] md:flex hidden">
           {skills.map((skill, index) => (
             <div
-              className="font-bold md:text-[4.722vw] sm:text-[5.680vw] text-[9.939vw] leading-[1.2] text-tertiary tracking-tight"
+              className="font-bold ld:text-[4.722vw] md:text-[4.969vw] text-[9.939vw] leading-[1.2] text-tertiary tracking-tight"
               key={index}
             >
               {skill}

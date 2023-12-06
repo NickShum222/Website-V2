@@ -14,7 +14,7 @@ import { styles } from "@/styles";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-[100svw]">
       {/* <Loading /> */}
       <Landing />
       <About />

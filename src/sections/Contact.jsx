@@ -100,7 +100,7 @@ const Contact = () => {
             placeholder="Message"
             onChange={formik.handleChange}
             value={formik.values.message}
-            className="w-full appearance-none bg-transparent lg:text-[2.083vw] sm:text-[2.985vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] lg:h-[300px] md:h-[150px] h-[125px] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
+            className="w-full appearance-none bg-transparent lg:text-[2.083vw] sm:text-[2.985vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] lg:h-[300px] md:h-[250px] h-[125px] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
           />
           <div
             className={`mb-4 mt-1 lg:text-[16px] text-[14px] text-[#A31621]`}
@@ -111,7 +111,7 @@ const Contact = () => {
             <button
               type="submit"
               onClick={formik.handleSubmit}
-              className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw] md:mb-0 mb-[10%] "
+              className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw] ld:mb-0 mb-[10%] "
             >
               SUBMIT
             </button>

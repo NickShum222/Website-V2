@@ -37,7 +37,7 @@ const Landing = () => {
           NS.
         </div>
       </div>
-      <div className={`lg:px-[128px] md:px-[64px] px-[24px] bg-secondary  py-[200px] lg:text-subsectionClamp md:text-[5.3vw] text-[40.6px] leading-[1.2] tracking-tight text-primary font-bold`}>
+      <div className={`lg:px-[128px] md:px-[64px] px-[24px] bg-secondary  py-[200px] lg:text-[4.722vw] md:text-[7.073vw] text-[7.952vw] leading-[1.2] tracking-tight text-primary font-bold`}>
         I build seamless digital experiences by bridging the gap between people and technology through development and design.
       </div>
    </>
