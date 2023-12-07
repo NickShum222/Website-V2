@@ -5,6 +5,7 @@ import Image from "next/image";
 import { 
   Loading, 
   Landing, 
+  LandingSub,
   About, 
   Services, 
   Projects, 
@@ -14,9 +15,10 @@ import { styles } from "@/styles";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-[100svw]">
+    <div className="flex flex-col max-w-[100svw]">
       {/* <Loading /> */}
-      <Landing />
+      <Landing  />
+      <LandingSub />
       <About />
       <Services />
       <Projects />

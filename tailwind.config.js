@@ -26,7 +26,8 @@ module.exports = withMT({
         subsectionClamp: "clamp(64px, 4.3vw, 100px)",
         headingLgClamp: "clamp(100px, 9vw, 120px)",
         headingSmClamp: "clamp(48.84px, 11vw, 200px)",
-      }
+      },
+      darkMode: 'class',
     },
   },
   plugins: [],

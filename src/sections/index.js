@@ -5,6 +5,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Experiences from "./Experiences";
 import Services from "./Services";
+import LandingSub from "./LandingSub";
 
 export {
   Loading,
@@ -14,4 +15,5 @@ export {
   Contact,
   Experiences,
   Services,
+  LandingSub
 }
