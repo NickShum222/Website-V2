@@ -46,29 +46,29 @@ const Contact = () => {
 
   return (
     <div
-      className={`lg:px-[128px] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary  w-full`}
+      className={`lg:px-[128px] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary dark:bg-secondary  w-full`}
     >
       <div className="flex w-full justify-end md:mb-[4%] mb-[5%]">
         <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">
           <div
-            className="text-tertiary md:text-[3.125vw]
+            className="text-tertiary dark:text-primary md:text-[3.125vw]
             sm:text-[3.980vw] text-[5.089vw]
             italic tracking-tighter font-[500] leading-[0.9] lg:mt-1"
           >
             05.
           </div>
-          <div className="lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight  font-[700] text-tertiary border-b-2 border-solid w-full border-tertiary pb-[4%]">
+          <div className="lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight  font-[700] text-tertiary dark:text-primary border-b-2 border-solid w-full border-tertiary dark:border-primary pb-[4%]">
             CONTACT
           </div>
         </div>
       </div>
       <div className="flex lg:flex-row flex-col justify-between items-start w-full">
         <div className="flex flex-col items-start lg:w-[65%] w-full">
-          <div className="lg:text-[4.722vw] sm:text-[5.305vw] text-[7.952vw] w-full font-[700] text-secondary leading-[1.1] tracking-tighter mb-[2%]">
+          <div className="lg:text-[4.722vw] sm:text-[5.305vw] text-[7.952vw] w-full font-[700] dark:text-primary text-secondary leading-[1.1] tracking-tighter mb-[2%]">
             Want to say hello? <br className="lg:inline hidden" /> Feel free to
             reach out!
           </div>
-          <div className="lg:text-[3.125vw] sm:text-[3.980vw] text-[6.361vw] font-[500] text-grey2 leading-[1.2] tracking-tight mb-[4%]">
+          <div className="lg:text-[3.125vw] sm:text-[3.980vw] text-[6.361vw] font-[500] dark:text-primary text-grey2 leading-[1.2] tracking-tight mb-[4%]">
             I am looking for Summer 2024 internship opportunities.
           </div>
           <input
@@ -119,7 +119,7 @@ const Contact = () => {
         </div>
         <div className="flex flex-col items-end justify-end lg:w-[25%]  w-full md:gap-24 gap-12">
           <div className="flex flex-col items-start w-full gap-2">
-            <div className="font-[700] text-grey2 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw]">
+            <div className="font-[700] text-grey2 dark:text-grey3 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw]">
               My Resume
             </div>
             <div className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw]">
@@ -127,7 +127,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex flex-col items-start w-full">
-            <div className="font-[700] text-grey2 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw] lg:mb-[8%] mb-[4%]">
+            <div className="font-[700] text-grey2 dark:text-grey3 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw] lg:mb-[8%] mb-[4%]">
               My Socials
             </div>
             <div className="w-full flex flex-col justify-start items-start lg:gap-8 ">
