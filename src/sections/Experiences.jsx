@@ -78,7 +78,7 @@ const Experiences = () => {
             {experiences[selected].description.map((description, index) => (
               <li
                 key={index}
-                className="font-[300] text-grey4 tracking-tight lg:text-[2.083vw] sm:text-[2.985vw] text-[5.089vw] leading-[1.5]"
+                className="font-[300] text-grey4  lg:text-[2.083vw] sm:text-[2.985vw] text-[5.089vw] leading-[1.5]"
               >
                 {description}
               </li>

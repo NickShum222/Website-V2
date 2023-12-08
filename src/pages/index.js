@@ -19,7 +19,7 @@ import { styles } from "@/styles";
 export default function Home() {
   const [theme, setTheme] = useState("light");
   return (
-    <div className={`flex flex-col max-w-[100svw] ${theme}`}>
+    <div className={`flex flex-col max-w-[100vw] overflow-clip ${theme}`}>
       {/* <Loading /> */}
       <Section theme="light" setTheme={setTheme}>
         <Landing />
