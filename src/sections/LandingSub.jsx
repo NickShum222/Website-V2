@@ -6,7 +6,7 @@ const LandingSub = () => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ["start center", "end center"],
+    offset: ["start 0.1", "end 0.7"],
   });
   useEffect(() => {
     scrollYProgress.on("change", (e) => console.log(e));
@@ -15,21 +15,26 @@ const LandingSub = () => {
     "I build seamless digital experiences by bridging the gap between people and technology through development and design.";
   const words = paragraph.split(" ");
   return (
-    <p
+    <div
       ref={element}
-      className={`lg:px-[128px] md:px-[64px] px-[24px] dark:bg-secondary bg-primary py-[100px] flex items-center  flex-wrap sticky top-[50%]
-      `}
+      className=" dark:bg-secondary h-[150dvh] pt-[25%] bg-primary relative"
     >
-      {words.map((word, index) => {
-        const start = index / words.length;
-        const end = start + 1 / words.length;
-        return (
-          <Word key={index} range={[start, end]} progress={scrollYProgress}>
-            {word}
-          </Word>
-        );
-      })}
-    </p>
+      <p
+        className={`lg:px-[128px] md:px-[64px] px-[24px] dark:bg-secondary bg-primary flex flex-wrap sticky
+        `}
+        style={{ top: "50%", transform: "translateY(-50%)"}}
+      >
+        {words.map((word, index) => {
+          const start = index / words.length;
+          const end = start + 1 / words.length;
+          return (
+            <Word key={index} range={[start, end]} progress={scrollYProgress}>
+              {word}
+            </Word>
+          );
+        })}
+      </p>
+    </div>
   );
 };
 
@@ -53,7 +58,7 @@ const Word = ({ children, range, progress }) => {
 };
 
 const Character = ({ children, range, progress }) => {
-  const opacity = useTransform(progress, range, [0.3, 1]);
+  const opacity = useTransform(progress, range, [0.1, 1]);
   return (
     <motion.span
       style={{ opacity }}
