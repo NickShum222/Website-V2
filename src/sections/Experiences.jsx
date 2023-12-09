@@ -87,7 +87,7 @@ const Experiences = () => {
           <div className="font-[400] dark:text-grey3 text-grey2 tracking-tight lg:text-[2.083vw] sm:text-[3.980vw] text-[6.361vw] leading-[1.2]">
             Tools:
           </div>
-          <div className="font-[300] text-grey4 tracking-tight lg:text-[2.083vw] sm:text-[2.985vw] text-[5.089vw] leading-[1.2]">
+          <div className="font-[300] text-grey4 lg:text-[2.083vw] sm:text-[2.985vw] text-[5.089vw] leading-[1.5]">
             {experiences[selected].tools}
           </div>
         </div>

@@ -1,5 +1,7 @@
 import Section from "./Section";
+import Word from "./Word";
 
 export {
-  Section
+  Section,
+  Word
 };
