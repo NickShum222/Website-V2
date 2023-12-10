@@ -20,9 +20,9 @@ export default function Home() {
   const [theme, setTheme] = useState("light");
   return (
     <div className={`flex flex-col max-w-[100vw] overflow-clip ${theme}`}>
-      <Button label={"Button"} className="w-[100px] h-[40px]"/>
+      {/* <Button label={"Button"} className="w-[100px] h-[40px]"/> */}
       {/* <Loading /> */}
-      {/* <Section theme="light" setTheme={setTheme}>
+      <Section theme="light" setTheme={setTheme}>
         <Landing />
       </Section>
       <Section theme="dark" setTheme={setTheme}>
@@ -42,7 +42,7 @@ export default function Home() {
       </Section>
       <Section theme="light" setTheme={setTheme}>
         <Contact />
-      </Section> */}
+      </Section>
     </div>
   );
 }
