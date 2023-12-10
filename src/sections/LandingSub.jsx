@@ -6,7 +6,7 @@ const LandingSub = () => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ["start 0.1", "end 0.7"],
+    offset: ["start 0.1", "end 0.8"],
   });
   useEffect(() => {
     scrollYProgress.on("change", (e) => console.log(e));
@@ -17,7 +17,7 @@ const LandingSub = () => {
   return (
     <div
       ref={element}
-      className=" dark:bg-secondary h-[150dvh] pt-[25%] bg-primary relative"
+      className=" dark:bg-secondary h-[160dvh] lg:pt-[25%] md:pt-[35%] pt-[45%] bg-primary relative"
     >
       <p
         className={`lg:px-[128px] md:px-[64px] px-[24px] dark:bg-secondary bg-primary flex flex-wrap sticky
