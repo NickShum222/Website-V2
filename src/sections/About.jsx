@@ -28,17 +28,21 @@ const About = () => {
             width={1000}
             height={1000}
             alt="Picture of the author"
-            style={{ objectFit: "contain" }}
+            style={{ objectFit: "contain",
+            borderRadius: "7px" }}
           />
         </div>
-        <div className="w-full relative md:hidden rounded-[7px] inline">
+        <div className="w-full relative md:hidden inline">
           <Image
             src="/ProfilePhotoMobile.jpeg"
             loading="lazy"
             width={1000}
             height={1000}
             alt="Picture of the author"
-            style={{ objectFit: "contain" }}
+            style={{ objectFit: "contain",
+            borderRadius: "7px"
+          
+          }}
           />
         </div>
         <div className="flex flex-col justify-start md:w-[50%] w-full">

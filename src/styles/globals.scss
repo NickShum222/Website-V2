@@ -8,11 +8,6 @@
   box-sizing: border-box;
   /* transition: all 0.25s ease; */
   @apply transition-colors;
-  @apply duration-500
+  @apply duration-500;
 }
 
-
-.landing-h2-clamp {
-  line-height: clamp(50px, 11vw, 100px);
-  font-size: clamp(58.04px, 13vw, 200px);
-}

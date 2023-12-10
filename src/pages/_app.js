@@ -1,4 +1,4 @@
-import "@/styles/globals.css";
+import "@/styles/globals.scss";
 import localFont from "next/font/local";
 const satoshi = localFont({ src: "../../public/fonts/Satoshi-Variable.ttf",
 variable: '--font-satoshi',

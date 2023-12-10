@@ -1,7 +1,4 @@
 import Section from "./Section";
-import Word from "./Word";
+import Button from "./Button";
 
-export {
-  Section,
-  Word
-};
+export { Section, Button };
