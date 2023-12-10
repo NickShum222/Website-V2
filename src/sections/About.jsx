@@ -46,15 +46,15 @@ const About = () => {
             Hi! Nice to meet you, I'm Nick Shum.
           </div>
           <div className="flex flex-col justify-normal w-full mt-[3%] lg:gap-6 gap-5 ">
-            <div className="text-grey2 lg:text-[2.083vw] font-[400] md:text-[2.576vw] text-[5.089vw] leading-[1.5] ">
+            <div className="text-grey2 lg:text-[2.083vw] font-[300] md:text-[2.576vw] text-[5.089vw] leading-[1.5] ">
               I am an independent full-stack developer, UI/UX designer and
               full-time computer engineering student at University of Waterloo.
             </div>
-            <div className="text-grey2 lg:text-[2.083vw] font-[400] md:text-[2.576vw] text-[5.089vw] leading-[1.5] ">
+            <div className="text-grey2 lg:text-[2.083vw] font-[300] md:text-[2.576vw] text-[5.089vw] leading-[1.5] ">
               My goal is to create innovative solutions and applications that
               leave a lasting impact on users and the field of technology.
             </div>
-            <div className="text-grey2 lg:text-[2.083vw] font-[400] md:text-[2.576vw] text-[5.089vw] leading-[1.5] ">
+            <div className="text-grey2 lg:text-[2.083vw] font-[300] md:text-[2.576vw] text-[5.089vw] leading-[1.5] ">
               When I'm not programming, you can find me curating spotify
               playlists, skateboarding, or lurking on awwwards.com.
             </div>
