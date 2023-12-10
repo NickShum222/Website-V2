@@ -11,3 +11,8 @@
   @apply duration-500;
 }
 
+.description{
+  clip-path: inset(50% 0 50%);
+  transition: clip-path .4s;
+}
+
