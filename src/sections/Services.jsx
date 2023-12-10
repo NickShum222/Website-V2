@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Button } from "@/components";
 const skills = [
   "React",
   "Next",
@@ -66,9 +66,10 @@ const Services = () => {
             <div className="font-[500] lg:text-[3.125vw] dark:text-grey3 md:text-[3.980vw] text-[6.361vw] text-grey2 leading-[1.2] tracking-tight mb-[6%]">
               You can see the rest of my skills here.
             </div>
-            <div className="w-full text-center text-primary bg-tertiary font-[700] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw]  py-2">
+            {/* <div className="w-full text-center text-primary bg-tertiary font-[700] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw]  py-2">
               RESUME
-            </div>
+            </div> */}
+            <Button label={"Resume"} className="w-full text-center text-primary bg-tertiary font-[700] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw] rounded-lg py-2" />
           </div>
         </div>
         <div className=" flex-col items-end md:w-[50%] md:flex hidden">

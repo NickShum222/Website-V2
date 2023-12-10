@@ -51,8 +51,10 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`bg-tertiary py-[2%]  border-t-[1px] border-solid border-secondary dark:border-primary lg:px-[128px] md:px-[64px] px-[24px] relative
-          ${index === 2 ? "border-b-[1px]" : ""} description z-20 cursor-pointer`}
+              className={`bg-tertiary dark:bg-primary py-[2%]  border-t-[1px] border-solid dark:border-primary border-secondary lg:px-[128px] md:px-[64px] px-[24px] relative
+          ${
+            index === 2 ? "border-b-[1px]" : ""
+          } description z-20 cursor-pointer`}
               style={{
                 clipPath:
                   active === index ? "inset(0 0 0 0)" : "inset(50% 0 50% 0)",
@@ -64,7 +66,7 @@ const Projects = () => {
                 setActive(null);
               }}
             >
-              <p className=" font-[700] lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary flex justify-between">
+              <p className=" font-[700] lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-tertiary flex justify-between">
                 {project}
               </p>
             </div>

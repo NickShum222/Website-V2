@@ -8,16 +8,16 @@ const LandingSub = () => {
     target: element,
     offset: ["start 0.1", "end 0.8"],
   });
-  useEffect(() => {
-    scrollYProgress.on("change", (e) => console.log(e));
-  }, []);
+  // useEffect(() => {
+  //   scrollYProgress.on("change", (e) => console.log(e));
+  // }, []);
   const paragraph =
     "I build seamless digital experiences by bridging the gap between people and technology through development and design.";
   const words = paragraph.split(" ");
   return (
     <div
       ref={element}
-      className=" dark:bg-secondary h-[160dvh] lg:pt-[25%] md:pt-[35%] pt-[45%] bg-primary relative"
+      className=" dark:bg-secondary h-[160dvh] lg:pt-[25%] md:pt-[35%] pt-[55%] bg-primary relative"
     >
       <p
         className={`lg:px-[128px] md:px-[64px] px-[24px] dark:bg-secondary bg-primary flex flex-wrap sticky
