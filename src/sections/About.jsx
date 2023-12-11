@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Header } from "@/components";
+import picture1 from "../../public/ProfilePhotoDesktop.jpeg";
 
 const About = () => {
   return (
@@ -13,10 +14,11 @@ const About = () => {
       <div className="flex md:flex-row flex-col md:justify-between justify-center items-start lg:gap-0 md:gap-4 gap-6">
         <div className="lg:w-[45%] md:w-[50%] w-[100%] rounded-[7px] relative md:inline hidden">
           <Image
-            src="/ProfilePhotoDesktop.jpeg"
+            src={picture1}
             loading="lazy"
             width={1000}
             height={1000}
+            placeholder="blur"
             alt="Picture of the author"
             style={{ objectFit: "contain",
             borderRadius: "7px" }}

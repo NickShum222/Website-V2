@@ -47,3 +47,7 @@
   clip-path: inset(50% 0 50%);
   transition: clip-path 0.4s;
 }
+.perspective {
+  perspective: 1200px;
+  perspective-origin: left;
+}

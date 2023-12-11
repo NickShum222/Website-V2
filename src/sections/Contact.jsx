@@ -5,29 +5,9 @@ import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Input } from "@material-tailwind/react";
-import { FaLinkedin, FaInstagram, FaGithub, FaIntercom } from "react-icons/fa";
 import { Button, Header } from "@/components";
+import { socials } from "@/constants";
 
-const socials = [
-  {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/nick-shum/",
-    icon: FaLinkedin,
-    color: "#0a66c2",
-  },
-  {
-    name: "Github",
-    link: "https://github.com/NickShum222",
-    icon: FaGithub,
-    color: "#6e5494",
-  },
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/nick.shum_/",
-    icon: FaInstagram,
-    color: "#FD1D1D",
-  },
-];
 
 const Contact = () => {
   const [submit, setSubmit] = useState(false);

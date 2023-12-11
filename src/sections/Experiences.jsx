@@ -1,29 +1,8 @@
 "use client";
 
 import { useState } from "react";
-
-const experiences = [
-  {
-    id: "CI Tech",
-    title: "Full Stack Developer",
-    company: "CI Technologies",
-    date: "Sept 2023 - Dec 2023",
-    description: [
-      "Designed and developed multiple web features for the company's services, IAPro, BlueTeam and EIPro, currently in use by over 950 law enforcement agencies across North America.",
-    ],
-    tools: "Vue.js, Vuex, Spring Boot, Hibernate, Microsoft SQL Server",
-  },
-  {
-    id: "EllisDon",
-    title: "Quality Assurance Analyst",
-    company: "EllisDon",
-    date: "Jan 2023 - Apr 2023",
-    description: [
-      "Worked closely with the QA team and software developers to test and ensure the quality of the company's main financial services application, used by over 5000 employees.",
-    ],
-    tools: "TestRail, Jira, IBM AS400",
-  },
-];
+import { motion } from "framer-motion";
+import { experiences } from "@/constants";
 
 const Experiences = () => {
   const [selected, setSelected] = useState(0);
@@ -54,11 +33,11 @@ const Experiences = () => {
           {experiences.map((experience, index) => (
             <div
               key={index}
-              className={`font-[700] cursor-pointer transition-colors duration-[250ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight lg:px-[5%] max-lg:pb-[1%]
+              className={`font-[700] cursor-pointer transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight lg:px-[5%] max-lg:pb-[1%]
               ${
                 index === selected
                   ? "text-tertiary dark:text-primary lg:border-r-[3px] border-r-0 lg:border-b-0 border-b-[3px] border-solid dark:border-primary border-tertiary"
-                  : "text-grey3 hover:text-primary dark:text-grey4"
+                  : "text-grey3 hover:dark:text-primary dark:text-grey4"
               }
             `}
               onClick={() => setSelected(index)}

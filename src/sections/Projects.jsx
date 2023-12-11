@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-const projects = ["RESUMATCH", "SPOTITRACK", "WEBSITE V1"];
 import { Header } from "@/components";
+import { projects } from "@/constants";
 
 const Projects = () => {
   const [active, setActive] = useState(null);

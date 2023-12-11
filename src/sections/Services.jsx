@@ -1,17 +1,33 @@
-import React from "react";
+"use client";
+import { useRef } from "react";
 import { Button, Header } from "@/components";
-const skills = [
-  "React",
-  "Next",
-  "Vue",
-  "Spring",
-  "Express",
-  "Django",
-  "Figma",
-  "Tailwind",
-];
+import { skills } from "@/constants";
+import { motion, useInView } from "framer-motion";
+
+const slideIn = {
+  initial: {
+    opacity: 0,
+    rotateX: 90,
+    translateY: 100,
+    translateX: 50,
+  },
+  enter: (index) => ({
+    opacity: 1,
+    rotateX: 0,
+    translateY: 0,
+    translateX: 0,
+    transition: {
+      duration: 0.75,
+      delay: index * 0.1,
+      ease: [0.215, 0.61, 0.355, 1],
+      opacity: { duration: 0.35 },
+    },
+  }),
+};
 
 const Services = () => {
+  const skillsContainer = useRef(null);
+  const isInView = useInView(skillsContainer, { once: true, amount: 0.4 });
   return (
     <div
       className={`lg:px-[128px] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary dark:bg-secondary  w-full`}
@@ -38,7 +54,7 @@ const Services = () => {
                 ))}
               </div>
               <div className="w-[50%] flex flex-col items-end ">
-                {skills.slice(4,8).map((skill, index) => (
+                {skills.slice(4, 8).map((skill, index) => (
                   <div
                     className="font-bold text-[9.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
                     key={index}
@@ -56,17 +72,27 @@ const Services = () => {
             {/* <div className="w-full text-center text-primary bg-tertiary font-[700] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw]  py-2">
               RESUME
             </div> */}
-            <Button label={"Resume"} className="w-full text-center text-primary bg-tertiary font-[700] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw] rounded-lg py-2" />
+            <Button
+              label={"Resume"}
+              className="w-full text-center text-primary bg-tertiary font-[700] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw] rounded-lg py-2"
+            />
           </div>
         </div>
-        <div className=" flex-col items-end md:w-[50%] md:flex hidden">
+        <div
+        ref={skillsContainer}
+          className=" flex-col items-end md:w-[50%] md:flex hidden perspective"
+        >
           {skills.map((skill, index) => (
-            <div
-              className="font-bold ld:text-[4.722vw] md:text-[4.969vw] text-[9.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
-              key={index}
-            >
-              {skill}
-            </div>
+              <motion.div
+                className="font-bold ld:text-[4.722vw] md:text-[4.969vw] text-[9.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
+                key={index}
+                custom={index}
+                variants={slideIn}
+                initial="initial"
+                animate={isInView ? "enter" : "initial"}
+              >
+                {skill}
+              </motion.div>
           ))}
         </div>
       </div>
