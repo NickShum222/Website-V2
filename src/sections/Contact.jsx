@@ -8,6 +8,27 @@ import { Input } from "@material-tailwind/react";
 import { FaLinkedin, FaInstagram, FaGithub, FaIntercom } from "react-icons/fa";
 import { Button, Header } from "@/components";
 
+const socials = [
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/nick-shum/",
+    icon: FaLinkedin,
+    color: "#0a66c2",
+  },
+  {
+    name: "Github",
+    link: "https://github.com/NickShum222",
+    icon: FaGithub,
+    color: "#6e5494",
+  },
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/nick.shum_/",
+    icon: FaInstagram,
+    color: "#FD1D1D",
+  },
+];
+
 const Contact = () => {
   const [submit, setSubmit] = useState(false);
   const formik = useFormik({
@@ -130,24 +151,22 @@ const Contact = () => {
               My Socials
             </div>
             <div className="w-full flex flex-col justify-start items-start lg:gap-8 ">
-              <div className="flex justify-start w-full items-center lg:gap-2 gap-1">
-                <FaLinkedin className="lg:text-[2.778vw]  sm:text-[5.305vw] text-[6.361vw] text-grey4" />
-                <div className="text-grey4 lg:text-[2.083vw]  sm:text-[5.305vw] text-[6.361vw] font-[500] tracking-tight">
-                  LinkedIn
-                </div>
-              </div>
-              <div className="flex justify-start w-full items-center lg:gap-2 gap-1">
-                <FaInstagram className="lg:text-[2.778vw]  sm:text-[5.305vw] text-[6.361vw] text-grey4" />
-                <div className="text-grey4 lg:text-[2.083vw]  sm:text-[5.305vw] text-[6.361vw] font-[500] tracking-tight">
-                  Instagram
-                </div>
-              </div>
-              <div className="flex justify-start w-full items-center lg:gap-2 gap-1">
-                <FaGithub className="lg:text-[2.778vw]  sm:text-[5.305vw] text-[6.361vw] text-grey4" />
-                <div className="text-grey4 lg:text-[2.083vw]  sm:text-[5.305vw] text-[6.361vw] font-[500] tracking-tight">
-                  Github
-                </div>
-              </div>
+              {socials.map((social) => {
+                const { name, link, icon: IconComponent, color } = social;
+                return (
+                  <a
+                    key={name}
+                    className={`flex justify-start w-full items-center lg-gap-2 gap-1 cursor-pointer text-grey4`}
+                    href={link}
+                    target="_blank"
+                  >
+                    <IconComponent className={`lg:text-[2.778vw]  sm:text-[5.305vw] text-[6.361vw] `} />
+                    <div className=" lg:text-[2.083vw]  sm:text-[5.305vw] text-[6.361vw] font-[500] tracking-tight">
+                      {name}
+                    </div>
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

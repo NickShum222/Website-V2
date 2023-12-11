@@ -8,12 +8,14 @@ const satoshi = localFont({
   weight: "variable",
 });
 import { SmoothScroll } from "@/components";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function App({ Component, pageProps }) {
   return (
     <SmoothScroll>
       <main className={`${satoshi.variable} font-sans`}>
         <Component {...pageProps} />
+        <SpeedInsights />
       </main>
     </SmoothScroll>
   );
