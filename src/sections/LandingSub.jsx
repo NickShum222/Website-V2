@@ -6,7 +6,7 @@ const LandingSub = () => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
     target: element,
-    offset: ["start 0.1", "end 0.8"],
+    offset: ["start 0.1", "end 0.9"],
   });
   // useEffect(() => {
   //   scrollYProgress.on("change", (e) => console.log(e));
