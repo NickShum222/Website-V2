@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -9,6 +9,7 @@ import { FaLinkedin, FaInstagram, FaGithub, FaIntercom } from "react-icons/fa";
 import { Button } from "@/components";
 
 const Contact = () => {
+  const [submit, setSubmit] = useState(false);
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -35,12 +36,14 @@ const Contact = () => {
             process.env.NEXT_PUBLIC_PUBLIC_KEY
           )
           .then(() => {
+            setSubmit(true);
             setSubmitting(false);
             resetForm();
           });
       } catch (error) {
         console.log(error);
         setSubmitting(false);
+        setSubmit(false);
       }
     },
   });
@@ -108,17 +111,21 @@ const Contact = () => {
           >
             {formik.errors.message}
           </div>
-          <div className="flex w-full justify-end">
+          <div className="flex flex-col w-full justify-end lg:mb-0 mb-[10%]">
             <button
               onClick={formik.handleSubmit}
               type="submit"
-              className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw] ld:mb-0 mb-[10%] "
+              className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw] "
             >
-              <Button
-                label={"submit"}
-                className=""
-              />
+              <Button label={"submit"} className="" />
             </button>
+            <div
+              className={`text-green-700 lg:text-[16px] text-[14px] pt-3 mb-0 pb-0 ${
+                submit ? "" : "hidden"
+              }`}
+            >
+              Message sent! I will get back with you shortly.
+            </div>
           </div>
         </div>
         <div className="flex flex-col items-end justify-end lg:w-[25%]  w-full md:gap-24 gap-12">
