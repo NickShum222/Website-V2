@@ -109,12 +109,16 @@ const Contact = () => {
             {formik.errors.message}
           </div>
           <div className="flex w-full justify-end">
-            <Button
-              type="submit"
-              label={"submit"}
+            <button
               onClick={formik.handleSubmit}
+              type="submit"
               className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw] ld:mb-0 mb-[10%] "
-            />
+            >
+              <Button
+                label={"submit"}
+                className=""
+              />
+            </button>
           </div>
         </div>
         <div className="flex flex-col items-end justify-end lg:w-[25%]  w-full md:gap-24 gap-12">
@@ -122,7 +126,10 @@ const Contact = () => {
             <div className="font-[700] text-grey2 dark:text-grey3 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw]">
               My Resume
             </div>
-            <Button label={"resume"} className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw]"/>
+            <Button
+              label={"resume"}
+              className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw]"
+            />
           </div>
           <div className="flex flex-col items-start w-full">
             <div className="font-[700] text-grey2 dark:text-grey3 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw] lg:mb-[8%] mb-[4%]">
