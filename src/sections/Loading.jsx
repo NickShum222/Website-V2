@@ -9,7 +9,7 @@ const slideUpFirst = {
   enter: (index) => ({
     y: -150,
     transition: {
-      delay: index * 0.03 + 1,
+      delay: index * 0.03 + 0.5,
       duration: 1,
       ease: [0.22, 1, 0.36, 1],
     },
@@ -24,14 +24,14 @@ const slideUpSecond = {
   },
   enter: (index) => ({
     y: -150,
-    x: index === 0 ? 260 : index === 8 ? -360 : 0,
+    x: index === 0 ? 280 : index === 8 ? -380 : 0,
     transition: {
-      delay: index * 0.03 + 1,
+      delay: index * 0.03 + 0.5,
       duration: 1,
       ease: [0.22, 1, 0.36, 1],
       x: {
-        delay: 1.9,
-        duration: 1,
+        delay: 1.3,
+        duration: 0.5,
         ease: [0.64, 0, 0.78, 0],
       },
     },

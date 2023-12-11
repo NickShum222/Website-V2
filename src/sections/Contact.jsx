@@ -6,7 +6,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Input } from "@material-tailwind/react";
 import { FaLinkedin, FaInstagram, FaGithub, FaIntercom } from "react-icons/fa";
-import { Button } from "@/components";
+import { Button, Header } from "@/components";
 
 const Contact = () => {
   const [submit, setSubmit] = useState(false);
@@ -52,20 +52,7 @@ const Contact = () => {
     <div
       className={`lg:px-[128px] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary dark:bg-secondary  w-full`}
     >
-      <div className="flex w-full justify-end md:mb-[4%] mb-[5%]">
-        <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">
-          <div
-            className="text-tertiary dark:text-primary md:text-[3.125vw]
-            sm:text-[3.980vw] text-[5.089vw]
-            italic tracking-tighter font-[500] leading-[0.9] lg:mt-1"
-          >
-            05.
-          </div>
-          <div className="lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight  font-[700] text-tertiary dark:text-primary border-b-2 border-solid w-full border-tertiary dark:border-primary pb-[4%]">
-            CONTACT
-          </div>
-        </div>
-      </div>
+      <Header title="Contact" index="05." />
       <div className="flex lg:flex-row flex-col justify-between items-start w-full">
         <div className="flex flex-col items-start lg:w-[65%] w-full">
           <div className="lg:text-[4.722vw] sm:text-[5.305vw] text-[7.952vw] w-full font-[700] dark:text-primary text-secondary leading-[1.1] tracking-tighter mb-[2%]">

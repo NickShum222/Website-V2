@@ -37,7 +37,7 @@ const Experiences = () => {
           <div
             className="text-tertiary dark:text-primary md:text-[3.125vw]
             sm:text-[3.980vw] text-[5.089vw]
-            italic tracking-tighter font-[500] leading-[0.9] lg:mt-1"
+            italic tracking-tighter font-[300] leading-[0.9] lg:mt-1"
           >
             04.
           </div>
