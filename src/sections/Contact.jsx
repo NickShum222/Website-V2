@@ -56,11 +56,11 @@ const Contact = () => {
       <Header title="Contact" index="05." />
       <div className="flex lg:flex-row flex-col justify-between items-start w-full">
         <div className="flex flex-col items-start lg:w-[65%] w-full">
-          <div className="lg:text-[4.722vw] sm:text-[5.305vw] text-[7.952vw] w-full font-[700] dark:text-primary text-secondary leading-[1.1] tracking-tighter mb-[2%]">
+          <div className="lg:text-[4.722vw] sm:text-[5.305vw] text-[7.952vw] w-full font-[700] dark:text-primary text-secondary leading-[1.3] tracking-tighter mb-[2%]">
             Want to say hello? <br className="lg:inline hidden" /> Feel free to
             reach out!
           </div>
-          <div className="lg:text-[3.125vw] sm:text-[3.980vw] text-[6.361vw] font-[500] dark:text-primary text-grey2 leading-[1.2] tracking-tight mb-[4%]">
+          <div className="lg:text-[3.125vw] sm:text-[3.980vw] text-[6.361vw] font-[500] dark:text-primary text-grey2 leading-[1.4]  mb-[4%]">
             I am looking for Summer 2024 internship opportunities.
           </div>
           <input

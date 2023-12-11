@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Header } from "@/components";
 import { projects } from "@/constants";
+import { RxExternalLink } from "react-icons/rx";
 
 const Projects = () => {
   const [active, setActive] = useState(null);
@@ -12,7 +13,11 @@ const Projects = () => {
     <div
       className={`flex flex-col justify-start bg-primary dark:bg-secondary py-[4%] w-full`}
     >
-      <Header title="Projects" index="03." className={"lg:px-[128px] md:px-[64px] px-[24px]"} />
+      <Header
+        title="Projects"
+        index="03."
+        className={"lg:px-[128px] md:px-[64px] px-[24px]"}
+      />
       <div className="relative">
         <div className="w-full flex flex-col">
           {projects.map((project, index) => (
@@ -54,9 +59,10 @@ const Projects = () => {
                 setActive(null);
               }}
             >
-              <p className=" font-[700] lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-tertiary flex justify-between">
-                {project}
-              </p>
+              <div className=" font-[700] lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-tertiary flex h-full justify-between items-center">
+                <p> {project}</p>
+                <RxExternalLink className="text-primary dark:text-tertiary md:inline hidden h-[50%] w-[6%] dark:text-teritary" />
+              </div>
             </div>
           ))}
         </div>
