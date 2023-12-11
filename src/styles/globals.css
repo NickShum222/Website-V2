@@ -39,8 +39,7 @@
 
 ::-moz-scrollbar-thumb {
   // background-color: #9c9c9c;
-  // border-radius: 5px;
-  background-color: transparent;
+  border-radius: 5px;
 }
 
 .description {

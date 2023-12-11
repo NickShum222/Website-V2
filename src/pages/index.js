@@ -13,7 +13,7 @@ import {
   Experiences,
   Contact,
 } from "@/sections";
-import { Section, Button } from "@/components";
+import { Section, Button, SEO } from "@/components";
 import { styles } from "@/styles";
 
 export default function Home() {
@@ -22,6 +22,7 @@ export default function Home() {
     <div
       className={`flex flex-col max-w-[100vw] overflow-clip ${theme} relative`}
     >
+      <SEO theme={theme}/>
       {/* <Button label={"Button"} className="w-[100px] h-[40px]"/> */}
       {/* <Loading /> */}
       {/* <div
