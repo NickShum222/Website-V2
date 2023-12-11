@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import {
   Loading,
@@ -15,15 +16,57 @@ import {
 } from "@/sections";
 import { Section, Button, SEO } from "@/components";
 import { styles } from "@/styles";
-
+const slideIn = {
+  initial: {
+    opacity: 0,
+    x: 100,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: -100,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+    },
+  },
+};
 export default function Home() {
   const [theme, setTheme] = useState("light");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const stringsArray = ["Element 1", "Element 2", "Element 3", "Element 4"];
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % stringsArray.length);
+    }, 2000);
+
+    return () => clearInterval(intervalId);
+  }, [stringsArray.length]);
   return (
+    // <div className="w-[100vw] h-[100vh] flex justify-center items-center ">
+    //       <AnimatePresence mode="wait">
+    //         <motion.p
+    //           key={stringsArray[currentIndex]}
+    //           variants={slideIn}
+    //           initial="initial"
+    //           animate="animate"
+    //           exit="exit"
+    //         >
+    //           {stringsArray[currentIndex]}
+    //         </motion.p>
+    //       </AnimatePresence>
+    // </div>
     <div
       className={`flex flex-col max-w-[100vw] overflow-clip ${theme} relative`}
     >
-      <SEO theme={theme}/>
-      {/* <Button label={"Button"} className="w-[100px] h-[40px]"/> */}
+      <SEO theme={theme} />
       {/* <Loading /> */}
       {/* <div
         className="flex fixed bottom-[30px] bg-grey4 bg-opacity-20 backdrop-blur-lg justify-around items-center h-[70px] w-[55%]  dark:border-white border-secondary border-solid dark:border-[0.5px] font-[300] border-opacity-25 rounded-full z-[100] uppercase cursor-pointer"

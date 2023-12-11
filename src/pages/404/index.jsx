@@ -12,7 +12,7 @@ const index = () => {
           className="h-[60%] w-[80%] object-fill shadow-2xl"
         />
         <div className="font-[700] text-secondary text-[3.290vw] mt-[2%] ">
-          Oops! Looks like the page you're looking for does not exist.
+          Oops! Looks like the page you're looking for does not exist :/
         </div>
       </div>
     </div>
