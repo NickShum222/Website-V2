@@ -10,22 +10,20 @@
   @apply transition-colors;
   @apply duration-500;
 }
-.landing-text{
+.landing-text {
   transform-style: preserve-3d;
 }
 ::-moz-selection {
-  background: #8894A3;
-  color: #E4E5E7;
+  background: #8894a3;
+  color: #e4e5e7;
 }
 ::-webkit-selection {
-  background: #8894A3;
-  color: #E4E5E7;
-
+  background: #8894a3;
+  color: #e4e5e7;
 }
 ::selection {
-  background: #8894A3;
-  color: #E4E5E7;
-
+  background: #8894a3;
+  color: #e4e5e7;
 }
 
 ::-webkit-scrollbar {
@@ -64,9 +62,9 @@
   clip-path: inset(50% 0 50%);
   transition: clip-path 0.4s;
 }
-.landing{
+.landing {
   clip-path: inset(50% 0 50%);
-  transition: clip-path 0.6s;
+  transition: clip-path 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .perspective {
   perspective: 700px;

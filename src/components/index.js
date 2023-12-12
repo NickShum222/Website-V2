@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import SmoothScroll from "./SmoothScroll";
 import SEO from "./SEO";
 import Header from "./Header";
+import TextAnim from "./TextAnim";
 
 export { 
   Section, 
@@ -11,5 +12,6 @@ export {
   Navbar, 
   SmoothScroll, 
   SEO,
-  Header
+  Header,
+  TextAnim,
 };

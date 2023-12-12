@@ -39,7 +39,7 @@ const Services = () => {
             <div className="text-secondary dark:text-primary font-[700] lg:text-[4.857vw] md:text-[5.305vw] text-[9.939vw] leading-[1.2] tracking-tight">
               my tech stack.
             </div>
-            <div className="font-[500] dark:text-grey3 lg:text-[3.125vw] md:text-[3.980vw] text-[6.361vw] text-grey2 leading-[1.2] mb-[6%]">
+            <div className="font-[500] dark:text-grey3 lg:text-[3.125vw] md:text-[3.980vw] text-[6.361vw] text-grey2 md:leading-[1.1] leading-[1.2] mb-[6%]">
               Here are just some of my go-to tools used for web development.
             </div>
             <div className="w-full flex md:hidden justify-between items-start">
@@ -66,12 +66,9 @@ const Services = () => {
             </div>
           </div>
           <div className="flex flex-col justify-start w-full ">
-            <div className="font-[500] lg:text-[3.125vw] dark:text-grey3 md:text-[3.980vw] text-[6.361vw] text-grey2 leading-[1.2] mb-[6%]">
+            <div className="font-[500] lg:text-[3.125vw] dark:text-grey3 md:text-[3.980vw] text-[6.361vw] text-grey2 md:leading-[1.1] leading-[1.2] mb-[6%]">
               You can see the rest of my skills here.
             </div>
-            {/* <div className="w-full text-center text-primary bg-tertiary font-[700] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw]  py-2">
-              RESUME
-            </div> */}
             <Button
               label={"Resume"}
               className="w-full text-center text-primary bg-tertiary font-[700] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw] rounded-lg py-2"
@@ -79,20 +76,20 @@ const Services = () => {
           </div>
         </div>
         <div
-        ref={skillsContainer}
+          ref={skillsContainer}
           className=" flex-col items-end md:w-[50%] md:flex hidden perspective"
         >
           {skills.map((skill, index) => (
-              <motion.div
-                className="font-bold ld:text-[4.722vw] md:text-[4.969vw] text-[9.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
-                key={index}
-                custom={index}
-                variants={slideIn}
-                initial="initial"
-                animate={isInView ? "enter" : "initial"}
-              >
-                {skill}
-              </motion.div>
+            <motion.div
+              className="font-bold ld:text-[4.722vw] md:text-[4.969vw] text-[9.939vw] md:leading-[1.1] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
+              key={index}
+              custom={index}
+              variants={slideIn}
+              initial="initial"
+              animate={isInView ? "enter" : "initial"}
+            >
+              {skill}
+            </motion.div>
           ))}
         </div>
       </div>

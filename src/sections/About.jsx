@@ -8,10 +8,8 @@ const About = () => {
     <div
       className={`lg:px-[128px] md:px-[64px] px-[24px] py-[12%] flex flex-col justify-start bg-primary dark:bg-secondary  w-full`}
     >
-      <div className="flex w-full justify-end md:mb-[4%] mb-[7%]">
-        <Header title={"about"} index={"01."} />
-      </div>
-      <div className="flex md:flex-row flex-col md:justify-between justify-center items-start lg:gap-0 md:gap-4 gap-6">
+      <Header title={"about"} index={"01."} />
+      <div className="flex md:flex-row flex-col md:justify-between justify-center items-start lg:gap-0 md:gap-4 gap-6 relative">
         <div className="lg:w-[45%] md:w-[50%] w-[100%] rounded-[7px] relative md:inline hidden">
           <Image
             src={picture1}
@@ -20,8 +18,7 @@ const About = () => {
             height={1000}
             placeholder="blur"
             alt="Picture of the author"
-            style={{ objectFit: "contain",
-            borderRadius: "7px" }}
+            style={{ objectFit: "contain", borderRadius: "7px" }}
           />
         </div>
         <div className="w-full relative md:hidden inline">
@@ -31,13 +28,10 @@ const About = () => {
             width={1000}
             height={1000}
             alt="Picture of the author"
-            style={{ objectFit: "contain",
-            borderRadius: "7px"
-          
-          }}
+            style={{ objectFit: "contain", borderRadius: "7px" }}
           />
         </div>
-        <div className="flex flex-col justify-start md:w-[50%] w-full">
+        <div className="flex flex-col justify-start md:w-[50%] w-full sticky top-[2%]">
           <div className="lg:text-[3.125vw] md:text-[3.980vw] text-[7.952vw] leading-[1.2] font-[700] text-secondary dark:text-primary">
             Hi! Nice to meet you, I'm Nick Shum.
           </div>
