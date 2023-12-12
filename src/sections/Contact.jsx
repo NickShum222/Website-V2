@@ -4,7 +4,6 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Input } from "@material-tailwind/react";
 import { Button, Header } from "@/components";
 import { socials } from "@/constants";
 

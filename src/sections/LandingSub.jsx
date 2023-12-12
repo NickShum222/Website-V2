@@ -8,9 +8,7 @@ const LandingSub = () => {
     target: element,
     offset: ["start start", "end end"],
   });
-  // useEffect(() => {
-  //   scrollYProgress.on("change", (e) => console.log(e));
-  // }, []);
+
   const paragraph =
     "I build seamless digital experiences by bridging the gap between people and technology through development and design.";
   const words = paragraph.split(" ");
@@ -20,7 +18,6 @@ const LandingSub = () => {
         <div
           className={`lg:px-[128px] md:px-[64px] px-[24px] dark:bg-secondary bg-primary flex flex-wrap justify-start 
         `}
-          // style={{ top: "50%", transform: "translateY(-50%)"}}
         >
           {words.map((word, index) => {
             const start = index / words.length;

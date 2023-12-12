@@ -1,14 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Header } from "@/components";
 import { projects } from "@/constants";
 import { RxExternalLink } from "react-icons/rx";
 
 const Projects = () => {
   const [active, setActive] = useState(null);
-  useEffect(() => {
-    console.log("Active value changed:", active);
-  }, [active]);
   return (
     <div
       className={`flex flex-col justify-start bg-primary dark:bg-secondary py-[4%] w-full`}
