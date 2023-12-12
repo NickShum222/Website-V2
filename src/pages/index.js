@@ -71,7 +71,7 @@ export default function Home() {
     //       </AnimatePresence>
     // </div>
     <div
-      className={`flex flex-col max-w-[100vw] overflow-clip ${theme} relative`}
+      className={`flex flex-col max-w-[100svw] overflow-clip ${theme} relative`}
     >
       <SEO theme={theme} />
       <Section theme="light" setTheme={setTheme}>

@@ -15,7 +15,7 @@ const LandingSub = () => {
     "I build seamless digital experiences by bridging the gap between people and technology through development and design.";
   const words = paragraph.split(" ");
   return (
-    <div className="h-[200dvh] relative w-full" ref={element}>
+    <div className="h-[200svh] relative w-full" ref={element}>
       <div className=" dark:bg-secondary h-[100dvh] w-full flex justify-center items-center bg-primary sticky top-0">
         <div
           className={`lg:px-[128px] md:px-[64px] px-[24px] dark:bg-secondary bg-primary flex flex-wrap justify-start 
