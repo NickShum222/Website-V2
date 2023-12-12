@@ -41,6 +41,7 @@ const slideIn = {
 export default function Home() {
   const [theme, setTheme] = useState("light");
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [active, setActive] = useState(null);
   const stringsArray = ["Element 1", "Element 2", "Element 3", "Element 4"];
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -49,6 +50,12 @@ export default function Home() {
 
     return () => clearInterval(intervalId);
   }, [stringsArray.length]);
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setActive(true);
+    }, 2350);
+    return () => clearTimeout(timeoutId);
+  }, []);
   return (
     // <div className="w-[100vw] h-[100vh] flex justify-center items-center ">
     //       <AnimatePresence mode="wait">
@@ -67,7 +74,19 @@ export default function Home() {
       className={`flex flex-col max-w-[100vw] overflow-clip ${theme} relative`}
     >
       <SEO theme={theme} />
-      <Loading />
+      <Section theme="light" setTheme={setTheme}>
+        <div className="w-full h-full relative">
+          <Loading />
+          <div
+            className="landing absolute top-0 left-0 h-full w-full"
+            style={{
+              clipPath: active ? "inset(0 0 0 0)" : "inset(50% 0 50% 0)",
+            }}
+          >
+            <Landing />
+          </div>
+        </div>
+      </Section>
       {/* <div
         className="flex fixed bottom-[30px] bg-grey4 bg-opacity-20 backdrop-blur-lg justify-around items-center h-[70px] w-[55%]  dark:border-white border-secondary border-solid dark:border-[0.5px] font-[300] border-opacity-25 rounded-full z-[100] uppercase cursor-pointer"
         style={{ left: "50%", transform: "translateX(-50%)" }}
@@ -79,27 +98,28 @@ export default function Home() {
         <p className="dark:text-white text-white">05. Experiences</p>
         <p className="dark:text-white text-white">06. Contact</p>
       </div> */}
-      {/* <Section theme="light" setTheme={setTheme}>
-        <Landing />
-      </Section>
-      <Section theme="dark" setTheme={setTheme}>
-        <LandingSub />
-      </Section>
-      <Section theme="light" setTheme={setTheme}>
-        <About />
-      </Section>
-      <Section theme="light" setTheme={setTheme}>
-        <Services />
-      </Section>
-      <Section theme="light" setTheme={setTheme}>
-        <Projects />
-      </Section>
-      <Section theme="dark" setTheme={setTheme}>
-        <Experiences />
-      </Section>
-      <Section theme="light" setTheme={setTheme}>
-        <Contact />
-      </Section> */}
+      {active && (
+        <>
+          <Section theme="dark" setTheme={setTheme}>
+            <LandingSub />
+          </Section>
+          <Section theme="light" setTheme={setTheme}>
+            <About />
+          </Section>
+          <Section theme="light" setTheme={setTheme}>
+            <Services />
+          </Section>
+          <Section theme="light" setTheme={setTheme}>
+            <Projects />
+          </Section>
+          <Section theme="dark" setTheme={setTheme}>
+            <Experiences />
+          </Section>
+          <Section theme="light" setTheme={setTheme}>
+            <Contact />
+          </Section>
+        </>
+      )}
     </div>
   );
 }

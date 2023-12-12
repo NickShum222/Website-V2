@@ -1,10 +1,13 @@
-import React from "react";
+"use client";
+import { useState, useEffect } from "react";
 import { styles } from "@/styles";
 
 const Landing = () => {
   return (
     <>
-      <div className="flex flex-col w-full justify-between h-[100svh] bg-primary dark:bg-secondary lg:p-10 md:p-7 sm:p-5 p-3 relative">
+      <div
+        className="z-[100] flex flex-col w-full justify-between h-[100svh] bg-primary dark:bg-secondary lg:p-10 md:p-7 sm:p-5 p-3 relative"
+      >
         <div className="flex z-10 flex-col justify-start items-start w-full">
           <div className="lg:text-[150px] md:text-[12.564vw] text-[15.532vw]  lg:leading-[0.70] leading-[0.9]  font-[700] tracking-tight text-tertiary dark:text-primary">
             SOFTWARE
@@ -31,10 +34,10 @@ const Landing = () => {
             SHUM
           </div>
         </div>
-      </div>
-      <div className="z-0 absolute top-0 left-0 h-[100svh] w-full flex justify-center items-center overflow-clip">
-        <div className="leading-[10px] font-bold text-[50vw] tracking-tighter text-[#B6b7B9] opacity-[24%]">
-          NS.
+        <div className="z-0 absolute top-0 left-0 h-[100svh] w-full flex justify-center items-center overflow-clip">
+          <div className="leading-[10px] font-bold text-[50vw] tracking-tighter text-[#B6b7B9] opacity-[24%]">
+            NS.
+          </div>
         </div>
       </div>
     </>

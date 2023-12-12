@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 
-const index = ({ theme, setTheme, children }) => {
+const index = ({ theme, setTheme, children, className }) => {
   let container = useRef(null);
   let { scrollYProgress } = useScroll({
     target: container,
@@ -15,7 +15,11 @@ const index = ({ theme, setTheme, children }) => {
     }
   });
 
-  return <section ref={container}>{children}</section>;
+  return (
+    <section className={`${className}`} ref={container}>
+      {children}
+    </section>
+  );
 };
 
 export default index;

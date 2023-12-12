@@ -61,7 +61,7 @@ const Projects = () => {
             >
               <div className=" font-[700] lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-tertiary flex h-full justify-between items-center">
                 <p> {project}</p>
-                <RxExternalLink className="text-primary dark:text-tertiary md:inline hidden h-[50%] w-[6%] dark:text-teritary" />
+                <RxExternalLink className="text-primary dark:text-tertiary md:inline hidden h-[30%] w-[6%] dark:text-teritary" />
               </div>
             </div>
           ))}
