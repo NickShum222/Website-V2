@@ -10,7 +10,7 @@ const index = ({theme}) => {
       <meta name="theme-color" content={theme === 'dark' ? "#191919" : "#E4E5E7"} />
       <meta name="robots" content="index, follow" />
       <meta property="og:type" content="website" />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.svg" />
     </Head>
   );
 };
