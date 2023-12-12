@@ -56,3 +56,12 @@ export const experiences = [
     tools: "TestRail, Jira, IBM AS400",
   },
 ];
+
+export const paragraph =
+  "I build seamless digital experiences by bridging the gap between people and technology through development and design.";
+
+export const landingText = [
+  "UWaterloo Student",
+  "Computer Engineering",
+  "Frontend Obssessed",
+];

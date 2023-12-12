@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useEffect } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
-
+import { paragraph } from "@/constants";
 const LandingSub = () => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -9,8 +9,6 @@ const LandingSub = () => {
     offset: ["start start", "end end"],
   });
 
-  const paragraph =
-    "I build seamless digital experiences by bridging the gap between people and technology through development and design.";
   const words = paragraph.split(" ");
   return (
     <div className="h-[200svh] relative w-full" ref={element}>

@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { TextAnim } from "@/components";
 import { motion, AnimatePresence } from "framer-motion";
+import { landingText } from "@/constants";
 const slideRight = {
   initial: {
     opacity: 0,
@@ -44,18 +45,13 @@ const slideIn = {
 };
 const Landing = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const stringsArray = [
-    "UWaterloo Student",
-    "Computer Engineering",
-    "Frontend Obssessed",
-  ];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % stringsArray.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % landingText.length);
     }, 4000);
     return () => clearInterval(intervalId);
-  }, [stringsArray.length]);
+  }, [landingText.length]);
   return (
     <>
       <div className="z-[100] select-none flex flex-col w-full justify-between h-[100svh] bg-primary dark:bg-secondary lg:p-10 md:p-7 sm:p-5 p-3 relative">
@@ -81,14 +77,14 @@ const Landing = () => {
             <div className=" lg:text-[45px] md:text-[5.305vw] text-[6.361vw] leading-[1.2] font-medium">
               <AnimatePresence mode="wait">
                 <motion.p
-                  key={stringsArray[currentIndex]}
+                  key={landingText[currentIndex]}
                   variants={slideIn}
                   initial="initial"
                   animate="animate"
                   exit="exit"
                   className="landing-text uppercase text-tertiary dark:text-primary"
                 >
-                  {stringsArray[currentIndex]}
+                  {landingText[currentIndex]}
                 </motion.p>
               </AnimatePresence>
             </div>
