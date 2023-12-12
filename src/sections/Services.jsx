@@ -33,9 +33,9 @@ const Services = () => {
       className={`lg:px-[128px] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary dark:bg-secondary  w-full`}
     >
       <Header title="Services" index="02." />
-      <div className="flex w-full md:flex-row flex-col justify-between items-start">
-        <div className="flex flex-col justify-between items-start gap-8 md:w-[50%] h-full w-full">
-          <div className="flex flex-col items-start justify-between h-full w-full ">
+      <div className="flex w-full md:flex-row flex-col justify-between items-start relative">
+        <div className="flex flex-col justify-between items-start gap-8 md:w-[50%] h-full w-full sticky top-0">
+          <div className="flex flex-col items-start justify-between h-full w-full  ">
             <div className="text-secondary dark:text-primary font-[700] lg:text-[4.857vw] md:text-[5.305vw] text-[9.939vw] leading-[1.2] tracking-tight">
               my tech stack.
             </div>

@@ -2,9 +2,15 @@ import React from 'react'
 import { SEO } from '@/components'
 const index = () => {
   return (
-    <div>
+    <div className={" min-w-[100dvw]"}>
       <SEO theme={"dark"}/>
-      <div>resume</div>
+      <div className="h-[100dvh]">
+          <embed
+          src="ShumNickResume.pdf"
+          height="100%"
+          width="100%"
+          type="application/pdf"
+      /></div>
     </div>
   )
 }

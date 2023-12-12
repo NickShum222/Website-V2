@@ -43,9 +43,9 @@ const slideIn = {
     },
   },
 };
+
 const Landing = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % landingText.length);
@@ -54,8 +54,9 @@ const Landing = () => {
   }, [landingText.length]);
   return (
     <>
-      <div className="z-[100] select-none flex flex-col w-full justify-between h-[100svh] bg-primary dark:bg-secondary lg:p-10 md:p-7 sm:p-5 p-3 relative">
-        <div className="flex z-10 flex-col justify-start items-start w-full">
+      <div
+          className="z-[100] select-none flex flex-col w-full justify-between min-h-[100lvh] bg-primary dark:bg-secondary lg:p-10 md:p-7 sm:p-5 p-3 relative">
+        <div className="flex z-10 flex-col justify-start items-start w-full -mt-[1%]">
           <TextAnim
             label={"SOFTWARE"}
             className="lg:text-[150px] md:text-[12.564vw] text-[15.532vw] font-[700] tracking-tight text-tertiary dark:text-primary"
@@ -67,14 +68,13 @@ const Landing = () => {
             delay={0.05}
           />
           <motion.div
-            className="flex justify-start lg:mt-3 items-center lg:gap-4 sm:gap-2 gap-1 w-full"
+            className="flex justify-start  items-center lg:gap-4 sm:gap-2 gap-1 w-full "
             variants={slideRight}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, amount: 0.3 }}
           >
             <div className="bg-tertiary dark:bg-primary lg:h-[4px] md:h-[3px] h-[2px] w-[6%] lg:ml-3 ml-2" />
-            <div className=" lg:text-[45px] md:text-[5.305vw] text-[6.361vw] leading-[1.2] font-medium">
               <AnimatePresence mode="wait">
                 <motion.p
                   key={landingText[currentIndex]}
@@ -82,12 +82,11 @@ const Landing = () => {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  className="landing-text uppercase text-tertiary dark:text-primary"
+                  className="landing-text uppercase text-tertiary dark:text-primary lg:text-[45px] md:text-[5.305vw] text-[6.361vw] leading-[1.2] font-medium"
                 >
                   {landingText[currentIndex]}
                 </motion.p>
               </AnimatePresence>
-            </div>
           </motion.div>
         </div>
         <div className="z-10 flex flex-col justify-end w-full items-end">
@@ -103,11 +102,12 @@ const Landing = () => {
             delay={0.03}
           />
         </div>
-        <div className="z-0 absolute top-0 left-0 h-[100svh] w-full flex justify-center items-center overflow-clip">
-          <div className="select-none leading-[10px] font-bold text-[50vw] tracking-tighter text-[#B6b7B9] opacity-[24%]">
-            NS.
-          </div>
-        </div>
+        {/* THis component is slowing down the page for some reason*/}
+        {/*<div className="z-0 absolute top-0 left-0 h-[100svh] w-full flex justify-center items-center m-0 py-0">*/}
+        {/*  <div className="leading-[10px] font-bold text-[50vw] tracking-tighter text-[#B6b7B9] opacity-[24%]">*/}
+        {/*    NS.*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
     </>
   );

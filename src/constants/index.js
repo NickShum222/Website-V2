@@ -1,4 +1,4 @@
-import { FaLinkedin, FaInstagram, FaGithub, FaIntercom } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 export const skills = [
   "React",
@@ -63,5 +63,5 @@ export const paragraph =
 export const landingText = [
   "UWaterloo Student",
   "Computer Engineering",
-  "Frontend Obssessed",
+  "Frontend Obsessed",
 ];

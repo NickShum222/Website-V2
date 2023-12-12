@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Header } from "@/components";
 import { projects } from "@/constants";
-import { RxExternalLink } from "react-icons/rx";
+
 
 const Projects = () => {
   const [active, setActive] = useState(null);
@@ -12,7 +12,7 @@ const Projects = () => {
     >
       <Header
         title="Projects"
-        index="03."
+        index="04."
         className={"lg:px-[128px] md:px-[64px] px-[24px]"}
       />
       <div className="relative">
@@ -58,7 +58,7 @@ const Projects = () => {
             >
               <div className=" font-[700] lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-tertiary flex h-full justify-between items-center">
                 <p> {project}</p>
-                <RxExternalLink className="text-primary dark:text-tertiary md:inline hidden h-[30%] w-[6%] dark:text-teritary" />
+                {/*<RxExternalLink className="text-primary dark:text-tertiary md:inline hidden w-[2%] overflow-y-clip p-0 m-0 dark:text-teritary" />*/}
               </div>
             </div>
           ))}
