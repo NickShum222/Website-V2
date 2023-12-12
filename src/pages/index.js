@@ -75,8 +75,10 @@ export default function Home() {
     >
       <SEO theme={theme} />
       <Section theme="light" setTheme={setTheme}>
-        <div className="w-full h-full relative">
-          <Loading />
+        <div className="w-[100svw] h-[100svh] relative">
+          <div className="absolute top-0 left-0 h-full w-full">
+            <Loading />
+          </div>
           <div
             className="landing absolute top-0 left-0 h-full w-full"
             style={{

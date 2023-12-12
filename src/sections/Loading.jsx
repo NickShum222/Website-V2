@@ -40,9 +40,12 @@ const slideUpSecond = {
     y: 0,
   },
 };
-const Loading = () => {
+const Loading = ({ active }) => {
   return (
-    <div className="relative z-0 h-[100dvh] w-[100dvw] flex flex-col justify-center items-center bg-secondary">
+    <div
+      className={`relative z-0 h-[100dvh] w-[100dvw] flex flex-col justify-center items-center bg-secondary
+    `}
+    >
       <div className="overflow-y-clip h-auto relative items-center">
         <div className="text-primary h-[100%] uppercase flex font-bold text-[10.417vw] leading-[1] relative">
           {firstName.map((letter, index) => (

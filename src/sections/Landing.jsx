@@ -5,9 +5,7 @@ import { styles } from "@/styles";
 const Landing = () => {
   return (
     <>
-      <div
-        className="z-[100] flex flex-col w-full justify-between h-[100svh] bg-primary dark:bg-secondary lg:p-10 md:p-7 sm:p-5 p-3 relative"
-      >
+      <div className="z-[100] flex flex-col w-full justify-between h-[100svh] bg-primary dark:bg-secondary lg:p-10 md:p-7 sm:p-5 p-3 relative">
         <div className="flex z-10 flex-col justify-start items-start w-full">
           <div className="lg:text-[150px] md:text-[12.564vw] text-[15.532vw]  lg:leading-[0.70] leading-[0.9]  font-[700] tracking-tight text-tertiary dark:text-primary">
             SOFTWARE
