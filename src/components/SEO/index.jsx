@@ -10,7 +10,11 @@ const index = ({theme}) => {
       <meta name="theme-color" content={theme === 'dark' ? "#191919" : "#E4E5E7"} />
       <meta name="robots" content="index, follow" />
       <meta property="og:type" content="website" />
-      <link rel="icon" href="/favicon.svg" />
+      
+      <link rel="icon" href="/favicon/favicon48.ico" sizes="any"/>
+      <link rel="icon" href="/favicon/favicon144.png" type="image/png"/>
+      <link rel="apple-touch-icon" href="/favicon/favicon180.png"/>
+      <link rel="manifest" href="/favicon/manifest.webmanifest"/>
     </Head>
   );
 };
