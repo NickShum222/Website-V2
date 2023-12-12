@@ -7,10 +7,10 @@ const slideUpFirst = {
     y: 0,
   },
   enter: (index) => ({
-    y: -150,
+    y: "-100%",
     transition: {
-      delay: index * 0.03 + 0.5,
-      duration: 1,
+      delay: index * 0.03 + 0.7,
+      duration: 0.9,
       ease: [0.22, 1, 0.36, 1],
     },
   }),
@@ -23,15 +23,15 @@ const slideUpSecond = {
     y: 0,
   },
   enter: (index) => ({
-    y: -150,
-    x: index === 0 ? 280 : index === 8 ? -380 : 0,
+    y: "-100%",
+    x: index === 0 ? "270%" : index === 8 ? "-900%" : 0,
     transition: {
-      delay: index * 0.03 + 0.5,
-      duration: 1,
+      delay: index * 0.03 + 0.7,
+      duration: 0.9,
       ease: [0.22, 1, 0.36, 1],
       x: {
-        delay: 1.3,
-        duration: 0.5,
+        delay: 1.6,
+        duration: 0.8,
         ease: [0.64, 0, 0.78, 0],
       },
     },
@@ -43,8 +43,8 @@ const slideUpSecond = {
 const Loading = () => {
   return (
     <div className="relative z-0 h-[100dvh] w-[100dvw] flex flex-col justify-center items-center bg-secondary">
-      <div className="h-[164px] overflow-y-clip flex-col flex justify-start items-center">
-        <div className="text-primary uppercase flex font-bold text-[150px] leading-[150px]">
+      <div className="overflow-y-clip h-auto relative items-center">
+        <div className="text-primary h-[110%] uppercase flex font-bold text-[10.417vw] leading-[0.8] relative">
           {firstName.map((letter, index) => (
             <motion.div
               key={index}
@@ -59,7 +59,7 @@ const Loading = () => {
           ))}
         </div>
 
-        <div className="text-primary uppercase flex font-bold text-[150px] leading-[150px]">
+        <div className="text-primary h-[110%] uppercase flex font-bold text-[10.417vw] leading-[0.8] absolute">
           {firstName.map((letter, index) => (
             <motion.span
               key={index}
