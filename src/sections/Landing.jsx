@@ -1,8 +1,47 @@
 "use client";
 import { useState, useEffect } from "react";
 import { styles } from "@/styles";
-
+import { motion, AnimatePresence } from "framer-motion";
+const slideIn = {
+  initial: {
+    opacity: 0,
+    rotateX: -90,
+    y: "40%",
+  },
+  animate: {
+    opacity: 1,
+    rotateX: 0,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.76, 0, 0.24, 1],
+    },
+  },
+  exit: {
+    opacity: 0,
+    rotateX: 90,
+    y: "-40%",
+    transition: {
+      duration: 0.5,
+      ease: [0.76, 0, 0.24, 1],
+    },
+  },
+};
 const Landing = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const stringsArray = [
+    "UWaterloo Student",
+    "Computer Engineering",
+    "Frontend Obssessed",
+  ];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % stringsArray.length);
+    }, 4000);
+
+    return () => clearInterval(intervalId);
+  }, [stringsArray.length]);
   return (
     <>
       <div className="z-[100] flex flex-col w-full justify-between h-[100svh] bg-primary dark:bg-secondary lg:p-10 md:p-7 sm:p-5 p-3 relative">
@@ -15,8 +54,19 @@ const Landing = () => {
           </div>
           <div className="flex justify-start lg:mt-3 items-center lg:gap-4 sm:gap-2 gap-1 w-full">
             <div className="bg-tertiary dark:bg-primary lg:h-[4px] md:h-[3px] h-[2px] w-[6%] lg:ml-3 ml-2" />
-            <div className="text-tertiary dark:text-primary lg:text-[45px] md:text-[5.305vw] text-[6.361vw] leading-[1.2] font-medium">
-              UNIVERSITY STUDENT
+            <div className=" lg:text-[45px] md:text-[5.305vw] text-[6.361vw] leading-[1.2] font-medium">
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={stringsArray[currentIndex]}
+                  variants={slideIn}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  className="landing-text uppercase text-tertiary dark:text-primary"
+                >
+                  {stringsArray[currentIndex]}
+                </motion.p>
+              </AnimatePresence>
             </div>
           </div>
         </div>

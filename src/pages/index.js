@@ -1,9 +1,6 @@
 "use client";
 
-import Image from "next/image";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-
 import {
   Loading,
   Landing,
@@ -14,42 +11,10 @@ import {
   Experiences,
   Contact,
 } from "@/sections";
-import { Section, Button, SEO } from "@/components";
-import { styles } from "@/styles";
-const slideIn = {
-  initial: {
-    opacity: 0,
-    x: 100,
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-    },
-  },
-  exit: {
-    opacity: 0,
-    x: -100,
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-    },
-  },
-};
+import { Section, SEO } from "@/components";
 export default function Home() {
   const [theme, setTheme] = useState("light");
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [active, setActive] = useState(null);
-  const stringsArray = ["Element 1", "Element 2", "Element 3", "Element 4"];
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % stringsArray.length);
-    }, 2000);
-
-    return () => clearInterval(intervalId);
-  }, [stringsArray.length]);
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setActive(true);
@@ -57,19 +22,6 @@ export default function Home() {
     return () => clearTimeout(timeoutId);
   }, []);
   return (
-    // <div className="w-[100vw] h-[100vh] flex justify-center items-center ">
-    //       <AnimatePresence mode="wait">
-    //         <motion.p
-    //           key={stringsArray[currentIndex]}
-    //           variants={slideIn}
-    //           initial="initial"
-    //           animate="animate"
-    //           exit="exit"
-    //         >
-    //           {stringsArray[currentIndex]}
-    //         </motion.p>
-    //       </AnimatePresence>
-    // </div>
     <div
       className={`flex flex-col max-w-[100svw] overflow-clip ${theme} relative`}
     >
