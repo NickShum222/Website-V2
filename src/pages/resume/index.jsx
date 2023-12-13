@@ -1,8 +1,9 @@
-import React from 'react'
+
 import { SEO } from '@/components'
 const index = () => {
+
   return (
-    <div className={" min-w-[100dvw]"}>
+    <div ref={ref} className={" min-w-[100dvw]"}>
       <SEO theme={"dark"}/>
       <div className="h-[100dvh]">
           <embed

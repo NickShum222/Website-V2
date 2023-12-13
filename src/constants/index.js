@@ -11,7 +11,21 @@ export const skills = [
   "Tailwind",
 ];
 
-export const projects = ["RESUMATCH", "SPOTITRACK", "WEBSITE V1"];
+export const projects = [
+  {
+      name: "ResuMatch",
+      url: "/projects/resumatch"
+  },
+  {
+    name: "SpotiTrack",
+    url: "/projects/spotitrack"
+  },
+  {
+    name: "Website V1",
+    url: "/projects/website-v1"
+  },
+
+];
 
 export const socials = [
   {

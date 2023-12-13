@@ -14,7 +14,7 @@ const slideRight = {
     transition: {
       duration: 0.75,
       ease: [0.25, 1, 0.5, 1],
-      delay: 0.09,
+      delay: 2.45,
     },
   },
 };
@@ -60,12 +60,12 @@ const Landing = () => {
           <TextAnim
             label={"SOFTWARE"}
             className="lg:text-[150px] md:text-[12.564vw] text-[15.532vw] font-[700] tracking-tight text-tertiary dark:text-primary"
-            delay={0}
+            delay={2.4}
           />
           <TextAnim
             label={"DEVELOPER"}
             className="lg:text-[150px] md:text-[12.564vw] text-[15.532vw] font-[700] tracking-tight text-tertiary dark:text-primary"
-            delay={0.05}
+            delay={2.45}
           />
           <motion.div
             className="flex justify-start  items-center lg:gap-4 sm:gap-2 gap-1 w-full "
@@ -82,7 +82,7 @@ const Landing = () => {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  className="landing-text uppercase text-tertiary dark:text-primary lg:text-[45px] md:text-[5.305vw] text-[6.361vw] leading-[1.2] font-medium"
+                  className="landing-text uppercase text-tertiary dark:text-primary lg:text-[45px] md:text-[5.305vw] text-[6.361vw] leading-[1.2] font-medium whitespace-nowrap"
                 >
                   {landingText[currentIndex]}
                 </motion.p>
@@ -93,13 +93,14 @@ const Landing = () => {
           <TextAnim
             label={"NICK"}
             className="lg:text-[150px] md:text-[12.564vw] text-[15.532vw] font-[700] tracking-tight text-tertiary dark:text-primary"
+            delay={2.4}
           />
           <TextAnim
             label={"SHUM"}
             className="lg:text-[150px] md:text-[12.564vw] text-[15.532vw] font-[700] tracking-tight text-tertiary dark:text-primary lg:-mr-3 md:-mr-2
           -mr-1
           "
-            delay={0.03}
+            delay={2.43}
           />
         </div>
         {/* THis component is slowing down the page for some reason*/}

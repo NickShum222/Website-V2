@@ -6,6 +6,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Button, Header } from "@/components";
 import { socials } from "@/constants";
+import Link from "next/link";
 
 
 const Contact = () => {
@@ -120,10 +121,12 @@ const Contact = () => {
             <div className="font-[700] text-grey2 dark:text-grey3 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw]">
               My Resume
             </div>
-            <Button
-              label={"resume"}
-              className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw]"
-            />
+            <Link href="/ShumNickResume.pdf" target="_blank" rel="noreferrer noopener" className={"w-full"}>
+              <Button
+                  label={"resume"}
+                  className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw]"
+              />
+            </Link>
           </div>
           <div className="flex flex-col items-start w-full">
             <div className="font-[700] text-grey2 dark:text-grey3 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw] lg:mb-[8%] mb-[4%]">
