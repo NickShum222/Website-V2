@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { Header } from "@/components";
 import { projects } from "@/constants";
-import { RxExternalLink } from "react-icons/rx";
+import Link from "next/link";
+
 
 const Projects = () => {
   const [active, setActive] = useState(null);
@@ -12,13 +13,14 @@ const Projects = () => {
     >
       <Header
         title="Projects"
-        index="03."
+        index="04."
         className={"lg:px-[128px] md:px-[64px] px-[24px]"}
       />
       <div className="relative">
         <div className="w-full flex flex-col">
           {projects.map((project, index) => (
-            <div
+            <Link
+                href={project.url}
               key={index}
               onMouseOver={() => {
                 setActive(index);
@@ -30,16 +32,17 @@ const Projects = () => {
           ${index === 2 ? "border-b-[1px]" : ""} cursor-pointer `}
             >
               <p
-                className={`text-tertiary dark:text-primary lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight font-[700]`}
+                className={`text-tertiary uppercase dark:text-primary lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight font-[700]`}
               >
-                {project}
+                {project.name}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="absolute top-0 left-0 w-full flex flex-col">
           {projects.map((project, index) => (
-            <div
+            <Link
+                href={project.url}
               key={index}
               className={`bg-tertiary dark:bg-primary py-[2%]  border-t-[1px] border-solid dark:border-primary border-secondary lg:px-[128px] md:px-[64px] px-[24px] relative
           ${
@@ -56,11 +59,11 @@ const Projects = () => {
                 setActive(null);
               }}
             >
-              <div className=" font-[700] lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-tertiary flex h-full justify-between items-center">
-                <p> {project}</p>
-                <RxExternalLink className="text-primary dark:text-tertiary md:inline hidden h-[30%] w-[6%] dark:text-teritary" />
+              <div className=" font-[700] uppercase lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-tertiary flex h-full justify-between items-center">
+                <p> {project.name}</p>
+                {/*<RxExternalLink className="text-primary dark:text-tertiary md:inline hidden w-[2%] overflow-y-clip p-0 m-0 dark:text-teritary" />*/}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

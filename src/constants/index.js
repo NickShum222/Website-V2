@@ -1,4 +1,4 @@
-import { FaLinkedin, FaInstagram, FaGithub, FaIntercom } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 export const skills = [
   "React",
@@ -11,7 +11,21 @@ export const skills = [
   "Tailwind",
 ];
 
-export const projects = ["RESUMATCH", "SPOTITRACK", "WEBSITE V1"];
+export const projects = [
+  {
+      name: "ResuMatch",
+      url: "/projects/resumatch"
+  },
+  {
+    name: "SpotiTrack",
+    url: "/projects/spotitrack"
+  },
+  {
+    name: "Website V1",
+    url: "/projects/website-v1"
+  },
+
+];
 
 export const socials = [
   {
@@ -63,5 +77,5 @@ export const paragraph =
 export const landingText = [
   "UWaterloo Student",
   "Computer Engineering",
-  "Frontend Obssessed",
+  "Frontend Obsessed",
 ];
