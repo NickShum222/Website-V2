@@ -1,0 +1,23 @@
+.headerBorder::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #273D57;
+  transition: width .3s;
+  transform: translateY(1500%);
+}
+.darkHeaderBorder::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #E4E5E7;
+  transition: width .3s;
+  transform: translateY(1500%);
+}
+.headerBorder.active::after,
+.darkHeaderBorder.active::after
+{
+  width: 100%;
+}

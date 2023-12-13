@@ -40,6 +40,7 @@ const slideUpSecond = {
     y: 0,
   },
 };
+
 const Loading = () => {
   return (
     <div

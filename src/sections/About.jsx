@@ -6,7 +6,7 @@ import picture1 from "../../public/ProfilePhotoDesktop.jpeg";
 const About = () => {
   return (
     <div
-      className={`lg:px-[128px] md:px-[64px] px-[24px] py-[12%] flex flex-col justify-start bg-primary dark:bg-secondary  w-full`}
+      className={`lg:px-[128px] md:px-[64px] px-[24px] py-[12%] flex flex-col justify-start bg-primary dark:bg-secondary w-full`}
     >
       <Header title={"about"} index={"01."} />
       <div className="flex md:flex-row flex-col md:justify-between justify-center items-start lg:gap-0 md:gap-4 gap-6 relative">

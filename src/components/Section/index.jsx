@@ -8,7 +8,6 @@ const index = ({ theme, setTheme, children, className }) => {
     target: container,
     offset: ["start center", "end center"],
   });
-
   useMotionValueEvent(scrollYProgress, "change", (value) => {
     if (value > 0 && value < 1) {
       setTheme(theme);

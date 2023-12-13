@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { experiences } from "@/constants";
 
 const Experiences = () => {
@@ -18,7 +17,7 @@ const Experiences = () => {
             sm:text-[3.980vw] text-[5.089vw]
             italic tracking-tighter font-[300] leading-[0.9] lg:mt-1"
           >
-            04.
+            03.
           </div>
           <div className="lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] sm:inline hidden leading-[0.8] tracking-tight  font-[700] text-tertiary dark:text-primary border-tertiary border-b-2 border-solid w-full dark:border-primary pb-[4%]">
             EXPERIENCES
