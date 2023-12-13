@@ -38,7 +38,7 @@ const Experiences = () => {
   return (
     <div
       ref={element}
-      className="h-[200dvh] relative w-full bg-primary dark:bg-secondary"
+      className="h-[200lvh] relative w-full bg-primary dark:bg-secondary"
     >
       <div
         className={`lg:px-[128px] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary dark:bg-secondary w-full h-[100dvh] sticky top-0`}
@@ -117,7 +117,16 @@ const Experiences = () => {
 };
 
 const ExperienceTitle = ({ label, range, progress, setSelected, index }) => {
-  const opacity = useTransform(progress, range, [0.1, 1, 0.1]);
+  let opacity;
+  if(index === 0){
+     opacity = useTransform(progress, [range[0], range[2]], [1, 0.1]);
+  }
+  else if(index === experiences.length -1){
+     opacity = useTransform(progress, [range[0], range[2]], [0.1, 1]);
+  }
+  else{
+     opacity = useTransform(progress, range, [0.1, 1, 0.1]);
+  }
   useMotionValueEvent(progress, "change", (value) => {
     if (value > range[0] && value < range[2]) {
       setSelected(index)
