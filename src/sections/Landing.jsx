@@ -55,18 +55,17 @@ const Landing = () => {
   }, [landingText.length]);
   return (
     <>
-      <section className="z-[100] select-none flex flex-col w-full justify-between min-h-[100lvh] bg-primary dark:bg-secondary lg:p-10 md:p-7 sm:p-5 p-3 relative">
-        <div className="flex z-10 flex-col justify-start items-start w-full">
+      <section className="z-[100] select-none flex flex-col w-full justify-between min-h-[100lvh] bg-primary dark:bg-secondary lg:p-6 md:p-7 sm:p-5 p-3 relative">
+        <div className="flex z-10 flex-col justify-start items-start w-full mt-[-1%]">
           <TextAnim
-            label={"SOFTWARE"}
-            className="lg:text-[150px] md:text-[12.564vw] text-[15.532vw] font-[700] tracking-tight text-tertiary dark:text-primary"
+            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary"
             delay={2.4}
-          />
+          >SOFTWARE</TextAnim>
           <TextAnim
-            label={"DEVELOPER"}
-            className="lg:text-[150px] md:text-[12.564vw] text-[15.532vw] font-[700] tracking-tight text-tertiary dark:text-primary"
+            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary mt-[-2%]"
             delay={2.45}
-          />
+
+          >DEVELOPER</TextAnim>
           <motion.div
             className="flex justify-start  items-center lg:gap-4 sm:gap-2 gap-1 w-full "
             variants={slideRight}
@@ -81,26 +80,24 @@ const Landing = () => {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  className="landing-text uppercase text-tertiary dark:text-primary lg:text-[45px] md:text-[5.305vw] text-[6.361vw] leading-[1.2] font-medium whitespace-nowrap"
+                  className="landing-text truncate uppercase text-tertiary dark:text-primary lg:text-[45px] md:text-[5.305vw] text-[5.361vw] leading-[1.2] font-medium whitespace-nowrap"
                 >
                   {landingText[currentIndex]}
                 </motion.p>
               </AnimatePresence>
           </motion.div>
         </div>
-        <div className="z-10 flex flex-col justify-end w-full items-end">
+        <div className="z-10 flex flex-col justify-end w-full items-end mb-[-1%]">
           <TextAnim
-            label={"NICK"}
-            className="lg:text-[150px] md:text-[12.564vw] text-[15.532vw] font-[700] tracking-tight text-tertiary dark:text-primary"
+            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary "
             delay={2.4}
-          />
+          >NICK</TextAnim>
           <TextAnim
-            label={"SHUM"}
-            className="lg:text-[150px] md:text-[12.564vw] text-[15.532vw] font-[700] tracking-tight text-tertiary dark:text-primary lg:-mr-3 md:-mr-2
-          -mr-1
+            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary lg:-mr-3 md:-mr-2
+          -mr-1 mt-[-3%]
           "
             delay={2.43}
-          />
+          >SHUM</TextAnim>
         </div>
         {/* THis component is slowing down the page for some reason*/}
         {/*<div className="z-0 absolute top-0 left-0 h-[100svh] w-full flex justify-center items-center m-0 py-0">*/}

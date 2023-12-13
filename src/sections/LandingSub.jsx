@@ -14,7 +14,7 @@ const LandingSub = () => {
     <div className="min-h-[200lvh] relative w-full" ref={element}>
       <div className=" dark:bg-secondary min-h-[100lvh] w-full flex justify-center items-center bg-primary sticky top-0">
         <div
-          className={`lg:px-[128px] md:px-[64px] px-[24px] dark:bg-secondary bg-primary flex flex-wrap justify-start 
+          className={`lg:px-[9%] md:px-[64px] px-[24px] dark:bg-secondary bg-primary flex flex-wrap justify-start 
         `}
         >
           {words.map((word, index) => {
@@ -56,7 +56,7 @@ const Character = ({ children, range, progress }) => {
   return (
     <motion.span
       style={{ opacity }}
-      className="lg:text-[4.722vw] md:text-[7.073vw] text-[7.952vw] leading-[1.2] tracking-tight dark:text-primary text-secondary font-bold"
+      className="lg:text-servicesTool md:text-[7.073vw] text-[7.952vw] leading-[1.2] tracking-tight dark:text-primary text-secondary font-bold"
     >
       {children}
     </motion.span>

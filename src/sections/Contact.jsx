@@ -51,16 +51,16 @@ const Contact = () => {
 
   return (
     <div
-      className={`lg:px-[128px] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary dark:bg-secondary  w-full`}
+      className={`lg:px-[9%] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary dark:bg-secondary  w-full`}
     >
       <Header title="Contact" index="05." />
       <div className="flex lg:flex-row flex-col justify-between items-start w-full">
         <div className="flex flex-col items-start lg:w-[65%] w-full">
-          <div className="lg:text-[4.722vw] sm:text-[5.305vw] text-[7.952vw] w-full font-[700] dark:text-primary text-secondary md:leading-[1.0] leading-[1.2] tracking-tighter mb-[2%]">
+          <div className="lg:text-contactHeading sm:text-[5.305vw] text-[7.952vw] w-full font-[700] dark:text-primary text-secondary md:leading-[1.0] leading-[1.2] tracking-tighter mb-[2%]">
             Want to say hello? <br className="lg:inline hidden" /> Feel free to
             reach out!
           </div>
-          <div className="lg:text-[3.125vw] sm:text-[3.980vw] text-[6.361vw] font-[500] dark:text-primary text-grey2 md:leading-[1.1] leading-[1.3]  mb-[4%]">
+          <div className="lg:text-contactSub sm:text-[3.980vw] text-[6.361vw] font-[500] dark:text-primary text-grey2 md:leading-[1.1] leading-[1.3]  mb-[4%]">
             I am looking for Summer 2024 internship opportunities.
           </div>
           <input
@@ -68,7 +68,7 @@ const Contact = () => {
             placeholder="Name"
             onChange={formik.handleChange}
             value={formik.values.name}
-            className="w-full appearance-none bg-transparent lg:text-[2.083vw] sm:text-[2.985vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
+            className="w-full appearance-none bg-transparent lg:text-contactForm sm:text-[2.985vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
           />
           <div
             className={`mb-4 mt-1 lg:text-[16px] text-[14px] text-[#A31621]`}
@@ -80,7 +80,7 @@ const Contact = () => {
             placeholder="Email"
             onChange={formik.handleChange}
             value={formik.values.email}
-            className="w-full appearance-none bg-transparent lg:text-[2.083vw] sm:text-[2.985vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
+            className="w-full appearance-none bg-transparent lg:text-contactForm sm:text-[2.985vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
           />
           <div
             className={`mb-4 mt-1 lg:text-[16px] text-[14px] text-[#A31621]`}
@@ -92,7 +92,7 @@ const Contact = () => {
             placeholder="Message"
             onChange={formik.handleChange}
             value={formik.values.message}
-            className="w-full appearance-none bg-transparent lg:text-[2.083vw] sm:text-[2.985vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] lg:h-[300px] md:h-[250px] h-[125px] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
+            className="w-full appearance-none bg-transparent lg:text-contactForm sm:text-[2.985vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] lg:h-[300px] md:h-[250px] h-[125px] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
           />
           <div
             className={`mb-4 mt-1 lg:text-[16px] text-[14px] text-[#A31621]`}
@@ -103,7 +103,7 @@ const Contact = () => {
             <button
               onClick={formik.handleSubmit}
               type="submit"
-              className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw] "
+              className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-contactForm sm:text-[3.980vw] text-[7.634vw] "
             >
               <Button label={"submit"} className="" />
             </button>
@@ -118,18 +118,18 @@ const Contact = () => {
         </div>
         <div className="flex flex-col items-end justify-end lg:w-[25%]  w-full md:gap-24 gap-12">
           <div className="flex flex-col items-start w-full gap-2">
-            <div className="font-[700] text-grey2 dark:text-grey3 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw]">
+            <div className="font-[700] text-grey2 dark:text-grey3 tracking-tight leading-[1.3] lg:text-servicesSub sm:text-[5.305vw] text-[7.952vw]">
               My Resume
             </div>
             <Link href="/ShumNickResume.pdf" target="_blank" rel="noreferrer noopener" className={"w-full"}>
               <Button
                   label={"resume"}
-                  className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-[2.083vw] sm:text-[3.980vw] text-[7.634vw]"
+                  className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-contactForm sm:text-[3.980vw] text-[7.634vw]"
               />
             </Link>
           </div>
           <div className="flex flex-col items-start w-full">
-            <div className="font-[700] text-grey2 dark:text-grey3 tracking-tight leading-[1.3] lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw] lg:mb-[8%] mb-[4%]">
+            <div className="font-[700] text-grey2 dark:text-grey3 tracking-tight leading-[1.3] lg:text-servicesSub sm:text-[5.305vw] text-[7.952vw] lg:mb-[8%] mb-[4%]">
               My Socials
             </div>
             <div className="w-full flex flex-col justify-start items-start lg:gap-8 ">
@@ -142,8 +142,8 @@ const Contact = () => {
                     href={link}
                     target="_blank"
                   >
-                    <IconComponent className={`lg:text-[2.778vw]  sm:text-[5.305vw] text-[6.361vw] `} />
-                    <div className=" lg:text-[2.083vw]  sm:text-[5.305vw] text-[6.361vw] font-[500] tracking-tight">
+                    <IconComponent className={`lg:text-contactSub  sm:text-[5.305vw] text-[6.361vw] `} />
+                    <div className=" lg:text-contactForm  sm:text-[5.305vw] text-[6.361vw] font-[500] tracking-tight">
                       {name}
                     </div>
                   </a>
