@@ -16,14 +16,11 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
   return (
     <SmoothScroll>
-      <AnimatePresence mode="wait">
-        <motion.div
-          className={`${satoshi.variable} font-sans`}
-          key={router.pathname}
-        >
-          <Component {...pageProps} />
-          <SpeedInsights />
-          <motion.div
+      {/* <AnimatePresence mode="wait"> */}
+      <main className={`${satoshi.variable} font-sans`} key={router.asPath}>
+        <Component {...pageProps} />
+        <SpeedInsights />
+        {/* <motion.div
             className="absolute top-0 left-0 w-full h-[100dvh] bg-tertiary origin-bottom"
             initial={{ scaleY: 0 }}
             animate={{ scaleY: 0 }}
@@ -36,9 +33,9 @@ export default function App({ Component, pageProps }) {
             animate={{ scaleY: 0 }}
             exit={{ scaleY: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          ></motion.div>
-        </motion.div>
-      </AnimatePresence>
+          ></motion.div> */}
+      </main>
+      {/* </AnimatePresence> */}
     </SmoothScroll>
   );
 }
