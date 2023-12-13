@@ -71,8 +71,7 @@ const Landing = () => {
             className="flex justify-start  items-center lg:gap-4 sm:gap-2 gap-1 w-full "
             variants={slideRight}
             initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, amount: 0.3 }}
+            animate="animate"
           >
             <div className="bg-tertiary dark:bg-primary lg:h-[4px] md:h-[3px] h-[2px] w-[6%] lg:ml-3 ml-2" />
               <AnimatePresence mode="wait">
@@ -109,7 +108,7 @@ const Landing = () => {
         {/*    NS.*/}
         {/*  </div>*/}
         {/*</div>*/}
-      </div>
+      </section>
     </>
   );
 };

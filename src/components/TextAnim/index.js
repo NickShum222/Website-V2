@@ -16,14 +16,14 @@ const slideUp = {
 };
 const index = ({ label, className, delay }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.4 });
+  // const isInView = useInView(ref, { once: true, amount: 0.4 });
   return (
     <div className="overflow-y-clip h-auto relative " ref={ref}>
       <motion.div
         variants={slideUp}
         custom={delay}
         initial="initial"
-        animate={isInView ? "visible" : "initial"}
+        animate="visible"
         className={`${className} h-full leading-[1]`}
       >
         {label}
