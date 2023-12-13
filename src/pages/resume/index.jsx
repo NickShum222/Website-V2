@@ -1,19 +1,18 @@
-
-import { SEO } from '@/components'
+import { SEO } from "@/components";
 const index = () => {
-
   return (
-    <div ref={ref} className={" min-w-[100dvw]"}>
-      <SEO theme={"dark"}/>
+    <div className={" min-w-[100dvw]"}>
+      <SEO theme={"dark"} />
       <div className="h-[100dvh]">
-          <embed
+        <embed
           src="ShumNickResume.pdf"
           height="100%"
           width="100%"
           type="application/pdf"
-      /></div>
+        />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;
