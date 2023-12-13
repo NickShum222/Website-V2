@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { TextAnim } from "@/components";
 import { motion, AnimatePresence } from "framer-motion";
 import { landingText } from "@/constants";
+import { Loading } from ".";
 const slideRight = {
   initial: {
     opacity: 0,
@@ -45,7 +46,13 @@ const slideIn = {
 };
 const Landing = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  // const [active, setActive] = useState(null);
+  // useEffect(() => {
+  //   const timeoutId = setTimeout(() => {
+  //     setActive(true);
+  //   }, 2350);
+  //   return () => clearTimeout(timeoutId);
+  // }, []);
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % landingText.length);
@@ -54,7 +61,7 @@ const Landing = () => {
   }, [landingText.length]);
   return (
     <>
-      <div className="z-[100] select-none flex flex-col w-full justify-between h-[100svh] bg-primary dark:bg-secondary lg:p-10 md:p-7 sm:p-5 p-3 relative">
+      <section className="z-[100] select-none flex flex-col w-full justify-between min-h-[100lvh] bg-primary dark:bg-secondary lg:p-10 md:p-7 sm:p-5 p-3 relative">
         <div className="flex z-10 flex-col justify-start items-start w-full">
           <TextAnim
             label={"SOFTWARE"}
@@ -103,12 +110,12 @@ const Landing = () => {
             delay={0.03}
           />
         </div>
-        <div className="z-0 absolute top-0 left-0 h-[100svh] w-full flex justify-center items-center overflow-clip">
+        <div className="z-0 absolute top-0 left-0 min-h-[100vh] w-full flex justify-center items-center overflow-clip">
           <div className="select-none leading-[10px] font-bold text-[50vw] tracking-tighter text-[#B6b7B9] opacity-[24%]">
             NS.
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

@@ -11,8 +11,8 @@ const LandingSub = () => {
 
   const words = paragraph.split(" ");
   return (
-    <div className="h-[200svh] relative w-full" ref={element}>
-      <div className=" dark:bg-secondary h-[100dvh] w-full flex justify-center items-center bg-primary sticky top-0">
+    <div className="min-h-[200lvh] relative w-full" ref={element}>
+      <div className=" dark:bg-secondary min-h-[100lvh] w-full flex justify-center items-center bg-primary sticky top-0">
         <div
           className={`lg:px-[128px] md:px-[64px] px-[24px] dark:bg-secondary bg-primary flex flex-wrap justify-start 
         `}

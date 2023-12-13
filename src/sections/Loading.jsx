@@ -40,7 +40,7 @@ const slideUpSecond = {
     y: 0,
   },
 };
-const Loading = ({ active }) => {
+const Loading = () => {
   return (
     <div
       className={`relative z-0 h-[100dvh] w-[100dvw] flex flex-col justify-center items-center bg-secondary

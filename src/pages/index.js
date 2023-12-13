@@ -23,11 +23,14 @@ export default function Home() {
   }, []);
   return (
     <div
-      className={`flex flex-col max-w-[100svw] overflow-clip ${theme} relative`}
+      className={`flex flex-col max-w-[100svw] overflow-x-clip ${theme} relative`}
     >
       <SEO theme={theme} />
       <Section theme="light" setTheme={setTheme}>
-        <div className="w-[100svw] h-[100svh] relative">
+        <Landing/>
+      </Section>
+      {/* <Section theme="light" setTheme={setTheme}>
+        <div className="w-[100lvw] min-h-[100lvh] relative">
           <div className="absolute top-0 left-0 h-full w-full">
             <Loading />
           </div>
@@ -40,7 +43,7 @@ export default function Home() {
             <Landing />
           </div>
         </div>
-      </Section>
+      </Section> */}
       {/* <div
         className="flex fixed bottom-[30px] bg-grey4 bg-opacity-20 backdrop-blur-lg justify-around items-center h-[70px] w-[55%]  dark:border-white border-secondary border-solid dark:border-[0.5px] font-[300] border-opacity-25 rounded-full z-[100] uppercase cursor-pointer"
         style={{ left: "50%", transform: "translateX(-50%)" }}
