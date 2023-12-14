@@ -48,7 +48,7 @@ const Loading = () => {
     `}
     >
       <div className="overflow-y-clip h-auto relative items-center">
-        <div className="select-none text-primary h-[100%] uppercase flex font-bold text-[10.417vw] leading-[1] relative">
+        <div className="select-none text-primary h-[100%] uppercase flex font-bold lg:text-[120px] text-[10.417vw] leading-[1] relative">
           {firstName.map((letter, index) => (
             <motion.div
               key={index}
@@ -63,7 +63,7 @@ const Loading = () => {
           ))}
         </div>
 
-        <div className="select-none text-primary h-[100%] uppercase flex font-bold text-[10.417vw] leading-[1] absolute -bottom-[100%]">
+        <div className="select-none text-primary h-[100%] uppercase flex font-bold lg:text-[120px] text-[10.417vw] leading-[1] absolute -bottom-[100%]">
           {firstName.map((letter, index) => (
             <motion.span
               key={index}

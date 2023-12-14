@@ -13,7 +13,7 @@ const Projects = () => {
       <Header
         title="Projects"
         index="04."
-        className={"lg:px-[128px] md:px-[64px] px-[24px]"}
+        className={"lg:px-[6%] md:px-[64px] px-[24px]"}
       />
       <div className="relative">
         <div className="w-full flex flex-col">
@@ -27,7 +27,7 @@ const Projects = () => {
               onMouseLeave={() => {
                 setActive(null);
               }}
-              className={`z-10 py-[2%]  border-t-[1px] border-solid border-secondary dark:border-primary lg:px-[128px] md:px-[64px] px-[24px]
+              className={`z-10 py-[2%]  border-t-[1px] border-solid border-secondary dark:border-primary lg:px-[6%] md:px-[64px] px-[24px]
           ${index === 2 ? "border-b-[1px]" : ""} cursor-pointer `}
             >
               <p
@@ -43,7 +43,7 @@ const Projects = () => {
             <Link
               href={project.url}
               key={index}
-              className={`bg-tertiary dark:bg-primary py-[2%]  border-t-[1px] border-solid dark:border-primary border-secondary lg:px-[128px] md:px-[64px] px-[24px] relative
+              className={`bg-tertiary dark:bg-primary py-[2%]  border-t-[1px] border-solid dark:border-primary border-secondary lg:px-[6%] md:px-[64px] px-[24px] relative
           ${
             index === 2 ? "border-b-[1px]" : ""
           } description z-20 cursor-pointer`}
