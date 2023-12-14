@@ -5,7 +5,7 @@ import picture2 from "../../public/ProfilePhotoMobile.jpeg";
 
 const About = () => {
   return (
-    <div
+    <section id="about"
       className={`lg:px-[6%] md:px-[64px] px-[24px] py-[12%] flex flex-col justify-start bg-primary dark:bg-secondary w-full`}
     >
       <Header title={"about"} index={"01."} />
@@ -52,7 +52,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

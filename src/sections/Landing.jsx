@@ -68,9 +68,9 @@ const Landing = () => {
         </div>
         {/* THis component is slowing down the page for some reason */}
         {/* <div className="z-0 absolute top-0 left-0 h-[100svh] w-full flex justify-center items-center m-0 py-0"> */}
-        <div className="leading-[1px] absolute top-1/2 left-1/2 -translate-x-1/2 font-bold text-landingBg tracking-tighter text-[#B6b7B9] opacity-[24%]">
+        {/* <div className="leading-[1px] absolute top-1/2 left-1/2 -translate-x-1/2 font-bold text-landingBg tracking-tighter text-[#B6b7B9] opacity-[24%]">
           NS.
-        </div>
+        </div> */}
         {/* </div> */}
       </section>
     </>
