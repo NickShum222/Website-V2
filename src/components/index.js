@@ -5,6 +5,7 @@ import SmoothScroll from "./SmoothScroll";
 import SEO from "./SEO";
 import Header from "./Header";
 import TextAnim from "./TextAnim";
+import BodyAnim from "./BodyAnim";
 
 export { 
   Section, 
@@ -14,4 +15,5 @@ export {
   SEO,
   Header,
   TextAnim,
+  BodyAnim
 };
