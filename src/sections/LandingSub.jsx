@@ -14,7 +14,7 @@ const LandingSub = () => {
     <div className="min-h-[200lvh] relative w-full" ref={element}>
       <div className=" dark:bg-secondary min-h-[100lvh] w-full flex justify-center items-center bg-primary sticky top-0">
         <div
-          className={`lg:px-[9%] md:px-[64px] px-[24px] dark:bg-secondary bg-primary flex flex-wrap justify-start 
+          className={`lg:px-[6%] md:px-[64px] px-[24px] dark:bg-secondary bg-primary flex flex-wrap justify-start 
         `}
         >
           {words.map((word, index) => {

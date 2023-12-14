@@ -5,7 +5,7 @@ const slideUp = {
   initial: {
     y: "100%",
   },
-  visible: (delay) => ({
+  enter: (delay) => ({
     y: 0,
     transition: {
       duration: 0.65,
@@ -24,7 +24,7 @@ const index = ({ children, className, delay }) => {
               variants={slideUp}
               custom={delay}
               initial="initial"
-              animate="visible"
+              animate="enter"
               className={`${className} h-full leading-[1]`}
           >
             {children}
@@ -38,7 +38,7 @@ const index = ({ children, className, delay }) => {
           <motion.div
               variants={slideUp}
               initial="initial"
-              animate = {isInView ? "visible":"initial"}
+              animate = {isInView ? "enter":"initial"}
               className={`${className} h-full leading-[1]`}
           >
             {children}

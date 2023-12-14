@@ -4,6 +4,7 @@ module.exports = withMT({
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/styles/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -21,11 +22,11 @@ module.exports = withMT({
         sans: ["var(--font-satoshi)"],
       },
       fontSize: {
-        headingLgClamp: "clamp(100px, 9vw, 120px)",
+        headingLgClamp: "clamp(80px, 8.333vw, 120px)",
         headingIndexClamp: "clamp(34px, 2.7vw, 60px)",
         aboutParagraph: "clamp(14px, 2.083vw, 39.577px)",
-        servicesTech: "clamp(20px, 4.857vw, 92.283)",
-        servicesSub: "clamp(16px, 3.125vw, 57px)",
+        servicesTech: "clamp(20px, 3.857vw, 92.283px)",
+        servicesSub: "clamp(16px, 2.825vw, 57px)",
         servicesTool: "clamp(24px, 4.772vw, 90.668px)",
         contactHeading: "clamp(24px, 4.522vw, 86.488px)",
         contactSub: "clamp(20px, 2.925vw, 55.575px)",

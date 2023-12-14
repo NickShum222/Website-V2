@@ -51,16 +51,16 @@ const Contact = () => {
 
   return (
     <div
-      className={`lg:px-[9%] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary dark:bg-secondary  w-full`}
+      className={`lg:px-[6%] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary dark:bg-secondary  w-full`}
     >
       <Header title="Contact" index="05." />
       <div className="flex lg:flex-row flex-col justify-between items-start w-full">
         <div className="flex flex-col items-start lg:w-[65%] w-full">
-          <div className="lg:text-contactHeading sm:text-[5.305vw] text-[7.952vw] w-full font-[700] dark:text-primary text-secondary md:leading-[1.0] leading-[1.2] tracking-tighter mb-[2%]">
+          <div className="lg:text-servicesTech md:text-[4.969vw] text-[9.939vw] md:leading-[1.1] leading-[1.2] font-[700] text-secondary dark:text-primary">
             Want to say hello? <br className="lg:inline hidden" /> Feel free to
             reach out!
           </div>
-          <div className="lg:text-contactSub sm:text-[3.980vw] text-[6.361vw] font-[500] dark:text-primary text-grey2 md:leading-[1.1] leading-[1.3]  mb-[4%]">
+          <div className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[400] md:text-[2.576vw] text-[5.089vw] leading-[1.3]  mb-[4%]">
             I am looking for Summer 2024 internship opportunities.
           </div>
           <input
@@ -68,7 +68,7 @@ const Contact = () => {
             placeholder="Name"
             onChange={formik.handleChange}
             value={formik.values.name}
-            className="w-full appearance-none bg-transparent lg:text-contactForm sm:text-[2.985vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
+            className="w-full appearance-none bg-transparent lg:text-aboutParagraph  md:text-[2.576vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
           />
           <div
             className={`mb-4 mt-1 lg:text-[16px] text-[14px] text-[#A31621]`}
@@ -80,7 +80,8 @@ const Contact = () => {
             placeholder="Email"
             onChange={formik.handleChange}
             value={formik.values.email}
-            className="w-full appearance-none bg-transparent lg:text-contactForm sm:text-[2.985vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
+            className="w-full appearance-none bg-transparent lg:text-aboutParagraph md:text-[2.576vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
+
           />
           <div
             className={`mb-4 mt-1 lg:text-[16px] text-[14px] text-[#A31621]`}
@@ -92,7 +93,7 @@ const Contact = () => {
             placeholder="Message"
             onChange={formik.handleChange}
             value={formik.values.message}
-            className="w-full appearance-none bg-transparent lg:text-contactForm sm:text-[2.985vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] lg:h-[300px] md:h-[250px] h-[125px] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
+            className="w-full appearance-none bg-transparent lg:text-aboutParagraph md:text-[2.576vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] lg:h-[300px] md:h-[250px] h-[125px] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
           />
           <div
             className={`mb-4 mt-1 lg:text-[16px] text-[14px] text-[#A31621]`}
