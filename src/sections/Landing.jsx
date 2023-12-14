@@ -15,7 +15,7 @@ const Landing = () => {
   }, [landingText.length]);
   return (
     <>
-      <section className="z-[100] select-none flex flex-col w-full justify-between min-h-[100lvh] bg-primary dark:bg-secondary lg:p-6 md:p-7 sm:p-5 p-3 relative">
+      <section className="z-[100] select-none flex flex-col w-full justify-between min-h-[100dvh] bg-primary dark:bg-secondary lg:p-6 md:p-7 sm:p-5 p-3 relative">
         <div className="flex z-10 flex-col justify-start items-start w-full lg:mt-[-1%]">
           <TextAnim
             className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary"

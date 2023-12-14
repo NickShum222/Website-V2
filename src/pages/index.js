@@ -29,8 +29,8 @@ export default function Home() {
     >
       <SEO theme={theme} />
       <div
-        className={`w-[100lvw] relative ${
-          !active ? "h-[100lvh] overflow-y-clip" : ""
+        className={`w-[100dvw] relative ${
+          !active ? "h-[100svh] overflow-y-clip" : ""
         }`}
       >
         <div className="absolute top-0 left-0 h-full w-full">
