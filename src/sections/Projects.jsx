@@ -8,7 +8,7 @@ const Projects = () => {
   const [active, setActive] = useState(null);
   return (
     <div
-      className={`flex flex-col justify-start bg-primary dark:bg-secondary py-[4%] w-full`}
+      className={`flex flex-col justify-start bg-primary dark:bg-secondary md:pb-[4%] pb-[40%] w-full`}
     >
       <Header
         title="Projects"

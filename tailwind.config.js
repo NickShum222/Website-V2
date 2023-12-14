@@ -33,6 +33,7 @@ module.exports = withMT({
         contactHeading: "clamp(24px, 4.522vw, 86.488px)",
         contactSub: "clamp(20px, 2.925vw, 55.575px)",
         contactForm: "clamp(16px, 2.083vw, 39.577px)",
+        landingBg: "clamp(16px, 50vw, 950px)"
 
       },
       darkMode: "class",
