@@ -4,11 +4,13 @@ import { Button, Header, BodyAnim } from "@/components";
 import { skills } from "@/constants";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import { servicesToolsSlideIn } from "@/utils/motion";
+import { servicesToolsSlideIn, servicesToolsSlideIn2 } from "@/utils/motion";
 
 const Services = () => {
   const skillsContainer = useRef(null);
+  const skillsContainerMobile = useRef(null);
   const isInView = useInView(skillsContainer, { once: true, amount: 0.4 });
+  const isInViewMobile = useInView(skillsContainerMobile, { once: true, amount: 0.4 });
   return (
     <div
       className={`lg:px-[6%] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary dark:bg-secondary  w-full`}
@@ -23,25 +25,36 @@ const Services = () => {
             <BodyAnim className="dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] text-grey2 md:leading-[1.1] leading-[1.2] mb-[6%]">
               Here are just some of my go-to tools used for web development.
             </BodyAnim>
-            <div className="w-full flex md:hidden justify-between items-start">
+            <div
+              ref={skillsContainerMobile}
+              className="w-full flex md:hidden justify-between items-start"
+            >
               <div className="w-[50%] flex flex-col items-start ">
                 {skills.slice(0, 4).map((skill, index) => (
-                  <div
+                  <motion.div
                     className="font-bold text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
                     key={index}
+                    custom={index}
+                    variants={servicesToolsSlideIn2}
+                    initial="initial"
+                    animate={isInViewMobile ? "enter" : "initial"}
                   >
                     {skill}
-                  </div>
+                  </motion.div>
                 ))}
               </div>
               <div className="w-[50%] flex flex-col items-end ">
                 {skills.slice(4, 8).map((skill, index) => (
-                  <div
+                  <motion.div
                     className="font-bold text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
                     key={index}
+                    custom={index}
+                    variants={servicesToolsSlideIn}
+                    initial="initial"
+                    animate={isInViewMobile ? "enter" : "initial"}
                   >
                     {skill}
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>

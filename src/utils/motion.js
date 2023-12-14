@@ -61,6 +61,27 @@ export const servicesToolsSlideIn = {
   }),
 };
 
+export const servicesToolsSlideIn2 = {
+  initial: {
+    opacity: 0,
+    rotateX: 90,
+    translateY: 100,
+    translateX: -50,
+  },
+  enter: (index) => ({
+    opacity: 1,
+    rotateX: 0,
+    translateY: 0,
+    translateX: 0,
+    transition: {
+      duration: 0.75,
+      delay: index * 0.1,
+      ease: [0.215, 0.61, 0.355, 1],
+      opacity: { duration: 0.35 },
+    },
+  }),
+};
+
 export const experiencesBodySlideUp = {
   initial: {
     y: "10%",

@@ -31,7 +31,7 @@ const Experiences = () => {
           <Header title="Experiences" index="03." />
         </div>
         <div className="sm:hidden inline w-full">
-          <Header title="Word" index="03." />
+          <Header title="Work" index="03." />
         </div>
         {/*<div className="flex w-full justify-end md:mb-[2%] mb-[7%]">*/}
         {/*  <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">*/}
