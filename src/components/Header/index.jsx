@@ -33,7 +33,7 @@ const slideUp = {
 };
 const index = ({ title, index, className }) => {
     const ref = useRef(null);
-    const isInView = useInView(ref, {once: true, amount: 0.7})
+    const isInView = useInView(ref, {once: true, amount: 1})
   return (
     <div
         ref={ref}

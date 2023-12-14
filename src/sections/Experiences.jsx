@@ -67,8 +67,8 @@ const Experiences = () => {
         {/*    </div>*/}
         {/*  </div>*/}
         {/*</div>*/}
-        <div className="flex lg:flex-row flex-col justify-bewteen items-start lg:gap-0 sm:gap-8 gap-6 w-full">
-          <div className="flex lg:flex-col flex-row justify-start items-start lg:w-[30%] w-full lg:gap-3 sm:gap-12 gap-4 lg:pl-[5%] relative">
+        <div className="flex lg:flex-row flex-col justify-between items-start lg:gap-0 sm:gap-8 gap-6 w-full">
+          <div className="flex lg:flex-col flex-row justify-start items-start lg:w-[20%] w-full lg:gap-3 sm:gap-12 gap-4 lg:pl-[5%] relative">
             {experiences.map((experience, index) => {
               const start = index / experiences.length;
               const end = start + 1 / experiences.length;
@@ -86,33 +86,33 @@ const Experiences = () => {
             })}
           </div>
           <AnimatePresence mode="wait">
-            <motion.div className="md:w-[80%]"
+            <motion.div className="lg:w-[75%] w-full lg:pl-[1%]"
                         key={experiences[selected].id}
               variants={experiencesBody}
                         initial="initial"
                         animate="enter"
                         exit="exit"
             >
-              <div className="font-[700] dark:text-primary text-secondary lg:text-[3.125vw] sm:text-[5.305vw] text-[7.952vw]  tracking-tight leading-[1.2]">
+              <div className="font-[700] dark:text-primary text-secondary lg:text-experiencesHeading sm:text-[5.305vw] text-[7.952vw] md:leading-[1.1] leading-[1.2] tracking-tight w-full lg:mb-[0.5%] mb-[2%] ">
                 {experiences[selected].title} @ <span className="cursor-pointer underline decoration-[4px] ">{experiences[selected].company}</span>
               </div>
-              <div className="font-[400] dark:text-grey3 text-grey2 tracking-tight lg:text-[2.083vw] sm:text-[3.980vw] text-[6.361vw] leading-[1.2] mb-[3.4%]">
+              <div className="font-[400] dark:text-grey3 text-grey2 tracking-tight lg:text-experiencesSub sm:text-[3.980vw] text-[6.361vw] leading-[1.2] ">
                 {experiences[selected].date}
               </div>
-              <ul className="lg:mb-[2%] mb-[5%]">
+              <ul className="lg:my-[3%] sm:my-[4%] my-[7%]">
                 {experiences[selected].description.map((description, index) => (
                     <li
                         key={index}
-                        className="font-[300] text-grey4  lg:text-[2.083vw] sm:text-[2.985vw] text-[5.089vw] leading-[1.5]"
+                        className="font-[300] text-grey4 lg:text-experiencesSub sm:text-[2.985vw] text-[5.089vw] leading-[1.3]"
                     >
                       {description}
                     </li>
                 ))}
               </ul>
-              <div className="font-[400] dark:text-grey3 text-grey2 tracking-tight lg:text-[2.083vw] sm:text-[3.980vw] text-[6.361vw] leading-[1.2]">
+              <div className="font-[400] dark:text-grey3 text-grey2 tracking-tight lg:text-experiencesSub sm:text-[3.980vw] text-[6.361vw] leading-[1.2]">
                 Tools:
               </div>
-              <div className="font-[300] text-grey4 lg:text-[2.083vw] sm:text-[2.985vw] text-[5.089vw] leading-[1.5]">
+              <div className="font-[300] text-grey4 lg:text-experiencesSub sm:text-[2.985vw] text-[5.089vw] leading-[1.3]">
                 {experiences[selected].tools}
               </div>
             </motion.div>

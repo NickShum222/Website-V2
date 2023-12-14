@@ -28,6 +28,8 @@ module.exports = withMT({
         servicesTech: "clamp(20px, 3.857vw, 92.283px)",
         servicesSub: "clamp(16px, 2.825vw, 57px)",
         servicesTool: "clamp(24px, 4.772vw, 90.668px)",
+        experiencesHeading: "clamp(20px, 3.125vw, 59.375px)",
+        experiencesSub: "clamp(14px, 2.083vw, 39.577px)",
         contactHeading: "clamp(24px, 4.522vw, 86.488px)",
         contactSub: "clamp(20px, 2.925vw, 55.575px)",
         contactForm: "clamp(16px, 2.083vw, 39.577px)",

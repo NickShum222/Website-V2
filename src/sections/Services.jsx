@@ -38,17 +38,17 @@ const Services = () => {
       <div className="flex w-full md:flex-row flex-col md:justify-center justify-start items-start relative">
         <div className="flex flex-col justify-between items-start gap-8 md:w-[50%] h-full w-full sticky top-[2%]">
           <div className="flex flex-col items-start justify-between h-full w-full  ">
-            <div className="text-secondary dark:text-primary font-[700] lg:text-servicesTech md:text-[4.969vw] text-[9.939vw] leading-[1.2] tracking-tight mb-[2%]">
+            <div className="text-secondary dark:text-primary font-[700] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] tracking-tight mb-[1.5%]">
               my tech stack.
             </div>
-            <div className="dark:text-grey3 lg:text-aboutParagraph font-[400] md:text-[2.576vw] text-[5.089vw] text-grey2 md:leading-[1.1] leading-[1.2] mb-[6%]">
+            <div className="dark:text-grey3 lg:text-aboutParagraph font-[400] md:text-[2.576vw] text-[4.589vw] text-grey2 md:leading-[1.1] leading-[1.2] mb-[6%]">
               Here are just some of my go-to tools used for web development.
             </div>
             <div className="w-full flex md:hidden justify-between items-start">
               <div className="w-[50%] flex flex-col items-start ">
                 {skills.slice(0, 4).map((skill, index) => (
                   <div
-                    className="font-bold text-[9.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
+                    className="font-bold text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
                     key={index}
                   >
                     {skill}
@@ -58,7 +58,7 @@ const Services = () => {
               <div className="w-[50%] flex flex-col items-end ">
                 {skills.slice(4, 8).map((skill, index) => (
                   <div
-                    className="font-bold text-[9.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
+                    className="font-bold text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
                     key={index}
                   >
                     {skill}
@@ -68,7 +68,10 @@ const Services = () => {
             </div>
           </div>
           <div className="flex flex-col justify-start w-full ">
-            <div className="lg:text-aboutParagraph font-[400] md:text-[2.576vw] text-[5.089vw] text-grey2 dark:text-grey3 leading-[1.3]  mb-[3%]">
+            <div className="text-secondary dark:text-primary font-[700] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] tracking-tight mb-[1.5%]">
+              my resume.
+            </div>
+            <div className="lg:text-aboutParagraph font-[400] md:text-[2.576vw] text-[4.589vw] text-grey2 dark:text-grey3 leading-[1.3]  mb-[2%]">
               You can see the rest of my skills here.
             </div>
               <Link href="/ShumNickResume.pdf" target="_blank" rel="noreferrer noopener">
@@ -85,7 +88,7 @@ const Services = () => {
         >
           {skills.map((skill, index) => (
             <motion.div
-              className="font-bold lg:text-servicesTech md:text-[4.969vw] text-[9.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
+              className="font-bold lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
               key={index}
               custom={index}
               variants={slideIn}
