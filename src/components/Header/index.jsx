@@ -56,7 +56,7 @@ const index = ({ title, index, className }) => {
                 initial="initial"
                 delay={1.8}
                 animate={isInView ? "enter" : "initial"}
-                className={"uppercase lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight font-[700] text-tertiary dark:text-primary"}>{title}</motion.div>
+                className={"uppercase lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[1] tracking-tight font-[700] text-tertiary dark:text-primary"}>{title}</motion.div>
             <motion.div
                 variants={headerSlide}
                 initial="initial"
