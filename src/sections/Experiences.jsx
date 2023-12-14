@@ -7,27 +7,10 @@ import {
   motion,
   useScroll,
   AnimatePresence,
-  useTransform, useMotionValueEvent,
+  useTransform,
+  useMotionValueEvent,
 } from "framer-motion";
-
-const experiencesBody = {
-  initial: {
-    y: "10%",
-    opacity: 0
-  },
-  enter: {
-    y: "0%",
-    opacity: 1,
-    transition: {
-      duration: 1,
-      ease: [0.22, 1, 0.36, 1],
-    }
-  },
-  exit: {
-    y: "10%",
-    opacity: 0
-  }
-}
+import { experiencesBodySlideUp } from "@/utils/motion";
 
 const Experiences = () => {
   const element = useRef(null);
@@ -45,7 +28,7 @@ const Experiences = () => {
         className={`lg:px-[6%] md:px-[64px] px-[24px] py-[6%] flex flex-col md:justify-start justify-center bg-primary dark:bg-secondary w-full h-[100dvh] sticky top-0`}
       >
         <div className="sm:inline hidden w-full">
-          <Header title="Experiences" index="03."/>
+          <Header title="Experiences" index="03." />
         </div>
         <div className="sm:hidden inline w-full">
           <Header title="Word" index="03." />
@@ -86,27 +69,31 @@ const Experiences = () => {
             })}
           </div>
           <AnimatePresence mode="wait">
-            <motion.div className="lg:w-[75%] w-full lg:pl-[1%]"
-                        key={experiences[selected].id}
-              variants={experiencesBody}
-                        initial="initial"
-                        animate="enter"
-                        exit="exit"
+            <motion.div
+              className="lg:w-[75%] w-full lg:pl-[1%]"
+              key={experiences[selected].id}
+              variants={experiencesBodySlideUp}
+              initial="initial"
+              animate="enter"
+              exit="exit"
             >
               <div className="font-[700] dark:text-primary text-secondary lg:text-experiencesHeading sm:text-[5.305vw] text-[7.952vw] md:leading-[1.1] leading-[1.2] tracking-tight w-full lg:mb-[0.5%] mb-[2%] ">
-                {experiences[selected].title} @ <span className="cursor-pointer underline decoration-[4px] ">{experiences[selected].company}</span>
+                {experiences[selected].title} @{" "}
+                <span className="dark:text-primary text-secondary cursor-pointer underline lg:decoration-[4px] decoration-[2px] ">
+                  {experiences[selected].company}
+                </span>
               </div>
               <div className="font-[400] dark:text-grey3 text-grey2 tracking-tight lg:text-experiencesSub sm:text-[3.980vw] text-[6.361vw] leading-[1.2] ">
                 {experiences[selected].date}
               </div>
               <ul className="lg:my-[3%] sm:my-[4%] my-[7%]">
                 {experiences[selected].description.map((description, index) => (
-                    <li
-                        key={index}
-                        className="font-[300] text-grey4 lg:text-experiencesSub sm:text-[2.985vw] text-[5.089vw] leading-[1.3]"
-                    >
-                      {description}
-                    </li>
+                  <li
+                    key={index}
+                    className="font-[300] text-grey4 lg:text-experiencesSub sm:text-[2.985vw] text-[5.089vw] leading-[1.3]"
+                  >
+                    {description}
+                  </li>
                 ))}
               </ul>
               <div className="font-[400] dark:text-grey3 text-grey2 tracking-tight lg:text-experiencesSub sm:text-[3.980vw] text-[6.361vw] leading-[1.2]">
@@ -125,22 +112,19 @@ const Experiences = () => {
 
 const ExperienceTitle = ({ label, range, progress, setSelected, index }) => {
   let opacity, x;
-  if(index === 0){
-     opacity = useTransform(progress, [range[0], range[2]], [1, 0.1]);
-     x = useTransform(progress, [range[0], range[2]], ["10%", "0%"]);
-  }
-  else if(index === experiences.length -1){
-     opacity = useTransform(progress, [range[0], range[2]], [0.1, 1]);
-    x = useTransform(progress, [range[0], range[2]], ["0%","10%"]);
-  }
-  else{
-     opacity = useTransform(progress, range, [0.1, 1, 0.1]);
+  if (index === 0) {
+    opacity = useTransform(progress, [range[0], range[2]], [1, 0.1]);
+    x = useTransform(progress, [range[0], range[2]], ["10%", "0%"]);
+  } else if (index === experiences.length - 1) {
+    opacity = useTransform(progress, [range[0], range[2]], [0.1, 1]);
+    x = useTransform(progress, [range[0], range[2]], ["0%", "10%"]);
+  } else {
+    opacity = useTransform(progress, range, [0.1, 1, 0.1]);
     x = useTransform(progress, range, ["10%", "0%", "10%"]);
-
   }
   useMotionValueEvent(progress, "change", (value) => {
     if (value > range[0] && value < range[2]) {
-      setSelected(index)
+      setSelected(index);
     }
   });
   return (
@@ -152,7 +136,5 @@ const ExperienceTitle = ({ label, range, progress, setSelected, index }) => {
     </motion.span>
   );
 };
-
-
 
 export default Experiences;

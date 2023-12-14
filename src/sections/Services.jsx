@@ -4,28 +4,7 @@ import { Button, Header } from "@/components";
 import { skills } from "@/constants";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-
-const slideIn = {
-  initial: {
-    opacity: 0,
-    rotateX: 90,
-    translateY: 100,
-    translateX: 50,
-  },
-  enter: (index) => ({
-    opacity: 1,
-    rotateX: 0,
-    translateY: 0,
-    translateX: 0,
-    transition: {
-      duration: 0.75,
-      delay: index * 0.1,
-      ease: [0.215, 0.61, 0.355, 1],
-      opacity: { duration: 0.35 },
-    },
-  }),
-
-};
+import { servicesToolsSlideIn } from "@/utils/motion";
 
 const Services = () => {
   const skillsContainer = useRef(null);
@@ -36,12 +15,12 @@ const Services = () => {
     >
       <Header title="Services" index="02." />
       <div className="flex w-full md:flex-row flex-col md:justify-center justify-start items-start relative">
-        <div className="flex flex-col justify-between items-start gap-8 md:w-[50%] h-full w-full sticky top-[2%]">
+        <div className="flex flex-col justify-between items-start gap-8 md:w-[50%] h-full w-full ">
           <div className="flex flex-col items-start justify-between h-full w-full  ">
             <div className="text-secondary dark:text-primary font-[700] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] tracking-tight mb-[1.5%]">
               my tech stack.
             </div>
-            <div className="dark:text-grey3 lg:text-aboutParagraph font-[400] md:text-[2.576vw] text-[4.589vw] text-grey2 md:leading-[1.1] leading-[1.2] mb-[6%]">
+            <div className="dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] text-grey2 md:leading-[1.1] leading-[1.2] mb-[6%]">
               Here are just some of my go-to tools used for web development.
             </div>
             <div className="w-full flex md:hidden justify-between items-start">
@@ -71,13 +50,17 @@ const Services = () => {
             <div className="text-secondary dark:text-primary font-[700] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] tracking-tight mb-[1.5%]">
               my resume.
             </div>
-            <div className="lg:text-aboutParagraph font-[400] md:text-[2.576vw] text-[4.589vw] text-grey2 dark:text-grey3 leading-[1.3]  mb-[2%]">
+            <div className="lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] text-grey2 dark:text-grey3 leading-[1.4]  mb-[2%]">
               You can see the rest of my skills here.
             </div>
-              <Link href="/ShumNickResume.pdf" target="_blank" rel="noreferrer noopener">
+            <Link
+              href="/ShumNickResume.pdf"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <Button
-                  label={"Resume"}
-                  className="w-full text-center text-primary bg-tertiary font-[700] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw] rounded-lg py-2"
+                label={"Resume"}
+                className="w-full text-center text-primary bg-tertiary font-[700] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw] rounded-lg py-2"
               />
             </Link>
           </div>
@@ -91,7 +74,7 @@ const Services = () => {
               className="font-bold lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
               key={index}
               custom={index}
-              variants={slideIn}
+              variants={servicesToolsSlideIn}
               initial="initial"
               animate={isInView ? "enter" : "initial"}
             >

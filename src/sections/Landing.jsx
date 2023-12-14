@@ -3,47 +3,7 @@ import { useState, useEffect } from "react";
 import { TextAnim } from "@/components";
 import { motion, AnimatePresence } from "framer-motion";
 import { landingText } from "@/constants";
-import { Loading } from ".";
-const slideRight = {
-  initial: {
-    opacity: 0,
-    x: "-20%",
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.75,
-      ease: [0.25, 1, 0.5, 1],
-      delay: 2.45,
-    },
-  },
-};
-const slideIn = {
-  initial: {
-    opacity: 0,
-    rotateX: -90,
-    y: "40%",
-  },
-  animate: {
-    opacity: 1,
-    rotateX: 0,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: [0.76, 0, 0.24, 1],
-    },
-  },
-  exit: {
-    opacity: 0,
-    rotateX: 90,
-    y: "-40%",
-    transition: {
-      duration: 0.5,
-      ease: [0.76, 0, 0.24, 1],
-    },
-  },
-};
+import { landingSubSlideRight, landingSubRotateX } from "@/utils/motion";
 
 const Landing = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -60,44 +20,51 @@ const Landing = () => {
           <TextAnim
             className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary"
             delay={2.4}
-          >SOFTWARE</TextAnim>
+          >
+            SOFTWARE
+          </TextAnim>
           <TextAnim
-            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary mt-[-2%]"
+            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary lg:mt-[-2%]"
             delay={2.45}
-
-          >DEVELOPER</TextAnim>
+          >
+            DEVELOPER
+          </TextAnim>
           <motion.div
             className="flex justify-start  items-center lg:gap-4 sm:gap-2 gap-1 w-full "
-            variants={slideRight}
+            variants={landingSubSlideRight}
             initial="initial"
             animate="animate"
           >
             <div className="bg-tertiary dark:bg-primary lg:h-[4px] md:h-[3px] h-[2px] w-[6%] lg:ml-3 ml-2" />
-              <AnimatePresence mode="wait">
-                <motion.p
-                  key={landingText[currentIndex]}
-                  variants={slideIn}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                  className="landing-text truncate uppercase text-tertiary dark:text-primary lg:text-[45px] md:text-[5.305vw] text-[5.361vw] leading-[1.2] font-medium whitespace-nowrap"
-                >
-                  {landingText[currentIndex]}
-                </motion.p>
-              </AnimatePresence>
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={landingText[currentIndex]}
+                variants={landingSubRotateX}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                className="landing-text truncate uppercase text-tertiary dark:text-primary lg:text-[45px] md:text-[5.305vw] text-[5.361vw] leading-[1.2] font-medium whitespace-nowrap"
+              >
+                {landingText[currentIndex]}
+              </motion.p>
+            </AnimatePresence>
           </motion.div>
         </div>
         <div className="z-10 flex flex-col justify-end w-full items-end mb-[-1%]">
           <TextAnim
             className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary "
             delay={2.4}
-          >NICK</TextAnim>
+          >
+            NICK
+          </TextAnim>
           <TextAnim
             className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary lg:-mr-3 md:-mr-2
-          -mr-1 mt-[-3%]
+          -mr-1 lg:mt-[-3%]
           "
             delay={2.43}
-          >SHUM</TextAnim>
+          >
+            SHUM
+          </TextAnim>
         </div>
         {/* THis component is slowing down the page for some reason*/}
         {/*<div className="z-0 absolute top-0 left-0 h-[100svh] w-full flex justify-center items-center m-0 py-0">*/}

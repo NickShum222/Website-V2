@@ -8,7 +8,6 @@ import { Button, Header } from "@/components";
 import { socials } from "@/constants";
 import Link from "next/link";
 
-
 const Contact = () => {
   const [submit, setSubmit] = useState(false);
   const formik = useFormik({
@@ -68,7 +67,7 @@ const Contact = () => {
             placeholder="Name"
             onChange={formik.handleChange}
             value={formik.values.name}
-            className="w-full appearance-none bg-transparent lg:text-aboutParagraph  md:text-[2.576vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
+            className="w-full appearance-none bg-transparent lg:text-aboutParagraph  md:text-[2.576vw] text-[4.589vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
           />
           <div
             className={`mb-4 mt-1 lg:text-[16px] text-[14px] text-[#A31621]`}
@@ -80,8 +79,7 @@ const Contact = () => {
             placeholder="Email"
             onChange={formik.handleChange}
             value={formik.values.email}
-            className="w-full appearance-none bg-transparent lg:text-aboutParagraph md:text-[2.576vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
-
+            className="w-full appearance-none bg-transparent lg:text-aboutParagraph md:text-[2.576vw] text-[4.589vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
           />
           <div
             className={`mb-4 mt-1 lg:text-[16px] text-[14px] text-[#A31621]`}
@@ -93,7 +91,7 @@ const Contact = () => {
             placeholder="Message"
             onChange={formik.handleChange}
             value={formik.values.message}
-            className="w-full appearance-none bg-transparent lg:text-aboutParagraph md:text-[2.576vw] text-[5.089vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] lg:h-[300px] md:h-[250px] h-[125px] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
+            className="w-full appearance-none bg-transparent lg:text-aboutParagraph md:text-[2.576vw] text-[4.589vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] lg:h-[300px] md:h-[250px] h-[125px] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
           />
           <div
             className={`mb-4 mt-1 lg:text-[16px] text-[14px] text-[#A31621]`}
@@ -104,7 +102,7 @@ const Contact = () => {
             <button
               onClick={formik.handleSubmit}
               type="submit"
-              className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-contactForm sm:text-[3.980vw] text-[7.634vw] "
+              className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-aboutParagraph md:text-[3.980vw] text-[6.361vw] "
             >
               <Button label={"submit"} className="" />
             </button>
@@ -117,40 +115,59 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-end justify-end lg:w-[25%]  w-full md:gap-24 gap-12">
-          <div className="flex flex-col items-start w-full gap-2">
-            <div className="font-[700] text-grey2 dark:text-grey3 tracking-tight leading-[1.3] lg:text-servicesSub sm:text-[5.305vw] text-[7.952vw]">
-              My Resume
+        <div className="flex flex-col items-end justify-end lg:w-[25%] lg:gap-8 md:gap-6 gap-4 w-full">
+          <div className="flex flex-col items-start w-full">
+            <div className="font-[700] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] ">
+              Contact details
             </div>
-            <Link href="/ShumNickResume.pdf" target="_blank" rel="noreferrer noopener" className={"w-full"}>
-              <Button
-                  label={"resume"}
-                  className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-contactForm sm:text-[3.980vw] text-[7.634vw]"
-              />
-            </Link>
+            <a
+              href="mailto:n4shum@uwaterloo.ca"
+              target="_blank"
+              className="lg:text-aboutParagraph md:text-[3.576vw] text-[4.589vw] font-[400] tracking-tight text-grey2"
+            >
+              n4shum@uwaterloo.ca
+            </a>
           </div>
           <div className="flex flex-col items-start w-full">
-            <div className="font-[700] text-grey2 dark:text-grey3 tracking-tight leading-[1.3] lg:text-servicesSub sm:text-[5.305vw] text-[7.952vw] lg:mb-[8%] mb-[4%]">
+            <div className="font-[700] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] lg:mb-[6%] mb-[2%]">
               My Socials
             </div>
-            <div className="w-full flex flex-col justify-start items-start lg:gap-8 ">
+            <div className="w-full flex flex-col justify-start items-start lg:gap-4 md:gap-2 gap-1 ">
               {socials.map((social) => {
                 const { name, link, icon: IconComponent, color } = social;
                 return (
                   <a
                     key={name}
-                    className={`flex justify-start w-full items-center lg-gap-2 gap-1 cursor-pointer text-grey4`}
+                    className={`flex justify-start w-full items-center lg-gap-2 gap-1 cursor-pointer text-grey2`}
                     href={link}
                     target="_blank"
                   >
-                    <IconComponent className={`lg:text-contactSub  sm:text-[5.305vw] text-[6.361vw] `} />
-                    <div className=" lg:text-contactForm  sm:text-[5.305vw] text-[6.361vw] font-[500] tracking-tight">
+                    <IconComponent
+                      className={`lg:text-contactSub  md:text-[4.576vw] text-[6.361vw] `}
+                    />
+                    <p className=" lg:text-aboutParagraph md:text-[3.576vw] text-[4.589vw] font-[400] tracking-tight">
                       {name}
-                    </div>
+                    </p>
                   </a>
                 );
               })}
             </div>
+          </div>
+          <div className="flex flex-col items-start w-full gap-2">
+            <div className="font-[700] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw]">
+              My Resume
+            </div>
+            <Link
+              href="/ShumNickResume.pdf"
+              target="_blank"
+              rel="noreferrer noopener"
+              className={"w-full"}
+            >
+              <Button
+                label={"resume"}
+                className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-aboutParagraph md:text-[3.980vw] text-[6.361vw]"
+              />
+            </Link>
           </div>
         </div>
       </div>

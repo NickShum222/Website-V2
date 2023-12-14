@@ -39,7 +39,7 @@ const index = ({ title, index, className }) => {
         ref={ref}
         className={`${className} flex w-full justify-end md:mb-[4%] mb-[7%]`}>
       <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">
-        <motion.div
+        <motion.h4
             variants={slideUp}
             initial="initial"
             delay={1.8}
@@ -49,14 +49,14 @@ const index = ({ title, index, className }) => {
                 italic tracking-tighter font-[300] leading-[0.9]  mt-[0.25%]"
         >
           {index}
-        </motion.div>
+        </motion.h4>
         <div className={`w-full flex flex-col justify-start overflow-hidden`}>
-            <motion.div
+            <motion.h2
                 variants={slideUp}
                 initial="initial"
                 delay={1.8}
                 animate={isInView ? "enter" : "initial"}
-                className={"uppercase lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[1] tracking-tight font-[700] text-tertiary dark:text-primary"}>{title}</motion.div>
+                className={"uppercase lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[1] tracking-tight font-[700] text-tertiary dark:text-primary"}>{title}</motion.h2>
             <motion.div
                 variants={headerSlide}
                 initial="initial"
