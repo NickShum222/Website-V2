@@ -65,7 +65,7 @@ export default function Home() {
       {/*  <p className="dark:text-white text-white">05. Experiences</p>*/}
       {/*  <p className="dark:text-white text-white">06. Contact</p>*/}
       {/*</div>*/}
-      {active && (
+      {(active || loaded) && (
         <>
           <Section theme="dark" setTheme={setTheme}>
             <LandingSub />
