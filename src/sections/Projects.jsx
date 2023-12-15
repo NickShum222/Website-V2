@@ -65,7 +65,6 @@ const Projects = () => {
             >
               <div className="  flex h-full justify-between items-center">
                 <p className="font-[700] uppercase lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-tertiary">
-                  {" "}
                   {project.name}
                 </p>
                 {/*<RxExternalLink className="text-primary dark:text-tertiary md:inline hidden w-[2%] overflow-y-clip p-0 m-0 dark:text-teritary" />*/}
