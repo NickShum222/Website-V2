@@ -16,7 +16,6 @@ import { useRouter } from "next/router";
 export const Load = createContext();
 export default function App({Component, pageProps}) {
     const [loaded, setLoaded] = useState(false)
-
     const router = useRouter();
     useEffect(() => {
         if(router.pathname !== '/'){
@@ -44,13 +43,13 @@ export default function App({Component, pageProps}) {
                         >
                         </motion.div>
                         {loaded && (
-                            <motion.div
-                                className="fixed z-[200] top-0 left-0 w-full h-[100dvh] bg-tertiary origin-top"
-                                initial={{scaleY: 1}}
-                                animate={{scaleY: 0}}
-                                exit={{scaleY: 0}}
-                                transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
-                            ></motion.div>
+                        <motion.div
+                            className="fixed z-[200] top-0 left-0 w-full h-[100dvh] bg-tertiary origin-top"
+                            initial={{scaleY: 1}}
+                            animate={{scaleY: 0}}
+                            exit={{scaleY: 0}}
+                            transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
+                        ></motion.div>
                         )}
                     </main>
                 </AnimatePresence>

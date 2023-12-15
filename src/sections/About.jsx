@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Header, BodyAnim } from "@/components";
-import picture1 from "../../public/ProfilePhotoDesktop.jpeg";
-import picture2 from "../../public/ProfilePhotoMobile.jpeg";
+import picture1 from "../../public/ProfilePhotoDesktop.webp";
+import picture2 from "../../public/ProfilePhotoMobile.webp";
 
 const About = () => {
   return (
