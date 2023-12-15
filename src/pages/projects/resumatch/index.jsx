@@ -1,8 +1,7 @@
-import React from "react";
 import { SEO } from "@/components";
-
 const tools = ["React", "Django", "SQLite", "Firebase", "TailwindCSS", "Figma"];
 const index = () => {
+
   return (
     <section>
       <SEO theme={"dark"} />

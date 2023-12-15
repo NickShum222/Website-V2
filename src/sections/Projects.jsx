@@ -1,11 +1,13 @@
-"use client";
-import { useState } from "react";
+import {useState} from "react";
 import { Header } from "@/components";
 import { projects } from "@/constants";
 import Link from "next/link";
 
 const Projects = () => {
   const [active, setActive] = useState(null);
+
+
+
   return (
     <div
       className={`flex flex-col justify-start bg-primary dark:bg-secondary md:pb-[4%] pb-[40%] w-full`}
@@ -21,6 +23,8 @@ const Projects = () => {
             <Link
               href={project.url}
               key={index}
+              scroll={false}
+
               onMouseOver={() => {
                 setActive(index);
               }}
@@ -41,6 +45,7 @@ const Projects = () => {
         <div className="absolute top-0 left-0 w-full flex flex-col">
           {projects.map((project, index) => (
             <Link
+                scroll={false}
               href={project.url}
               key={index}
               className={`bg-tertiary dark:bg-primary py-[2%]  border-t-[1px] border-solid dark:border-primary border-secondary lg:px-[6%] md:px-[64px] px-[24px] relative

@@ -15,5 +15,6 @@ export {
   SEO,
   Header,
   TextAnim,
-  BodyAnim
+  BodyAnim,
+
 };
