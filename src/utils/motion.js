@@ -18,23 +18,23 @@ export const landingSubRotateX = {
   initial: {
     opacity: 0,
     rotateX: -90,
-    y: "40%",
+    y: "50%",
   },
   animate: {
     opacity: 1,
     rotateX: 0,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.85,
       ease: [0.76, 0, 0.24, 1],
     },
   },
   exit: {
     opacity: 0,
     rotateX: 90,
-    y: "-40%",
+    y: "-50%",
     transition: {
-      duration: 0.5,
+      duration: 0.85,
       ease: [0.76, 0, 0.24, 1],
     },
   },

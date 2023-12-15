@@ -77,4 +77,7 @@ export const paragraph =
 export const landingText = [
   "UWaterloo Student",
   "Computer Engineering",
+  "Design Oriented",
+  "Frontend Addict",
+  "Backend Capable",
 ];

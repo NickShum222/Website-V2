@@ -39,14 +39,14 @@ const Landing = () => {
             animate="animate"
           >
             <div className="bg-tertiary dark:bg-primary lg:h-[4px] md:h-[3px] h-[2px] w-[6%] lg:ml-3 ml-2" />
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="popLayout">
               <motion.p
                 key={landingText[currentIndex]}
                 variants={landingSubRotateX}
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className="landing-text truncate uppercase text-tertiary dark:text-primary lg:text-[45px] md:text-[5.305vw] text-[5.361vw] leading-[1.2] font-medium whitespace-nowrap"
+                className="landing-text overflow-clip uppercase text-tertiary dark:text-primary lg:text-[45px] md:text-[5.305vw] text-[5.361vw] leading-[1.2] font-medium whitespace-nowrap"
               >
                 {landingText[currentIndex]}
               </motion.p>

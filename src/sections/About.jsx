@@ -10,7 +10,7 @@ const About = () => {
     >
       <Header title={"about"} index={"01."} />
       <div className="flex md:flex-row flex-col md:justify-between justify-center items-start lg:gap-0 md:gap-4 gap-6 relative">
-        <div className="lg:w-[45%] md:w-[50%] w-[100%] rounded-[7px] relative md:inline hidden">
+        <div className="lg:w-[45%] md:w-[50%] w-[100%] rounded-[7px] relative md:inline hidden shadow-2xl">
           <Image
             src={picture1}
             loading="lazy"
@@ -21,7 +21,7 @@ const About = () => {
             style={{ objectFit: "contain", borderRadius: "7px" }}
           />
         </div>
-        <div className="w-full relative md:hidden inline">
+        <div className="w-full relative md:hidden inline shadow-lg">
           <Image
             src={picture2}
             loading="lazy"
@@ -38,7 +38,7 @@ const About = () => {
           </BodyAnim>
           <div className="flex flex-col justify-normal w-full mt-[3%] lg:gap-6 gap-5 ">
             <BodyAnim className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] leading-[1.4] ">
-              I am an independent full-stack developer, UI/UX designer and
+              I am an independent full-stack developer, UI/UX designer, and
               full-time computer engineering student at University of Waterloo.
             </BodyAnim>
             <BodyAnim className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] leading-[1.4] ">
