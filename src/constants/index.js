@@ -14,15 +14,18 @@ export const skills = [
 export const projects = [
   {
       name: "ResuMatch",
-      url: "/projects/resumatch"
+      url: "/projects/resumatch",
+      description: "Internship Application Manager"
   },
   {
     name: "SpotiTrack",
-    url: "/projects/spotitrack"
+    url: "/projects/spotitrack",
+    description: "Spotify Music Tracker"
   },
   {
     name: "Website V1",
-    url: "/projects/website-v1"
+    url: "/projects/website-v1",
+    description: "Personal Website Portfolio"
   },
 
 ];

@@ -64,7 +64,7 @@ const Services = () => {
               my resume.
             </BodyAnim>
             <BodyAnim className="lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] text-grey2 dark:text-grey3 leading-[1.4]  mb-[2%]">
-              You can see the rest of my skills here.
+              The rest of my skills can be found here.
             </BodyAnim>
             <BodyAnim>
               <Link
@@ -74,7 +74,7 @@ const Services = () => {
               >
                 <Button
                   label={"Resume"}
-                  className="w-full text-center text-primary bg-tertiary font-[700] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw] rounded-lg py-2"
+                  className="uppercase flex justify-center items-center cursor-pointer tracking-tight w-full text-center text-primary bg-tertiary font-[700] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw] rounded-lg py-2"
                 />
               </Link>
             </BodyAnim>
