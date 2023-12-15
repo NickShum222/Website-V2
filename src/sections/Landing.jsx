@@ -21,20 +21,20 @@ const Landing = () => {
         <div className="flex z-10 flex-col justify-start items-start w-full lg:mt-[-1%]">
           <TextAnim
             className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary"
-            delay={loaded ? 0.7 : 2.4}
+            delay={loaded ? 0: 2.4}
           >
             SOFTWARE
           </TextAnim>
           <TextAnim
             className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary lg:mt-[-2%]"
-            delay={loaded ? 0.75 : 2.45}
+            delay={loaded ? 0 : 2.45}
           >
             DEVELOPER
           </TextAnim>
           <motion.div
             className="flex justify-start  items-center lg:gap-4 sm:gap-2 gap-1 w-full "
             variants={landingSubSlideRight}
-            custom={loaded ? 0.8 : null}
+            custom={loaded ? 0: 2.45}
             initial="initial"
             animate="animate"
           >
@@ -56,7 +56,7 @@ const Landing = () => {
         <div className="z-10 flex flex-col justify-end w-full items-end mb-[-1%]">
           <TextAnim
             className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary "
-            delay={loaded ? 0.7 : 2.4}
+            delay={loaded ? 0 : 2.4}
           >
             NICK
           </TextAnim>
@@ -64,7 +64,7 @@ const Landing = () => {
             className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary lg:-mr-3 md:-mr-2
           -mr-1 lg:mt-[-3%]
           "
-            delay={loaded ? 0.75 : 2.43}
+            delay={loaded ? 0 : 2.43}
           >
             SHUM
           </TextAnim>

@@ -33,23 +33,6 @@ const Experiences = () => {
         <div className="sm:hidden inline w-full">
           <Header title="Work" index="03." />
         </div>
-        {/*<div className="flex w-full justify-end md:mb-[2%] mb-[7%]">*/}
-        {/*  <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">*/}
-        {/*    <div*/}
-        {/*      className="text-tertiary dark:text-primary md:text-[3.125vw]*/}
-        {/*  sm:text-[3.980vw] text-[5.089vw]*/}
-        {/*  italic tracking-tighter font-[300] leading-[0.9] lg:mt-1"*/}
-        {/*    >*/}
-        {/*      03.*/}
-        {/*    </div>*/}
-        {/*    <div className="lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] sm:inline hidden leading-[0.8] tracking-tight  font-[700] text-tertiary dark:text-primary border-tertiary border-b-2 border-solid w-full dark:border-primary pb-[4%]">*/}
-        {/*      EXPERIENCES*/}
-        {/*    </div>*/}
-        {/*    <div className="text-[12.427vw] font-[700] leading-[0.8] text-tertiary dark:text-primary border-b-2 border-solid w-full dark:border-primary border-tertiary pb-[4%] sm:hidden inline">*/}
-        {/*      WORK*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
         <div className="flex lg:flex-row flex-col justify-between items-start lg:gap-0 sm:gap-8 gap-6 w-full">
           <div className="flex lg:flex-col flex-row justify-start items-start lg:w-[20%] w-full lg:gap-3 sm:gap-12 gap-4 lg:pl-[5%] relative">
             {experiences.map((experience, index) => {

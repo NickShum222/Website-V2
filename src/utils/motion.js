@@ -9,7 +9,7 @@ export const landingSubSlideRight = {
     transition: {
       duration: 0.75,
       ease: [0.25, 1, 0.5, 1],
-      delay: index || 2.45,
+      delay: index,
     },
   }),
 };
