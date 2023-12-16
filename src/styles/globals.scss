@@ -10,6 +10,27 @@
   @apply transition-colors;
   @apply duration-500;
 }
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 .landing-text {
   transform-style: preserve-3d;
 }
@@ -69,4 +90,7 @@
 .perspective {
   perspective: 700px;
   perspective-origin: left;
+}
+.scroll-smooth{
+  scroll-behavior: smooth;
 }

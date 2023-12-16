@@ -39,7 +39,7 @@ const About = () => {
           <div className="flex flex-col justify-normal w-full mt-[3%] lg:gap-6 gap-5 ">
             <BodyAnim className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] leading-[1.4] ">
               I am an independent full-stack developer, UI/UX designer, and
-              full-time computer engineering student at University of Waterloo.
+              full-time computer engineering student at the University of Waterloo.
             </BodyAnim>
             <BodyAnim className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] leading-[1.4] ">
               My goal is to create innovative solutions and applications that

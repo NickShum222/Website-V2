@@ -67,7 +67,7 @@ const Projects = () => {
                 <p className="font-[700] uppercase lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-tertiary">
                   {project.name}
                 </p>
-                <p className={"text-primary font-[500] tracking-tight hidden lg:inline text-aboutParagraph"}>{project.description}</p>
+                <p className={"text-primary font-[500] hidden lg:inline text-[1.6vw]"}>{project.description}</p>
               </div>
             </Link>
           ))}
