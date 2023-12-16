@@ -104,7 +104,7 @@ const Contact = () => {
               type="submit"
               className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-aboutParagraph md:text-[3.980vw] text-[6.361vw] "
             >
-              <Button label={"submit"} className="" />
+              <Button label={"submit"} className="uppercase text-primary bg-tertiary flex justify-center items-center cursor-pointer font-[700] tracking-tight" />
             </button>
             <div
               className={`text-green-700 lg:text-[16px] text-[14px] pt-3 mb-0 pb-0 ${
@@ -165,7 +165,7 @@ const Contact = () => {
             >
               <Button
                 label={"resume"}
-                className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-aboutParagraph md:text-[3.980vw] text-[6.361vw]"
+                className="uppercase  flex justify-center items-center cursor-pointer text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-aboutParagraph md:text-[3.980vw] text-[6.361vw]"
               />
             </Link>
           </BodyAnim>
