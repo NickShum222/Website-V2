@@ -9,7 +9,8 @@ const Projects = () => {
 
 
   return (
-    <div
+    <section
+    id="projects"
       className={`flex flex-col justify-start bg-primary dark:bg-secondary md:pb-[4%] pb-[40%] w-full`}
     >
       <Header
@@ -67,13 +68,13 @@ const Projects = () => {
                 <p className="font-[700] uppercase lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-tertiary">
                   {project.name}
                 </p>
-                <p className={"text-primary font-[500] hidden lg:inline text-[1.6vw]"}>{project.description}</p>
+                {/* <p className={"text-primary font-[500] hidden lg:inline text-[1.6vw]"}>{project.description}</p> */}
               </div>
             </Link>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

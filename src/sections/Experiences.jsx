@@ -20,12 +20,13 @@ const Experiences = () => {
   });
   const [selected, setSelected] = useState(0);
   return (
-    <div
+    <section
+    id="experiences"
       ref={element}
       className="min-h-[200lvh] relative w-full bg-primary dark:bg-secondary"
     >
       <div
-        className={`lg:px-[6%] md:px-[64px] px-[24px] py-[2%] flex flex-col md:justify-start justify-center bg-primary dark:bg-secondary w-full min-h-[100dvh] sticky top-0`}
+        className={`lg:px-[6%] md:px-[64px] px-[24px] lg:py-[6%] py-[2%] flex flex-col md:justify-start justify-center bg-primary dark:bg-secondary w-full min-h-[100dvh] sticky top-0`}
       >
         <div className="sm:inline hidden w-full">
           <Header title="Experiences" index="03." />
@@ -89,7 +90,7 @@ const Experiences = () => {
           </AnimatePresence>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -110,15 +111,17 @@ const ExperienceTitle = ({ label, range, progress, setSelected, index }) => {
       setSelected(index);
     }
   });
+
   return (
-    <motion.span
-      style={{ opacity, x }}
-      className={`font-[600] transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight text-primary`}
-    >
-      {label}
-    </motion.span>
+    <>
+      <motion.span
+        style={{ opacity, x }}
+        className={`font-[600] transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight text-primary`}
+      >
+        {label}
+      </motion.span>
+    </>
   );
 };
-
 
 export default Experiences;

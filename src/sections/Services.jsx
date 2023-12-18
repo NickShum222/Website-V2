@@ -12,7 +12,8 @@ const Services = () => {
   const isInView = useInView(skillsContainer, { once: true, amount: 0.4 });
   const isInViewMobile = useInView(skillsContainerMobile, { once: true, amount: 0.4 });
   return (
-    <div
+    <section
+    id="services"
       className={`lg:px-[6%] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary dark:bg-secondary  w-full`}
     >
       <Header title="Services" index="02." />
@@ -98,7 +99,7 @@ const Services = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

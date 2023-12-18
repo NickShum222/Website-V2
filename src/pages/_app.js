@@ -17,6 +17,7 @@ export const Load = createContext();
 export default function App({Component, pageProps}) {
     const [loaded, setLoaded] = useState(false)
     const router = useRouter();
+
     useEffect(() => {
         if(router.pathname !== '/'){
             setLoaded(true);

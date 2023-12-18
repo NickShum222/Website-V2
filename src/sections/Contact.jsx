@@ -49,7 +49,8 @@ const Contact = () => {
   });
 
   return (
-    <div
+    <section
+    id="contact"
       className={`lg:px-[6%] md:px-[64px] px-[24px] py-[6%] flex flex-col justify-start bg-primary dark:bg-secondary  w-full`}
     >
       <Header title="Contact" index="05." />
@@ -171,7 +172,7 @@ const Contact = () => {
           </BodyAnim>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
