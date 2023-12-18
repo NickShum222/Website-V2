@@ -1,5 +1,4 @@
-"use client";
-import { useRef, useEffect } from "react";
+import { useRef} from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { paragraph } from "@/constants";
 const LandingSub = () => {

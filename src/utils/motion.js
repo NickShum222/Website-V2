@@ -100,3 +100,17 @@ export const experiencesBodySlideUp = {
     opacity: 0
   }
 }
+
+export const bodyAnim2SlideUp = {
+  initial: {
+    y: "100%",
+  },
+  enter: (delay) => ({
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.33, 1, 0.68, 1],
+      delay: delay * 0.01 + 0.2,
+    },
+  }),
+};

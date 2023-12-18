@@ -6,6 +6,8 @@ import SEO from "./SEO";
 import Header from "./Header";
 import TextAnim from "./TextAnim";
 import BodyAnim from "./BodyAnim";
+import BodyAnim2 from "./BodyAnim2";
+
 
 export { 
   Section, 
@@ -16,5 +18,5 @@ export {
   Header,
   TextAnim,
   BodyAnim,
-
+  BodyAnim2
 };

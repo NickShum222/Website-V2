@@ -4,7 +4,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Button, Header, BodyAnim } from "@/components";
+import { Button, Header, BodyAnim, BodyAnim2 } from "@/components";
 import { socials } from "@/constants";
 import Link from "next/link";
 
@@ -56,13 +56,12 @@ const Contact = () => {
       <Header title="Contact" index="05." />
       <div className="flex lg:flex-row flex-col justify-between items-start w-full">
         <div className="flex flex-col items-start lg:w-[65%] w-full">
-          <BodyAnim className="lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] md:leading-[1.1] leading-[1.2] font-[700] text-secondary dark:text-primary mb-[1%]">
-            Want to say hello? <br className="lg:inline hidden" /> Feel free to
-            reach out!
-          </BodyAnim>
-          <BodyAnim className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[400] md:text-[2.576vw] text-[4.589vw] leading-[1.3]  mb-[4%]">
+          <BodyAnim2 className="lg:text-servicesTech md:text-[4.969vw] text-center text-[6.939vw] md:leading-[1] leading-[1.2] font-[700] text-secondary dark:text-primary mb-[1%]">
+            Want to say hello? Feel free to reach out!
+          </BodyAnim2>
+          <BodyAnim2 className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[400] md:text-[2.576vw] text-[4.589vw] leading-[1.3]  mb-[4%]">
             I am looking for Summer 2024 internship opportunities.
-          </BodyAnim>
+          </BodyAnim2>
           <input
             id="name"
             placeholder="Name"
@@ -117,18 +116,19 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex flex-col items-end justify-end lg:w-[25%] lg:gap-8 md:gap-6 gap-4 w-full">
-          <BodyAnim className="flex flex-col items-start w-full">
-            <div className="font-[700] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] ">
+          <div className="flex flex-col items-start w-full">
+            <BodyAnim2 className="font-[700] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] ">
               Contact details
-            </div>
+            </BodyAnim2>
             <a
               href="mailto:n4shum@uwaterloo.ca"
               target="_blank"
-              className="lg:text-aboutParagraph md:text-[3.576vw] text-[4.589vw] font-[400] tracking-tight text-grey2"
             >
-              n4shum@uwaterloo.ca
+              <BodyAnim2 className="lg:text-aboutParagraph md:text-[3.576vw] text-[4.589vw] font-[400] tracking-tight text-grey2">
+                n4shum@uwaterloo.ca
+              </BodyAnim2>
             </a>
-          </BodyAnim>
+          </div>
           <BodyAnim className="flex flex-col items-start w-full">
             <div className="font-[700] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] lg:mb-[6%] mb-[2%]">
               My Socials
