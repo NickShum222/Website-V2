@@ -16,7 +16,7 @@ import { Section, SEO, Navbar } from "@/components";
 export default function Home() {
   const [loaded, setLoaded] = useContext(Load);
   const [theme, setTheme] = useState("light");
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setActive(true);
