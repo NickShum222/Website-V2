@@ -1,10 +1,10 @@
 "use client";
 import { useRef } from "react";
-import { Button, Header, BodyAnim, BodyAnim2, TextAnim } from "@/components";
+import { Button, Header, BodyAnim, BodyAnim2 } from "@/components";
 import { skills } from "@/constants";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import { servicesToolsSlideIn, servicesToolsSlideIn2 } from "@/utils/motion";
+import {bodyAnim2SlideUp} from "@/utils/motion";
 
 const Services = () => {
   const skillsContainer = useRef(null);
@@ -25,39 +25,35 @@ const Services = () => {
             <BodyAnim2 className="dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] text-grey2 md:leading-[1.1] leading-[1.2] mb-[6%]">
               Here are just some of my go-to tools used for web development.
             </BodyAnim2>
-            <div
-              ref={skillsContainerMobile}
-              className="w-full flex md:hidden justify-between items-start"
-            >
-              <div className="w-[50%] flex flex-col items-start ">
-                {skills.slice(0, 4).map((skill, index) => (
-                  <motion.div
-                    className="font-bold text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
-                    key={index}
-                    custom={index}
-                    variants={servicesToolsSlideIn2}
-                    initial="initial"
-                    animate={isInViewMobile ? "enter" : "initial"}
-                  >
-                    {skill}
-                  </motion.div>
-                ))}
+            <BodyAnim className={"w-full"}>
+              <div
+                  ref={skillsContainerMobile}
+                  className="w-full flex md:hidden justify-between items-start"
+              >
+                <div className="w-[50%] flex flex-col items-start ">
+                  {skills.slice(0, 4).map((skill, index) => (
+                      <div
+                          className="font-bold text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
+                          key={index}
+                      >
+                        {skill}
+                      </div>
+                  ))}
+                </div>
+                <div className="w-[50%] flex flex-col items-end ">
+                  {skills.slice(4, 8).map((skill, index) => (
+                      <div
+                          className="font-bold text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
+                          key={index}
+
+                      >
+                        {skill}
+                      </div>
+                  ))}
+                </div>
               </div>
-              <div className="w-[50%] flex flex-col items-end ">
-                {skills.slice(4, 8).map((skill, index) => (
-                  <motion.div
-                    className="font-bold text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
-                    key={index}
-                    custom={index}
-                    variants={servicesToolsSlideIn}
-                    initial="initial"
-                    animate={isInViewMobile ? "enter" : "initial"}
-                  >
-                    {skill}
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+            </BodyAnim>
+
           </div>
           <div className="flex flex-col justify-start w-full ">
             <BodyAnim2 className="text-secondary dark:text-primary font-[700] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] tracking-tight mb-[1.5%]">
@@ -85,16 +81,19 @@ const Services = () => {
           className=" flex-col items-end md:w-[50%] md:flex hidden perspective"
         >
           {skills.map((skill, index) => (
-            <motion.div
-              className="font-bold lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
-              key={index}
-              custom={index}
-              variants={servicesToolsSlideIn}
-              initial="initial"
-              animate={isInView ? "enter" : "initial"}
-            >
-              {skill}
-            </motion.div>
+              <div className={"h-auto relative overflow-y-clip"}>
+                <motion.div
+                  className="font-bold lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
+                  key={index}
+                  custom={index}
+                  variants={bodyAnim2SlideUp}
+                  initial="initial"
+                  animate={isInView ? "enter" : "initial"}
+              >
+                {skill}
+              </motion.div>
+              </div>
+
           ))}
         </div>
       </div>

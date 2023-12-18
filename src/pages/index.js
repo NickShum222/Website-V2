@@ -29,31 +29,31 @@ export default function Home() {
     >
       <SEO theme={theme} />
       {/* <Navbar /> */}
-      {/*{loaded ? (*/}
-      {/*  <Section theme="light" setTheme={setTheme}>*/}
-      {/*    <Landing />*/}
-      {/*  </Section>*/}
-      {/*) : (*/}
-      {/*  <div*/}
-      {/*    className={`w-[100dvw] relative ${*/}
-      {/*      !active ? "h-[100svh] overflow-y-clip" : ""*/}
-      {/*    }`}*/}
-      {/*  >*/}
-      {/*    <div className="absolute top-0 left-0 h-full w-full">*/}
-      {/*      <Loading />*/}
-      {/*    </div>*/}
-      {/*    <div*/}
-      {/*      className="landing  w-full"*/}
-      {/*      style={{*/}
-      {/*        clipPath: active ? "inset(0 0 0 0)" : "inset(50% 0 50% 0)",*/}
-      {/*      }}*/}
-      {/*    >*/}
-      {/*      <Section theme="light" setTheme={setTheme}>*/}
-      {/*        <Landing />*/}
-      {/*      </Section>*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*)}*/}
+      {loaded ? (
+        <Section theme="light" setTheme={setTheme}>
+          <Landing />
+        </Section>
+      ) : (
+        <div
+          className={`w-[100dvw] relative ${
+            !active ? "h-[100svh] overflow-y-clip" : ""
+          }`}
+        >
+          <div className="absolute top-0 left-0 h-full w-full">
+            <Loading />
+          </div>
+          <div
+            className="landing  w-full"
+            style={{
+              clipPath: active ? "inset(0 0 0 0)" : "inset(50% 0 50% 0)",
+            }}
+          >
+            <Section theme="light" setTheme={setTheme}>
+              <Landing />
+            </Section>
+          </div>
+        </div>
+      )}
 
       {(active || loaded) && (
         <>

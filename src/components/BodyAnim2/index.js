@@ -1,19 +1,8 @@
 import {useRef} from "react";
 import {motion, useInView} from "framer-motion";
+import {bodyAnim2SlideUp} from "@/utils/motion";
 
-const slideUp = {
-    initial: {
-        y: "100%",
-    },
-    enter: (delay) => ({
-        y: 0,
-        transition: {
-            duration: 0.5,
-            ease: [0.33, 1, 0.68, 1],
-            delay: delay * 0.01 + 0.2,
-        },
-    }),
-};
+
 
 const index = ({ children, className }) => {
     const ref = useRef(null);
@@ -45,7 +34,7 @@ const Word = ({ children, index, isInView }) => {
             className="relative mr-[1.25%] flex flex-wrap h-auto overflow-y-clip"
         >
             <motion.div
-                        variants={slideUp}
+                        variants={bodyAnim2SlideUp}
                         initial="initial"
                         animate={isInView ? "enter" : "initial"}
                         custom={index}
