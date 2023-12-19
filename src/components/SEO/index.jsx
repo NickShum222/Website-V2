@@ -4,7 +4,7 @@ const index = ({ theme }) => {
   return (
     <Head>
       <title>Nick Shum</title>
-      <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
       <meta name="description" content="Nick Shum | Software Developer" />
       <meta name="author" content="Nick Shum" />
       <meta
