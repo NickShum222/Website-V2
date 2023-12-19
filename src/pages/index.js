@@ -28,7 +28,7 @@ export default function Home() {
       className={`flex flex-col max-w-[100svw] overflow-x-clip ${theme} relative`}
     >
       <SEO theme={theme} />
-      {/* <Navbar /> */}
+       <Navbar />
       {loaded ? (
         <Section theme="light" setTheme={setTheme}>
           <Landing />

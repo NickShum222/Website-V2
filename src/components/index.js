@@ -7,16 +7,19 @@ import Header from "./Header";
 import TextAnim from "./TextAnim";
 import BodyAnim from "./BodyAnim";
 import BodyAnim2 from "./BodyAnim2";
+import Magnetic from "./Magnetic";
+
 
 
 export { 
-  Section, 
-  Button, 
-  Navbar, 
-  SmoothScroll, 
-  SEO,
-  Header,
-  TextAnim,
-  BodyAnim,
-  BodyAnim2
+    Section,
+    Button,
+    Navbar,
+    SmoothScroll,
+    SEO,
+    Header,
+    TextAnim,
+    BodyAnim,
+    BodyAnim2,
+    Magnetic
 };

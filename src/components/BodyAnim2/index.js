@@ -31,7 +31,7 @@ const index = ({ children, className }) => {
 const Word = ({ children, index, isInView }) => {
     return (
         <div
-            className="relative mr-[1.25%] flex flex-wrap h-auto overflow-y-clip"
+            className="relative mr-[1.25%] flex mt-[-0.5%] flex-wrap overflow-y-clip"
         >
             <motion.div
                         variants={bodyAnim2SlideUp}

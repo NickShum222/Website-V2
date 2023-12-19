@@ -20,9 +20,10 @@ const Services = () => {
       <div className="flex w-full md:flex-row flex-col md:justify-center justify-start items-start relative">
         <div className="flex flex-col justify-between items-start gap-8 md:w-[50%] h-full w-full ">
           <div className="flex flex-col items-start justify-between h-full w-full  ">
-            <BodyAnim2 children={"my tech stack."} className="text-secondary dark:text-primary font-[700] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] tracking-tight mb-[1.5%]">
+            <BodyAnim2 className="text-secondary dark:text-primary font-[700] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.3] tracking-tight mb-[1.5%]">
+            my tech stack.
             </BodyAnim2>
-            <BodyAnim2 className="dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] text-grey2 md:leading-[1.1] leading-[1.2] mb-[6%]">
+            <BodyAnim2 className="dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] text-grey2 leading-[1.2] mb-[6%]">
               Here are just some of my go-to tools used for web development.
             </BodyAnim2>
             <BodyAnim className={"w-full"}>
@@ -56,7 +57,7 @@ const Services = () => {
 
           </div>
           <div className="flex flex-col justify-start w-full ">
-            <BodyAnim2 className="text-secondary dark:text-primary font-[700] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] tracking-tight mb-[1.5%]">
+            <BodyAnim2 className="text-secondary dark:text-primary font-[700] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.3] tracking-tight mb-[1.5%]">
               my resume.
             </BodyAnim2>
             <BodyAnim2 className="lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] text-grey2 dark:text-grey3 leading-[1.4]  mb-[2%]">
