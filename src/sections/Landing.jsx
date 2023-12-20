@@ -19,7 +19,7 @@ const Landing = () => {
   return (
       <motion.div
       id="landing"
-      className=" z-[50] select-none flex flex-col w-full justify-between min-h-[100dvh] bg-primary dark:bg-secondary lg:p-6 md:p-7 sm:p-5 p-3 relative">
+      className=" z-[50] select-none flex flex-col w-full justify-between min-h-[100svh] bg-primary dark:bg-secondary lg:p-6 md:p-7 sm:p-5 p-3 relative">
         <div className="flex z-10 flex-col justify-start items-start w-full lg:mt-[-1%]">
           <TextAnim
             className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] md:font-[700] font-[600] tracking-tight text-tertiary dark:text-primary"

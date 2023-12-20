@@ -31,7 +31,7 @@ const navLinks = [
 ]
 const index = () => {
   const { scrollYProgress } =  useScroll();
-  const [showNav, setShowNav] = useState(true);
+  const [showNav, setShowNav] = useState(false);
   const [active, setActive] = useState(false);
   const [nav, setNav] = useState(false);
   const container = useRef(null);
@@ -158,7 +158,6 @@ const index = () => {
       scale: "100%",
       transition: {
         duration: 0.45,
-        delay: 0.5,
         ease: [0.34, 1.56, 0.64, 1]
       }
 

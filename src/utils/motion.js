@@ -128,3 +128,22 @@ export const headerSlide ={
     }
   }
 }
+
+export const fadeIn = {
+  initial: {
+    opacity: 0,
+  },
+  enter: (delay) => ({
+    opacity: 1,
+    transition: {
+      delay: delay,
+      duration: 0.5
+    }
+  }),
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5
+    }
+  }
+}

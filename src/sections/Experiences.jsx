@@ -27,7 +27,7 @@ const Experiences = () => {
       className="min-h-[200lvh] relative w-full bg-primary dark:bg-secondary"
     >
       <div
-        className={`lg:px-[6%] md:px-[64px] px-[24px] lg:py-[6%] py-[2%] flex flex-col md:justify-start justify-center bg-primary dark:bg-secondary w-full min-h-[100dvh] sticky top-0`}
+        className={`lg:px-[6%] md:px-[64px] px-[24px] lg:py-[6%] py-[2%] flex flex-col md:justify-start justify-center bg-primary dark:bg-secondary w-full min-h-[100svh] sticky top-0`}
       >
         <div className="sm:inline hidden w-full">
           <Header title="Experiences" index="03." />

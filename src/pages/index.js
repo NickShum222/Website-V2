@@ -1,26 +1,26 @@
 // "use client";
 // import { Load } from "@/pages/_app";
 import { useState, useEffect, useContext } from "react";
-import {
-  Loading,
-    Landing,
-    LandingSub,
-    About,
-    Services,
-    Projects,
-    Experiences,
-    Contact
-} from "@/sections";
-// import dynamic from "next/dynamic";
+// import {
+//   Loading,
+//     Landing,
+//     LandingSub,
+//     About,
+//     Services,
+//     Projects,
+//     Experiences,
+//     Contact
+// } from "@/sections";
+import dynamic from "next/dynamic";
 import { Section, SEO, Navbar } from "@/components";
 // import {AnimatePresence} from "framer-motion";
-// const Landing = dynamic(() => import("@/sections/Landing"))
-// const LandingSub = dynamic(() => import("@/sections/LandingSub"));
-// const About = dynamic(() => import("@/sections/About"));
-// const Services = dynamic(() => import("@/sections/Services"));
-// const Projects = dynamic(() => import("@/sections/Projects"));
-// const Experiences = dynamic(() => import("@/sections/Experiences"));
-// const Contact = dynamic(() => import("@/sections/Contact"));
+const Landing = dynamic(() => import("@/sections/Landing"))
+const LandingSub = dynamic(() => import("@/sections/LandingSub"));
+const About = dynamic(() => import("@/sections/About"));
+const Services = dynamic(() => import("@/sections/Services"));
+const Projects = dynamic(() => import("@/sections/Projects"));
+const Experiences = dynamic(() => import("@/sections/Experiences"));
+const Contact = dynamic(() => import("@/sections/Contact"));
 
 export default function Home() {
   // const [loaded, setLoaded] = useContext(Load);

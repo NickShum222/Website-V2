@@ -1,5 +1,5 @@
 import {useRef} from "react";
-import {headerSlide} from "@/utils/motion";
+import {headerSlide, fadeIn} from "@/utils/motion";
 import {useInView, motion} from "framer-motion";
 
 const slideUp = {
@@ -24,9 +24,9 @@ const index = ({ title, index, className }) => {
         className={`${className} flex w-full justify-end md:mb-[4%] mb-[7%]`}>
       <div className="flex justify-start items-start sm:w-[80%] w-[90%] lg:gap-6 md:gap-4 gap-2">
         <motion.h4
-            variants={slideUp}
+            variants={fadeIn}
             initial="initial"
-            delay={1.8}
+            delay={1.95}
             animate={isInView ? "enter" : "initial"}
           className="text-tertiary dark:text-primary lg:text-headingIndexClamp md:text-[3.125vw]
                 sm:text-[3.980vw] text-[5.089vw]
