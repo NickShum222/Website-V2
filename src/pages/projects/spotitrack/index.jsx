@@ -1,8 +1,8 @@
-"use client";
 import React, { useEffect } from "react";
 import { SEO, Button } from "@/components";
 import Link from "next/link";
 import Image from "next/image";
+import { BsArrowUpRight, BsArrowLeft } from "react-icons/bs";
 
 import picture1 from "../../../../public/images/spotitrack/SpotiTrackLanding.png";
 import picture2 from "../../../../public/images/spotitrack/SpotiTrackDashboard.png";
@@ -36,10 +36,10 @@ const index = () => {
               scroll={false}
               href={"/"}
               className={
-                "lg:text-[1.5em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
+                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
               }
             >
-              <p>Go Back</p>
+              <div className="flex items-center gap-1"><BsArrowLeft/> Go Back</div>
               <span
                 className={
                   "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
@@ -93,13 +93,18 @@ const index = () => {
             </p>
             <div className={"flex justify-start gap-2 mt-[6%]"}>
               <Link
-                target="_blank"
-                href={"https://github.com/NickShum222/Spotify-Tracker"}
-                className={
-                  "uppercase text-center lg:text-[1.4em] md:text-[1.3em] text-[1.2em] text-primary border-solid border-[1px] border-primary font-[500] px-[3%] py-[1.25%] rounded-full"
-                }
+                  scroll={false}
+                  href={"https://github.com/NickShum222/Spotify-Tracker"}
+                  className={
+                    "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
+                  }
               >
-                <Button label={"Github Repository"} className={""} />
+                <div className="flex items-center gap-1">Github Repository <BsArrowUpRight/></div>
+                <span
+                    className={
+                      "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
+                    }
+                />
               </Link>
             </div>
           </div>
@@ -146,7 +151,7 @@ const index = () => {
                 scroll={false}
                 href={"/"}
                 className={
-                  "lg:text-[1.5em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
+                  "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
                 }
             >
               <p>Go Back</p>
@@ -159,7 +164,7 @@ const index = () => {
             <a
               href={"#spotitrack"}
               className={
-                "lg:text-[1.5em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
+                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
               }
             >
               <p>Scroll Top</p>

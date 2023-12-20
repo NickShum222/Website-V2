@@ -1,5 +1,5 @@
 // "use client";
-import { Load } from "@/pages/_app";
+// import { Load } from "@/pages/_app";
 import { useState, useEffect, useContext } from "react";
 import {
   Loading,
@@ -11,9 +11,9 @@ import {
     Experiences,
     Contact
 } from "@/sections";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { Section, SEO, Navbar } from "@/components";
-import {AnimatePresence} from "framer-motion";
+// import {AnimatePresence} from "framer-motion";
 // const Landing = dynamic(() => import("@/sections/Landing"))
 // const LandingSub = dynamic(() => import("@/sections/LandingSub"));
 // const About = dynamic(() => import("@/sections/About"));

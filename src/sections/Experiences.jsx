@@ -12,24 +12,6 @@ import {
 } from "framer-motion";
 import { experiencesBodySlideUp } from "@/utils/motion";
 
-const experiencesBackground = {
-  initial: {
-    y: "-100%"
-  },
-  enter: {
-    y: 0,
-    transition: {
-      duration: 0.5,
-    }
-  },
-  exit: {
-    y: "100%",
-    transition: {
-      duration: 0.5,
-    }
-  }
-}
-
 
 const Experiences = () => {
   const element = useRef(null);
