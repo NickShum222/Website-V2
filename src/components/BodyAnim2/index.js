@@ -9,14 +9,14 @@ const index = ({ children, className }) => {
     const isInView = useInView(ref, {once: true, amount:0.4});
     const words = children.split(" ");
     return (
-            <div
+        <div
             ref={ref}
-            className={`${className} relative w-full `}
+            className={`relative w-full`}
         >
             <div className={"w-full flex flex-wrap"}>
                 {words.map((word, i) => {
                     return (
-                        <Word key={i} index ={i} isInView={isInView} >
+                        <Word key={i} index ={i} isInView={isInView} className={className} >
                             {word}
                         </Word>
                     );
@@ -28,12 +28,13 @@ const index = ({ children, className }) => {
     );
 };
 
-const Word = ({ children, index, isInView }) => {
+const Word = ({ children, index, isInView, className }) => {
     return (
         <div
-            className="relative mr-[1.25%] flex mt-[-0.5%] flex-wrap overflow-y-clip"
+            className={`${className} relative mr-[1.25%] flex mt-[-0.5%] flex-wrap overflow-y-clip`}
         >
             <motion.div
+
                         variants={bodyAnim2SlideUp}
                         initial="initial"
                         animate={isInView ? "enter" : "initial"}

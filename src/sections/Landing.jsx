@@ -18,7 +18,7 @@ const Landing = () => {
   return (
     <>
       <section 
-      id="home"
+      id="landing"
       className="z-[100] select-none flex flex-col w-full justify-between min-h-[100dvh] bg-primary dark:bg-secondary lg:p-6 md:p-7 sm:p-5 p-3 relative">
         <div className="flex z-10 flex-col justify-start items-start w-full lg:mt-[-1%]">
           <TextAnim

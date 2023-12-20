@@ -32,11 +32,11 @@ const Projects = () => {
               onMouseLeave={() => {
                 setActive(null);
               }}
-              className={`z-10 py-[2%]  border-t-[1px] border-solid border-secondary dark:border-primary lg:px-[6%] md:px-[64px] px-[24px]
+              className={`z-10 lg:py-[2%] py-[4%]  border-t-[1px] border-solid border-secondary dark:border-primary lg:px-[6%] md:px-[64px] px-[24px]
           ${index === 2 ? "border-b-[1px]" : ""} cursor-pointer `}
             >
               <p
-                className={`text-tertiary uppercase dark:text-primary lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight font-[700]`}
+                className={`text-tertiary uppercase dark:text-primary lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight font-[600]`}
               >
                 {project.name}
               </p>
@@ -49,7 +49,7 @@ const Projects = () => {
                 scroll={false}
               href={project.url}
               key={index}
-              className={`bg-tertiary dark:bg-primary py-[2%]  border-t-[1px] border-solid dark:border-primary border-secondary lg:px-[6%] md:px-[64px] px-[24px] relative
+              className={`bg-tertiary dark:bg-primary lg:py-[2%] py-[4%] border-t-[1px] border-solid dark:border-primary border-secondary lg:px-[6%] md:px-[64px] px-[24px] relative
           ${
             index === 2 ? "border-b-[1px]" : ""
           } description z-20 cursor-pointer`}
@@ -65,7 +65,7 @@ const Projects = () => {
               }}
             >
               <div className="  flex h-full justify-between items-center">
-                <p className="font-[700] uppercase lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-tertiary">
+                <p className="font-[600] uppercase lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-tertiary">
                   {project.name}
                 </p>
                 {/* <p className={"text-primary font-[500] hidden lg:inline text-[1.6vw]"}>{project.description}</p> */}

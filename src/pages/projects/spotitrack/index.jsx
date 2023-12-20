@@ -24,11 +24,11 @@ const index = () => {
     <section id="spotitrack" className={"scroll-smooth"}>
       <SEO theme={"dark"} />
       <div
-        className={`lg:px-[6%] md:px-[64px] min-h-[100dvh] w-[100dvw] px-[24px] lg:py-[64px] py-[6%] flex lg:flex-row flex-col justify-between items-start bg-secondary `}
+        className={`lg:px-[4%] md:px-[64px] min-h-[100dvh] w-[100dvw] px-[24px] lg:pb-[64px] pb-[6%] lg:pt-[148px] pt-[6%] flex lg:flex-row flex-col justify-between items-start bg-secondary `}
       >
         <div
           className={
-            "lg:w-[60%] w-full flex flex-col justify-start lg:sticky lg:top-[64px]"
+            "lg:w-[45%] w-full flex flex-col justify-start lg:sticky lg:top-[148px]"
           }
         >
           <div className={"flex justify-start"}>
@@ -36,20 +36,20 @@ const index = () => {
               scroll={false}
               href={"/"}
               className={
-                "lg:text-[1.5em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 font-[500] py-[1.25%] "
+                "lg:text-[1.5em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
               }
             >
               <p>Go Back</p>
               <span
                 className={
-                  "max-w-0 group-hover:max-w-full block bg-grey3 transition-all duration-350 ease-in h-[2px]"
+                  "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
                 }
               />
             </Link>
           </div>
           <div
             className={
-              "lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight font-[700] text-primary"
+              "lg:text-[5.5em] md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight font-[600] text-primary text-wrap"
             }
           >
             SPOTITRACK
@@ -63,7 +63,7 @@ const index = () => {
               <div
                 key={index}
                 className={
-                  "lg:text-[1.2em] md:text-[1.1em] text-[0.9em] mb-[1.5%] border-[1px] border-solid rounded-full mr-[1%] border-primary text-primary px-[1.5%] py-[0.25%] lg:font-[600] font-[500] leading-[1.3] uppercase text-center italic"
+                  "lg:text-[1.2em] md:text-[1.1em] text-[0.8em] mb-[1.5%] border-[1px] border-solid rounded-full mr-[1%] border-primary text-primary px-3 py-1 lg:font-[600] font-[500] leading-[1] uppercase text-center italic"
                 }
               >
                 {tool}
@@ -73,7 +73,7 @@ const index = () => {
           <div className={"flex flex-col justify-start w-full mb-[3%]"}>
             <p
               className={
-                "w-full text-primary leading-[1.4] font-[500] lg:text-[1.5em] md:text-[1.3em] text-[1.2em]"
+                "w-full text-primary leading-[1.4] font-[500] lg:text-[1.3em] md:text-[1.3em] text-[1.2em]"
               }
             >
               SpotiTrack streamlines your Spotify experience with easy access to
@@ -82,7 +82,7 @@ const index = () => {
             </p>
             <p
               className={
-                "w-full text-primary leading-[1.4] font-[300] lg:text-[1.5em] md:text-[1.3em] text-[1.2em] mt-[3%]"
+                "w-full text-primary leading-[1.4] font-[300] lg:text-[1.3em] md:text-[1.3em] text-[1.2em] mt-[3%]"
               }
             >
               Leveraging Next.js, React.js, and Tailwind CSS, the frontend
@@ -106,7 +106,7 @@ const index = () => {
         </div>
         <div
           className={
-            "flex flex-col justify-center items-center lg:w-[35%] w-full gap-8"
+            "flex flex-col justify-center items-center lg:w-[50%] w-full gap-8"
           }
         >
           <Image
@@ -143,29 +143,29 @@ const index = () => {
             className={"w-full flex justify-between items-center lg:hidden "}
           >
             <Link
-              scroll={false}
-              href={"/"}
-              className={
-                "lg:text-[1.5em] md:text-[1.3em] text-[1.2em] group text-center text-white font-[500] py-[1.25%] "
-              }
+                scroll={false}
+                href={"/"}
+                className={
+                  "lg:text-[1.5em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
+                }
             >
               <p>Go Back</p>
               <span
-                className={
-                  "max-w-0 group-hover:max-w-full block bg-white transition-all duration-350 ease-in h-[2px]"
-                }
+                  className={
+                    "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
+                  }
               />
             </Link>
             <a
               href={"#spotitrack"}
               className={
-                "lg:text-[1.5em] md:text-[1.3em] text-[1.2em] group text-center text-white font-[500] py-[1.25%] "
+                "lg:text-[1.5em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
               }
             >
               <p>Scroll Top</p>
               <span
                 className={
-                  "max-w-0 group-hover:max-w-full block bg-white transition-all duration-350 ease-in h-[2px]"
+                  "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
                 }
               />
             </a>

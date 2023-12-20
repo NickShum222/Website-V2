@@ -55,12 +55,12 @@ const Experiences = () => {
         </div>
         <div className="flex lg:flex-row flex-col justify-between items-start lg:gap-0 sm:gap-8 gap-6 w-full">
           <div className="flex lg:flex-col flex-row justify-start items-start lg:w-[15%] w-full md:ml-[5%] md:pl-[0.5%] pl-[1%] relative">
-            <motion.div className={"absolute md:inline hidden bg-grey4 top-0 right-0 w-full z-[10] opacity-20 rounded-md"}
+            <motion.div className={"absolute md:inline hidden bg-grey4 top-0 right-0 w-full z-[10] opacity-20 "}
                         animate={{ y: `${100 * selected}%` }}
                         style={{height: `calc(100% / ${experiences.length})`}}
                         transition={{duration: 0.25, ease: [0.5, 1, 0.89, 1]}}
             ></motion.div>
-            <motion.div className={"absolute md:hidden inline bg-grey4 top-0 left-0 h-full z-[10] opacity-20 rounded-md"}
+            <motion.div className={"absolute md:hidden inline bg-grey4 top-0 left-0 h-full z-[10] opacity-20 "}
                         animate={{ x: `${100 * selected}%` }}
                         style={{width: `calc(100% / ${experiences.length})`}}
                         transition={{duration: 0.25, ease: [0.5, 1, 0.89, 1]}}

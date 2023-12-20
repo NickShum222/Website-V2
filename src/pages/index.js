@@ -3,16 +3,10 @@ import { Load } from "@/pages/_app";
 import { useState, useEffect, useContext } from "react";
 import {
   Loading,
-  Landing,
-  // LandingSub,
-  // About,
-  // Services,
-  // Projects,
-  // Experiences,
-  // Contact,
 } from "@/sections";
 import dynamic from "next/dynamic";
 import { Section, SEO, Navbar } from "@/components";
+const Landing = dynamic(() => import("@/sections/Landing"))
 const LandingSub = dynamic(() => import("@/sections/LandingSub"));
 const About = dynamic(() => import("@/sections/About"));
 const Services = dynamic(() => import("@/sections/Services"));
@@ -35,11 +29,9 @@ export default function Home() {
       className={`flex flex-col max-w-[100svw] overflow-x-clip ${theme} relative`}
     >
       <SEO theme={theme} />
-       <Navbar />
       {loaded ? (
-        <Section theme="light" setTheme={setTheme}>
-          <Landing />
-        </Section>
+              <Section theme="light" setTheme={setTheme}>
+              </Section>
       ) : (
         <div
           className={`w-[100dvw] relative ${
@@ -64,9 +56,10 @@ export default function Home() {
 
       {(active || loaded) && (
         <>
-          <Section theme="dark" setTheme={setTheme}>
-            <LandingSub />
-          </Section>
+          <Navbar/>
+          {/*<Section theme="dark" setTheme={setTheme}>*/}
+          {/*  <LandingSub />*/}
+          {/*</Section>*/}
           <Section theme="light" setTheme={setTheme}>
             <About />
           </Section>

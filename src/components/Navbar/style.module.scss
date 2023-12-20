@@ -1,6 +1,6 @@
 .burger {
   width: 100%;
-  z-index: 200;
+  z-index: 50;
   &::after,
   &::before {
     content: "";

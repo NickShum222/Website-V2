@@ -114,3 +114,17 @@ export const bodyAnim2SlideUp = {
     },
   }),
 };
+
+export const headerSlide ={
+  initial: {
+    x:"-100%"
+  },
+  enter: {
+    x: "0%",
+    transition:{
+      duration: 0.9,
+      delay: 0.6,
+      ease: [0.16, 1, 0.3, 1]
+    }
+  }
+}
