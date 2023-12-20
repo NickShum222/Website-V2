@@ -56,7 +56,7 @@ const Contact = () => {
       <Header title="Contact" index="05." />
       <div className="flex lg:flex-row flex-col justify-between items-start w-full">
         <div className="flex flex-col items-start lg:w-[65%] w-full">
-          <BodyAnim2 className="lg:text-servicesTech md:text-[4.969vw] text-center text-[6.939vw] md:leading-[1] leading-[1.2] font-[700] text-secondary dark:text-primary mb-[1%]">
+          <BodyAnim2 className="lg:text-servicesTech md:text-[4.969vw] text-center text-[6.939vw] md:leading-[1] leading-[1.2] font-[600] text-secondary dark:text-primary mb-[1%]">
             Want to say hello? Feel free to reach out!
           </BodyAnim2>
           <BodyAnim2 className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[400] md:text-[2.576vw] text-[4.589vw] leading-[1.3]  mb-[4%]">
@@ -102,9 +102,9 @@ const Contact = () => {
             <button
               onClick={formik.handleSubmit}
               type="submit"
-              className="text-center font-[700] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-aboutParagraph md:text-[3.980vw] text-[6.361vw] "
+              className="text-center font-[600] w-full py-[2%] text-primary tracking-tight leading-[1.3] bg-tertiary rounded-[6px] lg:text-aboutParagraph md:text-[3.980vw] text-[6.361vw] "
             >
-              <Button label={"submit"} className="uppercase text-primary bg-tertiary flex justify-center items-center cursor-pointer font-[700] tracking-tight" />
+              <Button label={"submit"} className="uppercase text-primary bg-tertiary flex justify-center items-center cursor-pointer font-[600] tracking-tight" />
             </button>
             <div
               className={`text-green-700 lg:text-[16px] text-[14px] pt-3 mb-0 pb-0 ${
@@ -117,7 +117,7 @@ const Contact = () => {
         </div>
         <div className="flex flex-col items-end justify-end lg:w-[25%] lg:gap-8 md:gap-6 gap-4 w-full">
           <div className="flex flex-col items-start w-full">
-            <BodyAnim2 className="font-[700] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] ">
+            <BodyAnim2 className="font-[600] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] ">
               Contact details
             </BodyAnim2>
             <a

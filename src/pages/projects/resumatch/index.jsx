@@ -11,7 +11,7 @@ const index = () => {
         <div className={"w-[50%] flex flex-col justify-start"}>
           <div
             className={
-              "lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight font-[700] text-primary"
+              "lg:text-headingLgClamp md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight font-[600] text-primary"
             }
           >
             RESUMATCH

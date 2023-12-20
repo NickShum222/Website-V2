@@ -20,7 +20,7 @@ const Services = () => {
       <div className="flex w-full md:flex-row flex-col md:justify-center justify-start items-start relative">
         <div className="flex flex-col justify-between items-start gap-8 md:w-[50%] h-full w-full ">
           <div className="flex flex-col items-start justify-between h-full w-full  mb-[6%]">
-            <BodyAnim2 className="text-secondary dark:text-primary font-[700] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.3] tracking-tight mb-[1.5%]">
+            <BodyAnim2 className="text-secondary dark:text-primary font-[600] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.3] tracking-tight mb-[1.5%]">
             my tech stack.
             </BodyAnim2>
             <BodyAnim2  className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] leading-[1.4] ">
@@ -57,7 +57,7 @@ const Services = () => {
 
           </div>
           <div className="flex flex-col justify-start w-full ">
-            <BodyAnim2 className="text-secondary dark:text-primary font-[700] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.3] tracking-tight mb-[1.5%]">
+            <BodyAnim2 className="text-secondary dark:text-primary font-[600] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.3] tracking-tight mb-[1.5%]">
               my resume.
             </BodyAnim2>
             <BodyAnim2 className="lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] text-grey2 dark:text-grey3 leading-[1.4]  mb-[2%]">
@@ -71,7 +71,7 @@ const Services = () => {
               >
                 <Button
                   label={"Resume"}
-                  className="uppercase flex justify-center items-center cursor-pointer tracking-tight w-full text-center text-primary bg-tertiary font-[700] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw] rounded-lg py-2"
+                  className="uppercase flex justify-center items-center cursor-pointer tracking-tight w-full text-center text-primary bg-tertiary font-[600] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw] rounded-lg py-2"
                 />
               </Link>
             </BodyAnim>

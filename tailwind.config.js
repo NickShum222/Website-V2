@@ -22,7 +22,7 @@ module.exports = withMT({
         grey4: "#89898B",
       },
       fontFamily: {
-        sans: ["var(--font-satoshi)"],
+        sans: ["var(--font-dm_sans)"],
       },
       fontSize: {
         headingLgClamp: "clamp(80px, 8.333vw, 120px)",

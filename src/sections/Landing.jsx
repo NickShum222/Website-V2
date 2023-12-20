@@ -22,14 +22,14 @@ const Landing = () => {
       className=" z-[50] select-none flex flex-col w-full justify-between min-h-[100svh] bg-primary dark:bg-secondary lg:p-6 md:p-7 sm:p-5 p-3 relative">
         <div className="flex z-10 flex-col justify-start items-start w-full lg:mt-[-1%]">
           <TextAnim
-            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] md:font-[700] font-[600] tracking-tight text-tertiary dark:text-primary"
+            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[600] tracking-tight text-tertiary dark:text-primary"
             // delay={loaded ? 0: 2.4}
               delay={0.4}
           >
             SOFTWARE
           </TextAnim>
           <TextAnim
-            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] md:font-[700] font-[600] tracking-tight text-tertiary dark:text-primary lg:mt-[-2%]"
+            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw]  font-[600] tracking-tight text-tertiary dark:text-primary lg:mt-[-2%]"
             // delay={loaded ? 0 : 2.45}
             delay={0.45}
 
@@ -61,7 +61,7 @@ const Landing = () => {
         </div>
         <div className="z-10 flex flex-col justify-end w-full items-end mb-[-1%]">
           <TextAnim
-            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] md:font-[700] font-[600] tracking-tight text-tertiary dark:text-primary "
+            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw]  font-[600] tracking-tight text-tertiary dark:text-primary "
             // delay={loaded ? 0 : 2.4}
             delay={0.4}
 
@@ -69,7 +69,7 @@ const Landing = () => {
             NICK
           </TextAnim>
           <TextAnim
-            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] md:font-[700] font-[600] tracking-tight text-tertiary dark:text-primary lg:-mr-3 md:-mr-2
+            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw]  font-[600] tracking-tight text-tertiary dark:text-primary lg:-mr-3 md:-mr-2
           -mr-1 lg:mt-[-3%]
           "
             // delay={loaded ? 0 : 2.43}

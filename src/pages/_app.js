@@ -1,13 +1,20 @@
 import "@/styles/globals.scss";
-import localFont from "next/font/local";
-const satoshi = localFont({
-  src: "../../public/fonts/Satoshi-Variable.ttf",
-  variable: "--font-satoshi",
-  display: "swap",
-  style: "oblique",
-  weight: "variable",
+// import localFont from "next/font/local";
+import { DM_Sans} from "next/font/google";
 
-});
+// const satoshi = localFont({
+//   src: "../../public/fonts/Satoshi-Variable.ttf",
+//   variable: "--font-satoshi",
+//   display: "swap",
+//   style: "oblique",
+//   weight: "variable",
+// });
+
+const dm_sans = DM_Sans({
+    subsets: ['latin'],
+    display: "swap",
+    variable: "--font-dm_sans"
+})
 import {useState, useEffect, createContext} from 'react';
 import { SmoothScroll } from "@/components";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -33,7 +40,9 @@ export default function App({Component, pageProps}) {
                         window.scrollTo({top: 0})
                     }}
                 >
-                    <main className={`${satoshi.variable} font-sans`} key={router.pathname}>
+                    {/*<main className={`${satoshi.variable} font-sans`} key={router.pathname}>*/}
+                    <main className={`${dm_sans.variable} font-sans`} key={router.pathname}>
+
                         <Component {...pageProps} />
                         <SpeedInsights/>
                         <motion.div
