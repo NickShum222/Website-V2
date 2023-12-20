@@ -10,6 +10,9 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      boxShadow: {
+        '3xl': '0 35px 60px -5px rgba(0, 0, 0, 0.4)',
+      },
       colors: {
         primary: "#E4E5E7",
         secondary: "#0E0E0E",

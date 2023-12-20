@@ -33,7 +33,7 @@ const About = () => {
           />
         </div>
         <div className="flex flex-col justify-start md:w-[50%] w-full sticky top-[2%]">
-          <BodyAnim2 className="lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] md:leading-[1.1] leading-[1.2] font-[700] text-secondary dark:text-primary">
+          <BodyAnim2 className="lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] mt-[-3%] font-[700] text-secondary dark:text-primary">
             Hi! Nice to meet you, I'm Nick Shum.
           </BodyAnim2>
           <div className="flex flex-col justify-normal w-full mt-[3%] lg:gap-6 gap-5 ">

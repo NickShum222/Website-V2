@@ -41,9 +41,10 @@ const slideUpSecond = {
   },
 };
 
+
 const Loading = () => {
   return (
-    <div
+    <motion.div
       className={`relative z-0 h-[100dvh] w-[100dvw] flex flex-col justify-center items-center bg-secondary
     `}
     >
@@ -81,7 +82,7 @@ const Loading = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -12,6 +12,7 @@ import {
 } from "framer-motion";
 import { experiencesBodySlideUp } from "@/utils/motion";
 
+
 const Experiences = () => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -35,7 +36,17 @@ const Experiences = () => {
           <Header title="Work" index="03." />
         </div>
         <div className="flex lg:flex-row flex-col justify-between items-start lg:gap-0 sm:gap-8 gap-6 w-full">
-          <div className="flex lg:flex-col flex-row justify-start items-start lg:w-[20%] w-full lg:gap-3 sm:gap-12 gap-4 lg:pl-[5%] relative">
+          <div className="flex lg:flex-col flex-row justify-start items-start lg:w-[15%] w-full md:ml-[5%] md:pl-[0.5%] pl-[1%] relative">
+            <motion.div className={"absolute md:inline hidden bg-grey4 top-0 right-0 w-full z-[10] opacity-20 "}
+                        animate={{ y: `${100 * selected}%` }}
+                        style={{height: `calc(100% / ${experiences.length})`}}
+                        transition={{duration: 0.25, ease: [0.5, 1, 0.89, 1]}}
+            ></motion.div>
+            <motion.div className={"absolute md:hidden inline bg-grey4 top-0 left-0 h-full z-[10] opacity-20 "}
+                        animate={{ x: `${100 * selected}%` }}
+                        style={{width: `calc(100% / ${experiences.length})`}}
+                        transition={{duration: 0.25, ease: [0.5, 1, 0.89, 1]}}
+            ></motion.div>
             {experiences.map((experience, index) => {
               const start = index / experiences.length;
               const end = start + 1 / experiences.length;
@@ -44,6 +55,7 @@ const Experiences = () => {
                 <ExperienceTitle
                   key={index}
                   index={index}
+                  selected={selected}
                   setSelected={setSelected}
                   range={[start, middle, end]}
                   progress={scrollYProgress}
@@ -94,7 +106,7 @@ const Experiences = () => {
   );
 };
 
-const ExperienceTitle = ({ label, range, progress, setSelected, index }) => {
+const ExperienceTitle = ({ label, range, progress, selected, setSelected, index }) => {
   let opacity, x;
   if (index === 0) {
     opacity = useTransform(progress, [range[0], range[2]], [1, 0.1]);
@@ -114,12 +126,15 @@ const ExperienceTitle = ({ label, range, progress, setSelected, index }) => {
 
   return (
     <>
-      <motion.span
-        style={{ opacity, x }}
-        className={`font-[600] transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight text-primary`}
-      >
-        {label}
-      </motion.span>
+      <div className={"relative w-full py-[2%] z-[20]"}>
+        <motion.span
+            style={{ opacity, x }}
+            className={`font-[600] transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight text-primary`}
+        >
+          {label}
+        </motion.span>
+      </div>
+
     </>
   );
 };

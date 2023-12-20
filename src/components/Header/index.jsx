@@ -1,23 +1,7 @@
-"use client";
-
 import {useRef} from "react";
-
+import {headerSlide} from "@/utils/motion";
 import {useInView, motion} from "framer-motion";
-import TextAnim from "@/components/TextAnim";
 
-const headerSlide ={
-    initial: {
-        x:"-100%"
-    },
-    enter: {
-        x: "0%",
-        transition:{
-            duration: 0.9,
-            delay: 0.6,
-            ease: [0.16, 1, 0.3, 1]
-        }
-    }
-}
 const slideUp = {
     initial: {
         y: "100%",

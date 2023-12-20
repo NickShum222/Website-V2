@@ -1,12 +1,12 @@
 .burger {
   width: 100%;
-  z-index: 200;
+  z-index: 50;
   &::after,
   &::before {
     content: "";
     display: block;
     height: 1px;
-    width: 40%;
+    width: 30%;
     margin: auto;
     background-color: white;
     position: relative;
