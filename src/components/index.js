@@ -7,7 +7,6 @@ import Header from "./Header";
 import TextAnim from "./TextAnim";
 import BodyAnim from "./BodyAnim";
 import BodyAnim2 from "./BodyAnim2";
-import Magnetic from "./Magnetic";
 import Footer from "./Footer";
 
 
@@ -23,6 +22,5 @@ export {
     TextAnim,
     BodyAnim,
     BodyAnim2,
-    Magnetic,
     Footer
 };

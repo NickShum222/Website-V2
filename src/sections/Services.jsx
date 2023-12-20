@@ -82,10 +82,10 @@ const Services = () => {
           className=" flex-col items-end md:w-[50%] md:flex hidden perspective"
         >
           {skills.map((skill, index) => (
-              <div className={"h-auto relative overflow-y-clip"}>
+              <div className={"h-auto relative overflow-y-clip"}
+                   key={index}>
                 <motion.div
                   className="font-bold lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
-                  key={index}
                   custom={index * 5}
                   variants={bodyAnim2SlideUp}
                   initial="initial"

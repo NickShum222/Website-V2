@@ -1,7 +1,7 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import styles from "./style.module.scss";
-import { motion, AnimatePresence } from "framer-motion";
+import {motion, AnimatePresence, useScroll, useMotionValueEvent} from "framer-motion";
 
 const navLinks = [
   {
@@ -30,12 +30,24 @@ const navLinks = [
   },
 ]
 const index = () => {
+  const { scrollYProgress } =  useScroll();
   const [showNav, setShowNav] = useState(true);
   const [active, setActive] = useState(false);
   const [nav, setNav] = useState(false);
   const container = useRef(null);
   const [position, setPosition] = useState({x:0,y:0});
   const [navPosition, setNavPosition] = useState({x:0,y:0});
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    const prev = scrollYProgress.getPrevious();
+    if (latest > prev) {
+      setShowNav(false)
+      setActive(false)
+      setNav(false)
+    } else {
+      setShowNav(true)
+    }
+  })
   const handleMouse = (e) => {
     const { clientX, clientY } = e;
     const {height, width, left, top} = container.current.getBoundingClientRect();
@@ -145,7 +157,9 @@ const index = () => {
     enter: {
       scale: "100%",
       transition: {
-        duration: 0.35
+        duration: 0.45,
+        delay: 0.5,
+        ease: [0.34, 1.56, 0.64, 1]
       }
 
     },
@@ -166,12 +180,13 @@ const index = () => {
                   initial="initial"
                   animate="enter"
                   exit="exit"
-                  className="fixed z-[40] top-0 right-0 h-[100dvh] w-full bg-[#232323] flex flex-col justify-center items-center lg:px-[16%] md:px-[6%] px-[4%]">
+                  className="fixed z-[60] top-0 right-0 h-[100dvh] w-full bg-[#232323] flex flex-col justify-center items-center lg:px-[16%] md:px-[6%] px-[4%]">
                   {navLinks.map((navLink) => (
                     <div key={navLink.id} className={"w-full flex flex-col justify-start overflow-clip"}>
                       <motion.a
                           onClick={() => {
                             setActive(false)
+                            setNav(false)
                           }}
                           href={navLink.link}
                           variants={navSlideUp}
@@ -193,61 +208,67 @@ const index = () => {
             </motion.div>
         )}
         </AnimatePresence>
-        <motion.nav className="fixed top-0 right-0 lg:p-8 md:p-7 sm:p-6 p-4 z-[200]"
-        variants={toggleNav}
-                    initial="initial"
-                    animate="enter"
-                    exit="exit"
+        <AnimatePresence mode="wait">
+          {showNav && (
+              <motion.nav className="fixed top-0 right-0 lg:p-8 md:p-7 sm:p-6 p-4 z-[200]"
+                          variants={toggleNav}
+                          initial="initial"
+                          animate="enter"
+                          exit="exit"
 
-        >
-        <motion.div
-            ref={container}
-            onMouseMove={handleMouse}
-            onMouseLeave={reset}
-            animate={{x: position.x, y:position.y}}
-            transition={{type: "spring", stiffness: 200, damping: 10, mass: 1}}
-        >
-          <div
-              className="relative lg:w-[100px] md:w-[90px] sm:w-[80px] w-[70px] lg:h-[100px] md:h-[90px] sm:h-[80px] h-[70px] overflow-clip rounded-full shadow-3xl"
-              onMouseEnter={() => {
-                if(!active) {
-                  setNav(true);
-                }
-              }}
-              onMouseLeave={() => {
-                if(!active) {
-                  setNav(false);
-                }
-              }}
-              onClick={() => {
-                setActive(!active)
-              }}
-          >
-            <div
-                className={`z-10 lg:w-[100px] md:w-[90px] sm:w-[80px] w-[70px] lg:h-[100px] md:h-[90px] sm:h-[80px] h-[70px]  bg-tertiary cursor-pointer flex justify-center rounded-full items-center`}
-            >
-              <motion.div className={`${styles.burger} ${active ? styles.burgerActive : ""}`}
-                          animate={{x: navPosition.x, y: navPosition.y}}
-                          transition={{type: "spring", stiffness: 200, damping: 10, mass: 1}}
-              ></motion.div>
-            </div>
-            <AnimatePresence mode="wait">
-              {nav && (
-                  <motion.div
-                      variants={navActive}
-                      initial="initial"
-                      animate="enter"
-                      exit="exit"
-                      className={`z-10 absolute top-[100%] lg:w-[100px] md:w-[90px] sm:w-[80px] w-[70px] lg:h-[100px] md:h-[90px] sm:h-[80px] h-[70px] bg-[#121212] cursor-pointer rounded-full flex justify-center items-center `}
+              >
+                <motion.div
+                    ref={container}
+                    onMouseMove={handleMouse}
+                    onMouseLeave={reset}
+                    animate={{x: position.x, y:position.y}}
+                    transition={{type: "spring", stiffness: 200, damping: 10, mass: 1}}
+                >
+                  <div
+                      className="relative lg:w-[100px] md:w-[90px] sm:w-[80px] w-[70px] lg:h-[100px] md:h-[90px] sm:h-[80px] h-[70px] overflow-clip rounded-full shadow-3xl"
+                      onMouseEnter={() => {
+                        if(!active) {
+                          setNav(true);
+                        }
+                      }}
+                      onMouseLeave={() => {
+                        if(!active) {
+                          setNav(false);
+                        }
+                      }}
+                      onClick={() => {
+                        setActive(!active)
+                      }}
                   >
-                    {/* <div className={styles.burger}></div> */}
-                  </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </motion.div>
+                    <div
+                        className={`z-10 lg:w-[100px] md:w-[90px] sm:w-[80px] w-[70px] lg:h-[100px] md:h-[90px] sm:h-[80px] h-[70px]  bg-tertiary cursor-pointer flex justify-center rounded-full items-center`}
+                    >
+                      <motion.div className={`${styles.burger} ${active ? styles.burgerActive : ""}`}
+                                  animate={{x: navPosition.x, y: navPosition.y}}
+                                  transition={{type: "spring", stiffness: 200, damping: 10, mass: 1}}
+                      ></motion.div>
+                    </div>
+                    <AnimatePresence mode="wait">
+                      {nav && (
+                          <motion.div
+                              variants={navActive}
+                              initial="initial"
+                              animate="enter"
+                              exit="exit"
+                              className={`z-10 absolute top-[100%] lg:w-[100px] md:w-[90px] sm:w-[80px] w-[70px] lg:h-[100px] md:h-[90px] sm:h-[80px] h-[70px] bg-[#121212] cursor-pointer rounded-full flex justify-center items-center `}
+                          >
+                            {/* <div className={styles.burger}></div> */}
+                          </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </motion.div>
 
-      </motion.nav>
+              </motion.nav>
+          )}
+
+        </AnimatePresence>
+
       </>
 
   );

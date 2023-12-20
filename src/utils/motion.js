@@ -1,15 +1,15 @@
 export const landingSubSlideRight = {
   initial: {
     opacity: 0,
-    x: "-20%",
+    x: "-10%",
   },
-  animate: (index) =>  ({
+  animate: (delay) =>  ({
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.75,
+      duration: 0.55,
       ease: [0.25, 1, 0.5, 1],
-      delay: index,
+      delay: delay,
     },
   }),
 };

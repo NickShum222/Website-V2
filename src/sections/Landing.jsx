@@ -1,10 +1,11 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
-import {Load} from "@/pages/_app";
+// import {Load} from "@/pages/_app";
 import { TextAnim } from "@/components";
 import { motion, AnimatePresence } from "framer-motion";
 import { landingText } from "@/constants";
 import { landingSubSlideRight, landingSubRotateX } from "@/utils/motion";
+
 
 const Landing = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,29 +15,32 @@ const Landing = () => {
     }, 4000);
     return () => clearInterval(intervalId);
   }, [landingText.length]);
-  const [loaded, setLoaded] = useContext(Load)
+  // const [loaded, setLoaded] = useContext(Load)
   return (
-    <>
-      <section 
+      <motion.div
       id="landing"
-      className="z-[100] select-none flex flex-col w-full justify-between min-h-[100dvh] bg-primary dark:bg-secondary lg:p-6 md:p-7 sm:p-5 p-3 relative">
+      className=" z-[50] select-none flex flex-col w-full justify-between min-h-[100dvh] bg-primary dark:bg-secondary lg:p-6 md:p-7 sm:p-5 p-3 relative">
         <div className="flex z-10 flex-col justify-start items-start w-full lg:mt-[-1%]">
           <TextAnim
-            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary"
-            delay={loaded ? 0: 2.4}
+            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] md:font-[700] font-[600] tracking-tight text-tertiary dark:text-primary"
+            // delay={loaded ? 0: 2.4}
+              delay={0.4}
           >
             SOFTWARE
           </TextAnim>
           <TextAnim
-            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary lg:mt-[-2%]"
-            delay={loaded ? 0 : 2.45}
+            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] md:font-[700] font-[600] tracking-tight text-tertiary dark:text-primary lg:mt-[-2%]"
+            // delay={loaded ? 0 : 2.45}
+            delay={0.45}
+
           >
             DEVELOPER
           </TextAnim>
           <motion.div
             className="flex justify-start  items-center lg:gap-4 sm:gap-2 gap-1 w-full "
             variants={landingSubSlideRight}
-            custom={loaded ? 0: 2.45}
+            // custom={loaded ? 0: 2.45}
+            custom={0.55}
             initial="initial"
             animate="animate"
           >
@@ -57,16 +61,20 @@ const Landing = () => {
         </div>
         <div className="z-10 flex flex-col justify-end w-full items-end mb-[-1%]">
           <TextAnim
-            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary "
-            delay={loaded ? 0 : 2.4}
+            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] md:font-[700] font-[600] tracking-tight text-tertiary dark:text-primary "
+            // delay={loaded ? 0 : 2.4}
+            delay={0.4}
+
           >
             NICK
           </TextAnim>
           <TextAnim
-            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[700] tracking-tight text-tertiary dark:text-primary lg:-mr-3 md:-mr-2
+            className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] md:font-[700] font-[600] tracking-tight text-tertiary dark:text-primary lg:-mr-3 md:-mr-2
           -mr-1 lg:mt-[-3%]
           "
-            delay={loaded ? 0 : 2.43}
+            // delay={loaded ? 0 : 2.43}
+            delay={0.45}
+
           >
             SHUM
           </TextAnim>
@@ -77,8 +85,8 @@ const Landing = () => {
           NS.
         </div> */}
         {/* </div> */}
-      </section>
-    </>
+      </motion.div>
+
   );
 };
 
