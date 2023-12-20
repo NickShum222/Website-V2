@@ -10,7 +10,7 @@ const Services = () => {
   const skillsContainer = useRef(null);
   const skillsContainerMobile = useRef(null);
   const isInView = useInView(skillsContainer, { once: true, amount: 0.4 });
-  const isInViewMobile = useInView(skillsContainerMobile, { once: true, amount: 0.4 });
+  // const isInViewMobile = useInView(skillsContainerMobile, { once: true, amount: 0.4 });
   return (
     <section
     id="services"
