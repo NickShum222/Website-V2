@@ -3,8 +3,10 @@ import localFont from "next/font/local";
 const satoshi = localFont({
   src: "../../public/fonts/Satoshi-Variable.ttf",
   variable: "--font-satoshi",
-  display: "fallback",
+  display: "swap",
+  style: "oblique",
   weight: "variable",
+
 });
 import {useState, useEffect, createContext} from 'react';
 import { SmoothScroll } from "@/components";
