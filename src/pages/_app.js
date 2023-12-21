@@ -31,6 +31,7 @@ export default function App({Component, pageProps}) {
             setLoaded(true);
         }
     }, [router.pathname])
+
     return (
         <SmoothScroll>
             <Load.Provider value={[loaded, setLoaded]}>

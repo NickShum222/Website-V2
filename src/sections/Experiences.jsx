@@ -40,12 +40,12 @@ const Experiences = () => {
             <motion.div className={"absolute lg:inline hidden bg-grey4 top-0 right-0 w-full z-[10] opacity-20 "}
                         animate={{ y: `${100 * selected}%` }}
                         style={{height: `calc(100% / ${experiences.length})`}}
-                        transition={{duration: 0.25, ease: [0.5, 1, 0.89, 1]}}
+                        transition={{duration: 0.45, ease: [0.5, 1, 0.89, 1]}}
             ></motion.div>
             <motion.div className={"absolute lg:hidden inline bg-grey4 top-0 left-0 h-full z-[10] opacity-20 "}
                         animate={{ x: `${100 * selected}%` }}
                         style={{width: `calc(100% / ${experiences.length})`}}
-                        transition={{duration: 0.25, ease: [0.5, 1, 0.89, 1]}}
+                        transition={{duration: 0.45, ease: [0.5, 1, 0.89, 1]}}
             ></motion.div>
             {experiences.map((experience, index) => {
               const start = index / experiences.length;
@@ -107,16 +107,16 @@ const Experiences = () => {
 };
 
 const ExperienceTitle = ({ label, range, progress, selected, setSelected, index }) => {
-  let opacity, x;
+  let opacity;
   if (index === 0) {
     opacity = useTransform(progress, [range[0], range[2]], [1, 0.1]);
-    x = useTransform(progress, [range[0], range[2]], ["10%", "0%"]);
+    // x = useTransform(progress, [range[0], range[2]], ["10%", "0%"]);
   } else if (index === experiences.length - 1) {
     opacity = useTransform(progress, [range[0], range[2]], [0.1, 1]);
-    x = useTransform(progress, [range[0], range[2]], ["0%", "10%"]);
+    // x = useTransform(progress, [range[0], range[2]], ["0%", "10%"]);
   } else {
     opacity = useTransform(progress, range, [0.1, 1, 0.1]);
-    x = useTransform(progress, range, ["10%", "0%", "10%"]);
+    // x = useTransform(progress, range, ["10%", "0%", "10%"]);
   }
   useMotionValueEvent(progress, "change", (value) => {
     if (value > range[0] && value < range[2]) {
@@ -127,12 +127,12 @@ const ExperienceTitle = ({ label, range, progress, selected, setSelected, index 
   return (
     <>
       <div className={"relative w-full py-[2%] z-[20]"}>
-        <motion.span
-            style={{ opacity, x }}
-            className={`font-[600] transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight text-primary`}
+        <motion.div
+            style={{ opacity }}
+            className={`font-[600] w-full  transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight text-primary`}
         >
           {label}
-        </motion.span>
+        </motion.div>
       </div>
 
     </>

@@ -10,6 +10,10 @@ const index = ({ children }) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
+
+    requestAnimationFrame(raf);
+  }, []);
+  useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
         e.preventDefault();
@@ -22,8 +26,7 @@ const index = ({ children }) => {
         }
       });
     });
-    requestAnimationFrame(raf);
-  }, []);
+  },[])
   return children;
 };
 
