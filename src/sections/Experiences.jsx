@@ -36,13 +36,13 @@ const Experiences = () => {
           <Header title="Work" index="03." />
         </div>
         <div className="flex lg:flex-row flex-col justify-between items-start lg:gap-0 sm:gap-8 gap-6 w-full">
-          <div className="flex lg:flex-col flex-row justify-start items-start lg:w-[15%] w-full md:ml-[5%] md:pl-[0.5%] pl-[1%] relative">
-            <motion.div className={"absolute md:inline hidden bg-grey4 top-0 right-0 w-full z-[10] opacity-20 "}
+          <div className="flex lg:flex-col flex-row justify-start items-start lg:w-[15%] w-full lg:ml-[5%] lg:pl-[0.5%] pl-[1%] relative">
+            <motion.div className={"absolute lg:inline hidden bg-grey4 top-0 right-0 w-full z-[10] opacity-20 "}
                         animate={{ y: `${100 * selected}%` }}
                         style={{height: `calc(100% / ${experiences.length})`}}
                         transition={{duration: 0.25, ease: [0.5, 1, 0.89, 1]}}
             ></motion.div>
-            <motion.div className={"absolute md:hidden inline bg-grey4 top-0 left-0 h-full z-[10] opacity-20 "}
+            <motion.div className={"absolute lg:hidden inline bg-grey4 top-0 left-0 h-full z-[10] opacity-20 "}
                         animate={{ x: `${100 * selected}%` }}
                         style={{width: `calc(100% / ${experiences.length})`}}
                         transition={{duration: 0.25, ease: [0.5, 1, 0.89, 1]}}
@@ -79,14 +79,14 @@ const Experiences = () => {
                   {experiences[selected].company}
                 </span>
               </div>
-              <div className="font-[400] dark:text-grey3 text-grey2 tracking-tight lg:text-experiencesSub sm:text-[3.980vw] text-[6.361vw] leading-[1.2] ">
+              <div className="font-[400] dark:text-grey3 text-grey2 tracking-tight lg:text-aboutParagraph  md:text-[2.576vw] text-[5.089vw] leading-[1.2] ">
                 {experiences[selected].date}
               </div>
               <ul className="lg:my-[3%] sm:my-[4%] my-[7%]">
                 {experiences[selected].description.map((description, index) => (
                   <li
                     key={index}
-                    className="font-[300] text-grey4 lg:text-experiencesSub sm:text-[2.985vw] text-[5.089vw] leading-[1.3]"
+                    className=" text-grey4 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[5.089vw] leading-[1.3]"
                   >
                     {description}
                   </li>
@@ -95,7 +95,7 @@ const Experiences = () => {
               <div className="font-[400] dark:text-grey3 text-grey2 tracking-tight lg:text-experiencesSub sm:text-[3.980vw] text-[6.361vw] leading-[1.2]">
                 Tools:
               </div>
-              <div className="font-[300] text-grey4 lg:text-experiencesSub sm:text-[2.985vw] text-[5.089vw] leading-[1.3]">
+              <div className=" text-grey4 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[5.089vw] leading-[1.3]">
                 {experiences[selected].tools}
               </div>
             </motion.div>

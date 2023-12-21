@@ -8,9 +8,7 @@ import {bodyAnim2SlideUp} from "@/utils/motion";
 
 const Services = () => {
   const skillsContainer = useRef(null);
-  const skillsContainerMobile = useRef(null);
   const isInView = useInView(skillsContainer, { once: true, amount: 0.4 });
-  // const isInViewMobile = useInView(skillsContainerMobile, { once: true, amount: 0.4 });
   return (
     <section
     id="services"
@@ -20,15 +18,15 @@ const Services = () => {
       <div className="flex w-full md:flex-row flex-col md:justify-center justify-start items-start relative">
         <div className="flex flex-col justify-between items-start gap-8 md:w-[50%] h-full w-full ">
           <div className="flex flex-col items-start justify-between h-full w-full  mb-[6%]">
-            <BodyAnim2 className="text-secondary dark:text-primary font-[600] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.3] tracking-tight mb-[1.5%]">
+            <BodyAnim2 className="text-secondary dark:text-primary font-[600] lg:text-servicesTech md:text-[4.969vw] text-[7.939vw] leading-[1.3] tracking-tight mb-[1.5%]">
             my tech stack.
             </BodyAnim2>
-            <BodyAnim2  className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] leading-[1.4] ">
+            <BodyAnim2  className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[5.089vw] leading-[1.4] ">
               Here are just some of my go-to tools used for web development.
             </BodyAnim2>
-            <BodyAnim className={"w-full"}>
+            <BodyAnim className={"w-full mt-[2%]"}>
               <div
-                  ref={skillsContainerMobile}
+
                   className="w-full flex md:hidden justify-between items-start"
               >
                 <div className="w-[50%] flex flex-col items-start ">
@@ -57,10 +55,10 @@ const Services = () => {
 
           </div>
           <div className="flex flex-col justify-start w-full ">
-            <BodyAnim2 className="text-secondary dark:text-primary font-[600] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.3] tracking-tight mb-[1.5%]">
+            <BodyAnim2 className="text-secondary dark:text-primary font-[600] lg:text-servicesTech md:text-[4.969vw] text-[7.939vw] leading-[1.3] tracking-tight mb-[1.5%]">
               my resume.
             </BodyAnim2>
-            <BodyAnim2 className="lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[4.589vw] text-grey2 dark:text-grey3 leading-[1.4]  mb-[2%]">
+            <BodyAnim2 className="lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[5.089vw] text-grey2 dark:text-grey3 leading-[1.4] ">
               The rest of my skills can be found here.
             </BodyAnim2>
             <BodyAnim>
@@ -71,7 +69,7 @@ const Services = () => {
               >
                 <Button
                   label={"Resume"}
-                  className="uppercase flex justify-center items-center cursor-pointer tracking-tight w-full text-center text-primary bg-tertiary font-[600] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw] rounded-lg py-2"
+                  className="uppercase mt-[2%] flex justify-center items-center cursor-pointer tracking-tight w-full text-center text-primary bg-tertiary font-[600] lg:text-[2.083vw] md:text-[3.980vw] text-[6.361vw] rounded-lg py-2"
                 />
               </Link>
             </BodyAnim>
@@ -85,7 +83,7 @@ const Services = () => {
               <div className={"h-auto relative overflow-y-clip"}
                    key={index}>
                 <motion.div
-                  className="font-bold lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
+                  className="font-[600] lg:text-servicesTech md:text-[4.969vw] text-[6.939vw] leading-[1.2] text-tertiary dark:text-primary tracking-tight"
                   custom={index * 5}
                   variants={bodyAnim2SlideUp}
                   initial="initial"

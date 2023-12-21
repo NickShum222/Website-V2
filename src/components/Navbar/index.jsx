@@ -209,7 +209,7 @@ const index = () => {
         </AnimatePresence>
         <AnimatePresence mode="wait">
           {showNav && (
-              <motion.nav className="fixed top-0 right-0 lg:p-8 md:p-7 sm:p-6 p-4 z-[200]"
+              <motion.nav className="fixed top-0 right-0 lg:p-6 md:p-7 sm:p-5 p-3 z-[200]"
                           variants={toggleNav}
                           initial="initial"
                           animate="enter"

@@ -56,18 +56,21 @@ const Contact = () => {
       <Header title="Contact" index="05." />
       <div className="flex lg:flex-row flex-col justify-between items-start w-full">
         <div className="flex flex-col items-start lg:w-[65%] w-full">
-          <BodyAnim2 className="lg:text-servicesTech md:text-[4.969vw] text-center text-[6.939vw] md:leading-[1] leading-[1.2] font-[600] text-secondary dark:text-primary mb-[1%]">
-            Want to say hello? Feel free to reach out!
-          </BodyAnim2>
-          <BodyAnim2 className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[400] md:text-[2.576vw] text-[4.589vw] leading-[1.3]  mb-[4%]">
-            I am looking for Summer 2024 internship opportunities.
-          </BodyAnim2>
+          <div className={"flex flex-col w-full items-start lg:gap-3 md:gap-2 gap-1 mb-4"}>
+            <BodyAnim2 className="lg:text-servicesTech md:text-[4.969vw] text-[7.939vw] text-center md:leading-[1] leading-[1.1] font-[600] text-secondary dark:text-primary">
+              Want to say hello? Feel free to reach out!
+            </BodyAnim2>
+            <BodyAnim2 className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[5.089vw] leading-[1.3] ">
+              I am looking for Summer 2024 internship opportunities.
+            </BodyAnim2>
+          </div>
+
           <input
             id="name"
             placeholder="Name"
             onChange={formik.handleChange}
             value={formik.values.name}
-            className="w-full appearance-none bg-transparent lg:text-aboutParagraph  md:text-[2.576vw] text-[4.589vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
+            className="w-full appearance-none bg-transparent lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[5.089vw]  text-grey2 placeholder-grey3 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
           />
           <div
             className={`mb-4 mt-1 lg:text-[16px] text-[14px] text-[#A31621]`}
@@ -79,7 +82,7 @@ const Contact = () => {
             placeholder="Email"
             onChange={formik.handleChange}
             value={formik.values.email}
-            className="w-full appearance-none bg-transparent lg:text-aboutParagraph md:text-[2.576vw] text-[4.589vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
+            className="w-full appearance-none bg-transparent lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[5.089vw] text-grey2 placeholder-grey3 leading-[1.2] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
           />
           <div
             className={`mb-4 mt-1 lg:text-[16px] text-[14px] text-[#A31621]`}
@@ -91,7 +94,7 @@ const Contact = () => {
             placeholder="Message"
             onChange={formik.handleChange}
             value={formik.values.message}
-            className="w-full appearance-none bg-transparent lg:text-aboutParagraph md:text-[2.576vw] text-[4.589vw] font-[300] text-grey2 placeholder-grey2 leading-[1.2] lg:h-[300px] md:h-[250px] h-[125px] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
+            className="w-full appearance-none bg-transparent lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[5.089vw] text-grey2 placeholder-grey3 leading-[1.2] lg:h-[300px] md:h-[250px] h-[125px] tracking-tight border-b-[1px] py-[2%] px-[2%] border-solid border-grey4 focus:outline-none focus:border-grey2"
           />
           <div
             className={`mb-4 mt-1 lg:text-[16px] text-[14px] text-[#A31621]`}
@@ -130,7 +133,7 @@ const Contact = () => {
             </a>
           </div>
           <BodyAnim className="flex flex-col items-start w-full">
-            <div className="font-[700] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] lg:mb-[6%] mb-[2%]">
+            <div className="font-[600] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] lg:mb-[6%] mb-[2%]">
               My Socials
             </div>
             <div className="w-full flex flex-col justify-start items-start lg:gap-4 md:gap-2 gap-1 ">
@@ -155,7 +158,7 @@ const Contact = () => {
             </div>
           </BodyAnim>
           <BodyAnim className="flex flex-col items-start w-full gap-2">
-            <div className="font-[700] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw]">
+            <div className="font-[600] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw]">
               My Resume
             </div>
             <Link

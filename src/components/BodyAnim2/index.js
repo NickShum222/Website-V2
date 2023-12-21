@@ -31,13 +31,14 @@ const index = ({ children, className }) => {
 const Word = ({ children, index, isInView, className }) => {
     return (
         <div
-            className={`${className} relative mr-[1.25%] flex mt-[-0.5%] flex-wrap overflow-y-clip`}
+            className={`relative mr-[1.25%] flex mt-[-0.5%] flex-wrap overflow-y-clip`}
         >
             <motion.div
 
                         variants={bodyAnim2SlideUp}
                         initial="initial"
                         animate={isInView ? "enter" : "initial"}
+                        className={className}
                         custom={index}
             >
                 {children}
