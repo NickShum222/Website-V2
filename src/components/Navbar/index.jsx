@@ -71,7 +71,7 @@ const index = () => {
       x: "0%",
       transition:{
         duration: 1.25,
-        delay: 0.70,
+        delay: 0.50,
         ease: [0.25, 1, 0.5, 1]
       }
     },
@@ -94,7 +94,7 @@ const index = () => {
       opacity: 1,
       transition:{
         duration: 1,
-        delay: 0.70,
+        delay: 0.50,
         ease: [0.25, 1, 0.5, 1]
       }
     },
@@ -180,21 +180,29 @@ const index = () => {
                   animate="enter"
                   exit="exit"
                   className="fixed z-[60] top-0 right-0 h-[100dvh] w-full bg-[#232323] flex flex-col justify-center items-center lg:px-[16%] md:px-[6%] px-[4%]">
-                  {navLinks.map((navLink) => (
+                  {navLinks.map((navLink, index) => (
                     <div key={navLink.id} className={"w-full flex flex-col justify-start overflow-clip"}>
-                      <motion.a
-                          onClick={() => {
-                            setActive(false)
-                            setNav(false)
-                          }}
-                          href={navLink.link}
-                          variants={navSlideUp}
-                          initial="initial"
-                          animate="enter"
-                          // exit="exit"
-                          className={"text-primary overflow-y-clip h-auto px-[2%] uppercase font-[600] lg:text-[5em] md:text-[4.5em] sm:text-[10.092vw] text-[11.427vw] leading-[1] py-4 "}>
-                        {navLink.id}
-                      </motion.a>
+                      <div className={"flex justify-start items-start"}>
+                        <motion.a
+                            onClick={() => {
+                              setActive(false)
+                              setNav(false)
+                            }}
+                            href={navLink.link}
+                            variants={navSlideUp}
+                            initial="initial"
+                            animate="enter"
+                            // exit="exit"
+                            className={"text-primary overflow-y-clip h-auto px-[2%] uppercase font-[600] lg:text-[5em] md:text-[4.5em] sm:text-[10.092vw] text-[11.427vw] leading-[1] py-4 "}>
+                          {navLink.id}
+                        </motion.a>
+                        {index > 0 && (
+                            <div className="text-primary italic py-4 md:mt-[1%] lg:mt-[0.5%]">
+                              0{index}.
+                            </div>
+                        )}
+                      </div>
+
                       <motion.div
                           variants={navSlideIn}
                           initial="initial"

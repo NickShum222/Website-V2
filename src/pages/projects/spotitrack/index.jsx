@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { SEO, Button } from "@/components";
+import React from "react";
+import { SEO } from "@/components";
 import Link from "next/link";
 import Image from "next/image";
 import { BsArrowUpRight, BsArrowLeft } from "react-icons/bs";
@@ -63,7 +63,7 @@ const index = () => {
               <div
                 key={index}
                 className={
-                  "lg:text-[1.2em] md:text-[1.1em] text-[0.8em] mb-[1.5%] border-[1px] border-solid rounded-full mr-[1%] border-primary text-primary px-3 py-1 lg:font-[600] font-[500] leading-[1] uppercase text-center italic"
+                  "lg:text-[1.2em] md:text-[1.1em] text-[0.8em] mb-[1.5%] border-[1px] border-solid rounded-full mr-[1%] border-primary text-primary px-3 py-1 lg:font-[600] font-[500] leading-[1] uppercase text-center"
                 }
               >
                 {tool}
