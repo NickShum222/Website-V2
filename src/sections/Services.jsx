@@ -21,7 +21,7 @@ const Services = () => {
             <BodyAnim2 className="text-secondary dark:text-primary font-[600] lg:text-servicesTech md:text-[4.969vw] text-[7.939vw] leading-[1.3] tracking-tight mb-[1.5%]">
             my tech stack.
             </BodyAnim2>
-            <BodyAnim2  className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[5.089vw] leading-[1.4] ">
+            <BodyAnim2  className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[200] md:text-[2.576vw] text-[5.089vw] leading-[1.4] ">
               Here are just some of my go-to tools used for web development.
             </BodyAnim2>
             <BodyAnim className={"w-full mt-[2%]"}>
@@ -58,7 +58,7 @@ const Services = () => {
             <BodyAnim2 className="text-secondary dark:text-primary font-[600] lg:text-servicesTech md:text-[4.969vw] text-[7.939vw] leading-[1.3] tracking-tight mb-[1.5%]">
               my resume.
             </BodyAnim2>
-            <BodyAnim2 className="lg:text-aboutParagraph font-[300] md:text-[2.576vw] text-[5.089vw] text-grey2 dark:text-grey3 leading-[1.4] ">
+            <BodyAnim2 className="lg:text-aboutParagraph font-[200] md:text-[2.576vw] text-[5.089vw] text-grey2 dark:text-grey3 leading-[1.4] ">
               The rest of my skills can be found here.
             </BodyAnim2>
             <BodyAnim>

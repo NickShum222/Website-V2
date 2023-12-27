@@ -39,7 +39,9 @@ const index = () => {
                 "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
               }
             >
-              <div className="flex items-center gap-1"><BsArrowLeft/> Go Back</div>
+              <div className="flex items-center gap-1">
+                <BsArrowLeft /> Go Back
+              </div>
               <span
                 className={
                   "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
@@ -93,17 +95,20 @@ const index = () => {
             </p>
             <div className={"flex justify-start gap-2 mt-[6%]"}>
               <Link
-                  scroll={false}
-                  href={"https://github.com/NickShum222/Spotify-Tracker"}
-                  className={
-                    "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
-                  }
+                scroll={false}
+                href={"https://github.com/NickShum222/Spotify-Tracker"}
+                target="_blank"
+                className={
+                  "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
+                }
               >
-                <div className="flex items-center gap-1">Github Repository <BsArrowUpRight/></div>
+                <div className="flex items-center gap-1">
+                  Github Repository <BsArrowUpRight />
+                </div>
                 <span
-                    className={
-                      "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
-                    }
+                  className={
+                    "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
+                  }
                 />
               </Link>
             </div>
@@ -148,17 +153,17 @@ const index = () => {
             className={"w-full flex justify-between items-center lg:hidden "}
           >
             <Link
-                scroll={false}
-                href={"/"}
-                className={
-                  "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
-                }
+              scroll={false}
+              href={"/"}
+              className={
+                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
+              }
             >
               <p>Go Back</p>
               <span
-                  className={
-                    "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
-                  }
+                className={
+                  "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
+                }
               />
             </Link>
             <a

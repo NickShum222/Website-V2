@@ -87,6 +87,8 @@ const index = () => {
               <Link
                 scroll={false}
                 href={"https://github.com/NickShum222/Website-V1"}
+                target="_blank"
+
                 className={
                   "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
                 }
@@ -103,6 +105,7 @@ const index = () => {
               <Link
                 scroll={false}
                 href={"https://website-v1.nickshum.ca"}
+                target="_blank"
                 className={
                   "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
                 }

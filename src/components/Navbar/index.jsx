@@ -7,22 +7,6 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-const fadeIn = {
-  initial: {
-    opacity: 0,
-  },
-  enter: {
-    opacity: 1,
-    transition: {
-      ease: [0.25, 1, 0.5, 1],
-      duration: 0.75,
-      delay: 1,
-    },
-  },
-  exit: {
-    opacity: 0,
-  },
-};
 const navLinks = [
   {
     id: "Home",
@@ -83,14 +67,16 @@ const index = () => {
   };
   const fadeIn = {
     initial: {
+      y: "30%",
       opacity: 0,
     },
     enter: {
+      y: "0",
       opacity: 1,
       transition: {
         ease: [0.25, 1, 0.5, 1],
         duration: 0.75,
-        delay: 0.5,
+        delay: 0.75,
       },
     },
     exit: {
@@ -231,9 +217,8 @@ const index = () => {
                     variants={navSlideUp}
                     initial="initial"
                     animate="enter"
-                    // exit="exit"
                     className={
-                      "text-primary overflow-y-clip h-auto px-[2%] uppercase font-[600] lg:text-[5em] md:text-[4.5em] sm:text-[10.092vw] text-[11.427vw] leading-[1] py-4 "
+                      "text-primary overflow-y-clip h-auto px-[2%] uppercase font-[600] lg:text-[5rem] md:text-[4.5em] sm:text-[10.092vw] text-[11.427vw] leading-[1] py-4 "
                     }
                   >
                     {navLink.id}
@@ -243,18 +228,16 @@ const index = () => {
                       variants={fadeIn}
                       initial="initial"
                       animate="enter"
-                      className="text-primary italic py-4 md:mt-[1%] lg:mt-[0.5%]"
+                      className="text-primary italic py-4 ml-[-1%] font-[300] lg:text-[1.6rem] md:text-[1.1rem]"
                     >
                       0{index}.
                     </motion.p>
                   )}
                 </div>
-
                 <motion.div
                   variants={navSlideIn}
                   initial="initial"
                   animate="enter"
-                  // exit="exit"
                   className={"bg-grey3 h-[1px] w-full"}
                 />
               </div>

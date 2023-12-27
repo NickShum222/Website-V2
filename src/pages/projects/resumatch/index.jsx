@@ -65,8 +65,9 @@ const index = () => {
                 "w-full text-primary leading-[1.4] font-[500] lg:text-[1.3em] md:text-[1.3em] text-[1.2em]"
               }
             >
-              This website serves as a comprehensive showcase of my professional
-              journey, highlighting all relevant projects and experiences.
+              ResuMatch is a web application designed to streamline your job
+              search. Create an account, track your job applications, and
+              effortlessly link uploaded resumes to specific jobs.
             </p>
             <p
               className={
@@ -83,6 +84,7 @@ const index = () => {
               <Link
                 scroll={false}
                 href={"https://github.com/NickShum222/Website-V1"}
+                target="_blank"
                 className={
                   "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
                 }
