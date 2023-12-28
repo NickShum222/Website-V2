@@ -38,15 +38,16 @@ const Experiences = () => {
           <div className="flex lg:flex-col flex-row justify-start text-center items-start lg:w-[15%] w-full lg:ml-[5%]  relative">
             <motion.div
               className={
-                "absolute lg:inline hidden border-r-white border-solid border-r-[4px] top-0 right-0 w-full z-[10] "
+                "absolute lg:inline hidden bg-primary rounded-full top-0 left-0 w-[4px] z-[20]"
               }
               animate={{ y: `${100 * selected}%` }}
               style={{ height: `calc(100% / ${experiences.length})` }}
               transition={{ duration: 0.45, ease: [0.5, 1, 0.89, 1] }}
             ></motion.div>
+            <div className=" absolute lg:top-0 bottom-0 opacity-20 left-0 z-[10] bg-grey4 lg:w-[4px] w-full lg:h-full h-[3px]  rounded-full" />
             <motion.div
               className={
-                "absolute lg:hidden inline border-b-white border-solid border-b-[4px] top-0 left-0 h-full z-[10] "
+                "absolute lg:hidden inline left-0 bottom-0 h-[3px] rounded-full bg-primary z-[20] "
               }
               animate={{ x: `${100 * selected}%` }}
               style={{ width: `calc(100% / ${experiences.length})` }}
