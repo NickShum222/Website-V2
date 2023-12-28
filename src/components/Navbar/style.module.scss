@@ -1,0 +1,32 @@
+.burger {
+  width: 100%;
+  z-index: 50;
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 30%;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    transition: transform 0.3s;
+  }
+  &::after {
+    top: -5px;
+  }
+  &::before {
+    top: 5px;
+  }
+}
+
+.burgerActive {
+  &::after {
+    transform: rotate(45deg);
+    top: -1px;
+  }
+  &::before {
+    transform: rotate(-45deg);
+    top: 0px;
+  }
+}

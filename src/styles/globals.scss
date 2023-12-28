@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* transition: all 0.25s ease; */
+  @apply transition-colors;
+  @apply duration-500;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+.landing-text {
+  transform-style: preserve-3d;
+}
+::-moz-selection {
+  background: #8894a3;
+  color: #e4e5e7;
+}
+::-webkit-selection {
+  background: #8894a3;
+  color: #e4e5e7;
+}
+::selection {
+  background: #8894a3;
+  color: #e4e5e7;
+}
+
+::-webkit-scrollbar {
+  // width: 8px;
+  width: 0px;
+}
+::-webkit-scrollbar-track {
+  // background-color: #151515;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  // background-color: #9c9c9c;
+  // border-radius: 5px;
+  background-color: transparent;
+}
+
+/* Firefox */
+::-moz-scrollbar {
+  // width: 8px;
+  width: 0px;
+}
+
+::-moz-scrollbar-track {
+  // background-color: #151515;
+  background-color: transparent;
+}
+
+::-moz-scrollbar-thumb {
+  // background-color: #9c9c9c;
+  // border-radius: 5px;
+  background-color: transparent;
+}
+
+.description {
+  clip-path: inset(50% 0 50%);
+  transition: clip-path 0.4s;
+}
+.landing {
+  clip-path: inset(50% 0 50%);
+  transition: clip-path 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.perspective {
+  perspective: 700px;
+  perspective-origin: left;
+}
+.scroll-smooth{
+  scroll-behavior: smooth;
+}
