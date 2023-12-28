@@ -26,7 +26,7 @@ const index = ({ title, index, className }) => {
         <motion.h4
             variants={fadeIn}
             initial="initial"
-            delay={1.95}
+            delay={2.05}
             animate={isInView ? "enter" : "initial"}
           className="text-tertiary dark:text-primary lg:text-headingIndexClamp md:text-[3.125vw]
                 sm:text-[3.980vw] text-[5.089vw]

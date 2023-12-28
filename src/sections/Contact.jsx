@@ -133,11 +133,16 @@ const Contact = () => {
             <Link
               href="mailto:n4shum@uwaterloo.ca"
               target="_blank"
-              className="group transition-all duration-350"
+              className="group transition-all duration-400"
             >
-              <BodyAnim2 className="lg:text-aboutParagraph md:text-[3.576vw] text-[4.589vw] font-[400] tracking-tight text-grey2">
+              <div className="lg:text-aboutParagraph md:text-[3.576vw] text-[4.589vw] font-[400] tracking-tight leading-[1.2] text-grey2">
                 n4shum@uwaterloo.ca
-              </BodyAnim2>
+                <span
+                  className={
+                    "max-w-0 group-hover:max-w-full block bg-grey2 transition-all duration-400 ease-in h-[3px] rounded-full"
+                  }
+                />
+              </div>
             </Link>
           </div>
           <BodyAnim className="flex flex-col items-start w-full">
@@ -151,18 +156,18 @@ const Contact = () => {
                 return (
                   <Link
                     key={name}
-                    className={`flex justify-start w-full items-center group transition-all duration-350 lg-gap-2 gap-1 cursor-pointer text-grey2`}
+                    className={`flex justify-start w-full items-center group transition-all duration-400 lg-gap-2 gap-1 cursor-pointer text-grey2`}
                     href={link}
                     target="_blank"
                   >
                     <IconComponent
                       className={`lg:text-contactSub  md:text-[4.576vw] text-[6.361vw] `}
                     />
-                    <div className="group lg:text-aboutParagraph md:text-[3.576vw] text-[4.589vw] font-[400] tracking-tight">
+                    <div className="group lg:text-aboutParagraph md:text-[3.576vw] text-[4.589vw] leading-[1] font-[400] tracking-tight">
                       {name}
                       <span
                         className={
-                          "max-w-0 group-hover:max-w-full block bg-grey2 transition-all duration-350 ease-in h-[3px] rounded-full"
+                          "max-w-0 group-hover:max-w-full block bg-grey2 transition-all duration-400 ease-in h-[3px] rounded-full"
                         }
                       />
                     </div>

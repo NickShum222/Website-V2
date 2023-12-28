@@ -13,16 +13,16 @@ import {
 import { experiencesBodySlideUp } from "@/utils/motion";
 
 const Experiences = () => {
-  const element = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: element,
-    offset: ["start start", "end end"],
-  });
+  // const element = useRef(null);
+  // const { scrollYProgress } = useScroll({
+  //   target: element,
+  //   offset: ["start start", "end end"],
+  // });
   const [selected, setSelected] = useState(0);
   return (
     <section
       id="experiences"
-      ref={element}
+      // ref={element}
       className="min-h-[200lvh] relative w-full bg-primary dark:bg-secondary"
     >
       <div
@@ -38,7 +38,7 @@ const Experiences = () => {
           <div className="flex lg:flex-col flex-row justify-start text-center items-start lg:w-[15%] w-full lg:ml-[5%]  relative">
             <motion.div
               className={
-                "absolute lg:inline hidden bg-grey4 top-0 right-0 w-full z-[10] opacity-20 "
+                "absolute lg:inline hidden border-r-white border-solid border-r-[4px] top-0 right-0 w-full z-[10] opacity-20 "
               }
               animate={{ y: `${100 * selected}%` }}
               style={{ height: `calc(100% / ${experiences.length})` }}
@@ -46,7 +46,7 @@ const Experiences = () => {
             ></motion.div>
             <motion.div
               className={
-                "absolute lg:hidden inline bg-grey4 top-0 left-0 h-full z-[10] opacity-20 "
+                "absolute lg:hidden inline border-b-white border-solid border-b-[4px] top-0 left-0 h-full z-[10] opacity-20 "
               }
               animate={{ x: `${100 * selected}%` }}
               style={{ width: `calc(100% / ${experiences.length})` }}
@@ -63,7 +63,7 @@ const Experiences = () => {
                   selected={selected}
                   setSelected={setSelected}
                   range={[start, middle, end]}
-                  progress={scrollYProgress}
+                  // progress={scrollYProgress}
                   label={experience.id}
                 />
               );
@@ -119,34 +119,35 @@ const ExperienceTitle = ({
   setSelected,
   index,
 }) => {
-  let opacity;
-  if (index === 0) {
-    opacity = useTransform(progress, [range[0], range[2]], [1, 0.1]);
-    // x = useTransform(progress, [range[0], range[2]], ["10%", "0%"]);
-  } else if (index === experiences.length - 1) {
-    opacity = useTransform(progress, [range[0], range[2]], [0.1, 1]);
-    // x = useTransform(progress, [range[0], range[2]], ["0%", "10%"]);
-  } else {
-    opacity = useTransform(progress, range, [0.1, 1, 0.1]);
-    // x = useTransform(progress, range, ["10%", "0%", "10%"]);
-  }
-  useMotionValueEvent(progress, "change", (value) => {
-    if (value > range[0] && value < range[2]) {
-      setSelected(index);
-    }
-  });
+  // let opacity;
+  // if (index === 0) {
+  //   opacity = useTransform(progress, [range[0], range[2]], [1, 0.1]);
+  //   // x = useTransform(progress, [range[0], range[2]], ["10%", "0%"]);
+  // } else if (index === experiences.length - 1) {
+  //   opacity = useTransform(progress, [range[0], range[2]], [0.1, 1]);
+  //   // x = useTransform(progress, [range[0], range[2]], ["0%", "10%"]);
+  // } else {
+  //   opacity = useTransform(progress, range, [0.1, 1, 0.1]);
+  //   // x = useTransform(progress, range, ["10%", "0%", "10%"]);
+  // }
+  // useMotionValueEvent(progress, "change", (value) => {
+  //   if (value > range[0] && value < range[2]) {
+  //     setSelected(index);
+  //   }
+  // });
 
   return (
-    <>
-      <div className={"relative w-full py-[2%] z-[20]"}>
-        <motion.div
-          style={{ opacity }}
-          className={`font-[600] w-full  transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight text-primary`}
-        >
-          {label}
-        </motion.div>
-      </div>
-    </>
+    <div className={"relative w-full py-[2%] z-[20] cursor-pointer"}>
+      <motion.div
+        // style={{ opacity }}
+        onClick={() => {
+          setSelected(index);
+        }}
+        className={`font-[500] w-full  transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight text-primary`}
+      >
+        {label}
+      </motion.div>
+    </div>
   );
 };
 

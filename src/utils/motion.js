@@ -3,7 +3,7 @@ export const landingSubSlideRight = {
     opacity: 0,
     x: "-10%",
   },
-  animate: (delay) =>  ({
+  animate: (delay) => ({
     opacity: 1,
     x: 0,
     transition: {
@@ -84,22 +84,22 @@ export const servicesToolsSlideIn2 = {
 
 export const experiencesBodySlideUp = {
   initial: {
-    y: "10%",
-    opacity: 0
+    y: "5%",
+    opacity: 0,
   },
   enter: {
     y: "0%",
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.25,
       ease: [0.22, 1, 0.36, 1],
-    }
+    },
   },
   exit: {
-    y: "10%",
-    opacity: 0
-  }
-}
+    y: "5%",
+    opacity: 0,
+  },
+};
 
 export const bodyAnim2SlideUp = {
   initial: {
@@ -115,35 +115,83 @@ export const bodyAnim2SlideUp = {
   }),
 };
 
-export const headerSlide ={
+export const headerSlide = {
   initial: {
-    x:"-100%"
+    x: "-100%",
   },
   enter: {
     x: "0%",
-    transition:{
+    transition: {
       duration: 0.9,
       delay: 0.6,
-      ease: [0.16, 1, 0.3, 1]
-    }
-  }
-}
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
 
 export const fadeIn = {
   initial: {
     opacity: 0,
+    y: "30%",
   },
   enter: (delay) => ({
+    y: "0",
     opacity: 1,
     transition: {
       delay: delay,
-      duration: 0.5
-    }
+      duration: 0.5,
+    },
   }),
   exit: {
     opacity: 0,
     transition: {
-      duration: 0.5
-    }
-  }
-}
+      duration: 0.5,
+    },
+  },
+};
+
+export const navSlideIn = {
+  initial: {
+    x: "-100%",
+  },
+  enter: {
+    x: "0%",
+    transition: {
+      duration: 1.25,
+      delay: 0.5,
+      ease: [0.25, 1, 0.5, 1],
+    },
+  },
+  exit: {
+    x: "-100%",
+    transition: {
+      duration: 1.25,
+      delay: 0.15,
+      ease: [0.25, 1, 0.5, 1],
+    },
+  },
+};
+
+export const navSlideUp = {
+  initial: {
+    y: "100%",
+    opacity: 0,
+  },
+  enter: {
+    y: "0%",
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delay: 0.5,
+      ease: [0.25, 1, 0.5, 1],
+    },
+  },
+  exit: {
+    y: "100%",
+    opacity: 0,
+    transition: {
+      duration: 1,
+      ease: [0.25, 1, 0.5, 1],
+    },
+  },
+};
