@@ -7,32 +7,15 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-const navLinks = [
-  {
-    id: "Home",
-    link: "#landing",
-  },
-  {
-    id: "About",
-    link: "#about",
-  },
-  {
-    id: "Services",
-    link: "#services",
-  },
-  {
-    id: "Experiences",
-    link: "#experiences",
-  },
-  {
-    id: "Projects",
-    link: "#projects",
-  },
-  {
-    id: "Contact",
-    link: "#contact",
-  },
-];
+import {
+  fadeIn,
+  navSlideIn,
+  navSlideUp,
+  navSlideDown,
+  navActive,
+  toggleNav,
+} from "@/utils/motion";
+import { navLinks } from "@/constants";
 const index = () => {
   const { scrollYProgress } = useScroll();
   const [showNav, setShowNav] = useState(true);
@@ -65,128 +48,6 @@ const index = () => {
     setPosition({ x: 0, y: 0 });
     setNavPosition({ x: 0, y: 0 });
   };
-  const fadeIn = {
-    initial: {
-      y: "30%",
-      opacity: 0,
-    },
-    enter: {
-      y: "0",
-      opacity: 1,
-      transition: {
-        ease: [0.25, 1, 0.5, 1],
-        duration: 0.75,
-        delay: 0.75,
-      },
-    },
-    exit: {
-      opacity: 0,
-    },
-  };
-  const navSlideIn = {
-    initial: {
-      x: "-100%",
-    },
-    enter: {
-      x: "0%",
-      transition: {
-        duration: 1.25,
-        delay: 0.5,
-        ease: [0.25, 1, 0.5, 1],
-      },
-    },
-    exit: {
-      x: "-100%",
-      transition: {
-        duration: 1.25,
-        delay: 0.15,
-        ease: [0.25, 1, 0.5, 1],
-      },
-    },
-  };
-  const navSlideUp = {
-    initial: {
-      y: "100%",
-      opacity: 0,
-    },
-    enter: {
-      y: "0%",
-      opacity: 1,
-      transition: {
-        duration: 1,
-        delay: 0.5,
-        ease: [0.25, 1, 0.5, 1],
-      },
-    },
-    exit: {
-      y: "100%",
-      opacity: 0,
-      transition: {
-        duration: 1,
-        ease: [0.25, 1, 0.5, 1],
-      },
-    },
-  };
-
-  const navSlideDown = {
-    initial: {
-      y: "-100%",
-    },
-    enter: {
-      y: 0,
-      transition: {
-        duration: 0.75,
-        ease: [0.25, 1, 0.5, 1],
-      },
-    },
-    exit: {
-      y: "-100%",
-      transition: {
-        duration: 0.75,
-        ease: [0.25, 1, 0.5, 1],
-      },
-    },
-  };
-
-  const navActive = {
-    initial: {
-      y: 0,
-    },
-    enter: {
-      y: "-100%",
-      transition: {
-        duration: 0.45,
-        delay: 0.05,
-        ease: [0.32, 0, 0.67, 0],
-      },
-    },
-    exit: {
-      y: "-200%",
-      transition: {
-        duration: 0.45,
-        delay: 0.05,
-        ease: [0.33, 1, 0.68, 1],
-      },
-    },
-  };
-  const toggleNav = {
-    initial: {
-      scale: 0,
-    },
-    enter: {
-      scale: "100%",
-      transition: {
-        duration: 0.45,
-        ease: [0.34, 1.56, 0.64, 1],
-      },
-    },
-    exit: {
-      scale: 0,
-      transition: {
-        duration: 0.35,
-      },
-    },
-  };
   return (
     <>
       <AnimatePresence mode="wait">
@@ -196,7 +57,7 @@ const index = () => {
             initial="initial"
             animate="enter"
             exit="exit"
-            className="fixed z-[60] top-0 right-0 h-[100dvh] w-full bg-[#232323] flex flex-col justify-center items-center lg:px-[16%] md:px-[6%] px-[4%]"
+            className="selected-none fixed z-[60] top-0 right-0 h-[100dvh] w-full bg-[#232323] flex flex-col justify-center items-center lg:px-[16%] md:px-[6%] px-[4%]"
           >
             {navLinks.map((navLink, index) => (
               <div
@@ -226,6 +87,7 @@ const index = () => {
                   {index > 0 && (
                     <motion.p
                       variants={fadeIn}
+                      custom={0.75}
                       initial="initial"
                       animate="enter"
                       className="text-primary italic py-4 ml-[-1%] font-[300] lg:text-[1.6rem] md:text-[1.1rem]"

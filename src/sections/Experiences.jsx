@@ -13,11 +13,11 @@ import {
 import { experiencesBodySlideUp } from "@/utils/motion";
 
 const Experiences = () => {
-  const element = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: element,
-    offset: ["start start", "end end"],
-  });
+  // const element = useRef(null);
+  // const { scrollYProgress } = useScroll({
+  //   target: element,
+  //   offset: ["start start", "end end"],
+  // });
   const [selected, setSelected] = useState(0);
   return (
     <section
@@ -63,7 +63,7 @@ const Experiences = () => {
                   selected={selected}
                   setSelected={setSelected}
                   range={[start, middle, end]}
-                  progress={scrollYProgress}
+                  // progress={scrollYProgress}
                   label={experience.id}
                 />
               );
@@ -119,34 +119,35 @@ const ExperienceTitle = ({
   setSelected,
   index,
 }) => {
-  let opacity;
-  if (index === 0) {
-    opacity = useTransform(progress, [range[0], range[2]], [1, 0.1]);
-    // x = useTransform(progress, [range[0], range[2]], ["10%", "0%"]);
-  } else if (index === experiences.length - 1) {
-    opacity = useTransform(progress, [range[0], range[2]], [0.1, 1]);
-    // x = useTransform(progress, [range[0], range[2]], ["0%", "10%"]);
-  } else {
-    opacity = useTransform(progress, range, [0.1, 1, 0.1]);
-    // x = useTransform(progress, range, ["10%", "0%", "10%"]);
-  }
-  useMotionValueEvent(progress, "change", (value) => {
-    if (value > range[0] && value < range[2]) {
-      setSelected(index);
-    }
-  });
+  // let opacity;
+  // if (index === 0) {
+  //   opacity = useTransform(progress, [range[0], range[2]], [1, 0.1]);
+  //   // x = useTransform(progress, [range[0], range[2]], ["10%", "0%"]);
+  // } else if (index === experiences.length - 1) {
+  //   opacity = useTransform(progress, [range[0], range[2]], [0.1, 1]);
+  //   // x = useTransform(progress, [range[0], range[2]], ["0%", "10%"]);
+  // } else {
+  //   opacity = useTransform(progress, range, [0.1, 1, 0.1]);
+  //   // x = useTransform(progress, range, ["10%", "0%", "10%"]);
+  // }
+  // useMotionValueEvent(progress, "change", (value) => {
+  //   if (value > range[0] && value < range[2]) {
+  //     setSelected(index);
+  //   }
+  // });
 
   return (
-    <>
-      <div className={"relative w-full py-[2%] z-[20]"}>
-        <motion.div
-          style={{ opacity }}
-          className={`font-[600] w-full  transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight text-primary`}
-        >
-          {label}
-        </motion.div>
-      </div>
-    </>
+    <div className={"relative w-full py-[2%] z-[20]"}>
+      <motion.div
+        // style={{ opacity }}
+        onClick={() => {
+          setSelected(index);
+        }}
+        className={`cursor-pointer font-[500] w-full  transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight text-primary`}
+      >
+        {label}
+      </motion.div>
+    </div>
   );
 };
 
