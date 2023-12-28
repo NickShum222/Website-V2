@@ -125,11 +125,11 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-end justify-end lg:w-[25%] lg:gap-8 md:gap-6 gap-4 w-full">
-          <div className="flex flex-col items-start w-full">
-            <BodyAnim2 className="font-[600] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] ">
+        <div className="flex flex-col items-end justify-end lg:w-[28%] lg:gap-8 md:gap-6 gap-4 w-full">
+          <BodyAnim className="flex flex-col items-start w-full">
+            <div className="font-[600] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] ">
               Contact details
-            </BodyAnim2>
+            </div>
             <Link
               href="mailto:n4shum@uwaterloo.ca"
               target="_blank"
@@ -144,7 +144,7 @@ const Contact = () => {
                 />
               </div>
             </Link>
-          </div>
+          </BodyAnim>
           <BodyAnim className="flex flex-col items-start w-full">
             <div className="font-[600] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] lg:mb-[6%] mb-[2%]">
               My Socials

@@ -103,7 +103,7 @@ export const experiencesBodySlideUp = {
 
 export const bodyAnim2SlideUp = {
   initial: {
-    y: "100%",
+    y: "120%",
   },
   enter: (delay) => ({
     y: 0,

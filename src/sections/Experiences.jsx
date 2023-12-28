@@ -61,9 +61,9 @@ const Experiences = () => {
                 <ExperienceTitle
                   key={index}
                   index={index}
-                  selected={selected}
+                  // selected={selected}
                   setSelected={setSelected}
-                  range={[start, middle, end]}
+                  // range={[start, middle, end]}
                   // progress={scrollYProgress}
                   label={experience.id}
                 />
@@ -112,14 +112,7 @@ const Experiences = () => {
   );
 };
 
-const ExperienceTitle = ({
-  label,
-  range,
-  progress,
-  selected,
-  setSelected,
-  index,
-}) => {
+const ExperienceTitle = ({ label, setSelected, index }) => {
   // let opacity;
   // if (index === 0) {
   //   opacity = useTransform(progress, [range[0], range[2]], [1, 0.1]);

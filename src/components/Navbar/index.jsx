@@ -57,8 +57,7 @@ const index = () => {
             initial="initial"
             animate="enter"
             exit="exit"
-            className="selected-none '
-            fixed z-[60] top-0 right-0 h-[100dvh] w-full bg-[#232323] flex flex-col justify-center items-center lg:px-[16%] md:px-[6%] px-[4%]"
+            className="fixed select-none z-[60] top-0 right-0 h-[100dvh] w-full bg-[#232323] flex flex-col justify-center items-center lg:px-[16%] md:px-[6%] px-[4%]"
           >
             {navLinks.map((navLink, index) => (
               <div
