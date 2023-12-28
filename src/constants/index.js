@@ -13,20 +13,21 @@ export const skills = [
 
 export const projects = [
   {
-    name: "ResuMatch",
-    url: "/projects/resumatch",
-    description: "Internship Application Manager",
+      name: "ResuMatch",
+      url: "/projects/resumatch",
+      description: "Internship Application Manager"
   },
   {
     name: "SpotiTrack",
     url: "/projects/spotitrack",
-    description: "Spotify Music Tracker",
+    description: "Spotify Music Tracker"
   },
   {
     name: "Website V1",
     url: "/projects/website-v1",
-    description: "Personal Website Portfolio",
+    description: "Personal Website Portfolio"
   },
+
 ];
 
 export const socials = [
@@ -71,6 +72,7 @@ export const experiences = [
     ],
     tools: "TestRail, Jira, IBM AS400",
   },
+  
 ];
 
 export const paragraph =
@@ -82,31 +84,4 @@ export const landingText = [
   "Design Oriented",
   "Frontend Addict",
   "Backend Capable",
-];
-
-export const navLinks = [
-  {
-    id: "Home",
-    link: "#landing",
-  },
-  {
-    id: "About",
-    link: "#about",
-  },
-  {
-    id: "Services",
-    link: "#services",
-  },
-  {
-    id: "Experiences",
-    link: "#experiences",
-  },
-  {
-    id: "Projects",
-    link: "#projects",
-  },
-  {
-    id: "Contact",
-    link: "#contact",
-  },
 ];

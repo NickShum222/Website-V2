@@ -27,7 +27,7 @@ const index = () => {
               scroll={false}
               href={"/"}
               className={
-                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-400 hover:text-primary font-[500] py-[1.25%] "
+                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
               }
             >
               <div className="flex items-center gap-1">
@@ -35,7 +35,7 @@ const index = () => {
               </div>
               <span
                 className={
-                  "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-400 ease-in h-[2px]"
+                  "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
                 }
               />
             </Link>
@@ -83,55 +83,14 @@ const index = () => {
               ensures the application follows the OAuth 2.0 protocol, allowing
               secure, user-protected fetch api calls to the Spotify API.
             </p>
-            <div
-              className={
-                "flex lg:flex-row flex-col justify-start lg:gap-8 lg:w-full mt-[6%]"
-              }
-            >
-              <div className={"flex justify-start"}>
-                <Link
-                  scroll={false}
-                  href={"https://github.com/NickShum222/Website-V1"}
-                  target="_blank"
-                  className={
-                    "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-400 hover:text-primary font-[500] py-[1.25%] "
-                  }
-                >
-                  <div className="flex items-center gap-1">
-                    GitHub Repository <BsArrowUpRight />
-                  </div>
-                  <span
-                    className={
-                      "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-400 ease-in h-[2px]"
-                    }
-                  />
-                </Link>
-              </div>
-              <div className={"flex justify-start"}>
-                <Link
-                  scroll={false}
-                  href={"https://website-v1.nickshum.ca"}
-                  target="_blank"
-                  className={
-                    "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-400 hover:text-primary font-[500] py-[1.25%] "
-                  }
-                >
-                  <div className="flex items-center gap-1">
-                    Visit Website <BsArrowUpRight />
-                  </div>
-                  <span
-                    className={
-                      "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-400 ease-in h-[2px]"
-                    }
-                  />
-                </Link>
-              </div>
-              {/* <Link
+            <div className={"flex justify-start gap-8 w-full mt-[6%]"}>
+              <Link
                 scroll={false}
                 href={"https://github.com/NickShum222/Website-V1"}
                 target="_blank"
+
                 className={
-                  "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-400 hover:text-primary font-[500] py-[1.25%] "
+                  "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
                 }
               >
                 <div className="flex items-center gap-1">
@@ -139,7 +98,7 @@ const index = () => {
                 </div>
                 <span
                   className={
-                    "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-400 ease-in h-[2px]"
+                    "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
                   }
                 />
               </Link>
@@ -148,7 +107,7 @@ const index = () => {
                 href={"https://website-v1.nickshum.ca"}
                 target="_blank"
                 className={
-                  "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-400 hover:text-primary font-[500] py-[1.25%] "
+                  "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
                 }
               >
                 <div className="flex items-center gap-1">
@@ -156,10 +115,10 @@ const index = () => {
                 </div>
                 <span
                   className={
-                    "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-400 ease-in h-[2px]"
+                    "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
                   }
                 />
-              </Link> */}
+              </Link>
             </div>
           </div>
         </div>
@@ -193,26 +152,26 @@ const index = () => {
               scroll={false}
               href={"/"}
               className={
-                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-400 hover:text-primary font-[500] py-[1.25%] "
+                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
               }
             >
               <p>Go Back</p>
               <span
                 className={
-                  "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-400 ease-in h-[2px]"
+                  "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
                 }
               />
             </Link>
             <a
               href={"#spotitrack"}
               className={
-                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-400 hover:text-primary font-[500] py-[1.25%] "
+                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
               }
             >
               <p>Scroll Top</p>
               <span
                 className={
-                  "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-400 ease-in h-[2px]"
+                  "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
                 }
               />
             </a>
