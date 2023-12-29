@@ -34,11 +34,11 @@ const Experiences = () => {
         <div className="sm:hidden inline w-full">
           <Header title="Work" index="03." />
         </div>
-        <div className="flex lg:flex-row flex-col justify-between items-start lg:gap-0 sm:gap-8 gap-6 w-full">
+        <div className="flex lg:flex-row flex-col justify-end items-start lg:gap-0 sm:gap-8 gap-6 w-full">
           <div className="flex lg:flex-col flex-row justify-start text-center items-start lg:w-[15%] w-full lg:ml-[5%]  relative">
             <motion.div
               className={
-                "absolute lg:inline hidden bg-primary rounded-full top-0 left-0 w-[4px] z-[20]"
+                "absolute lg:inline hidden dark:bg-primary bg-tertiary rounded-full top-0 left-0 w-[4px] z-[20]"
               }
               animate={{ y: `${100 * selected}%` }}
               style={{ height: `calc(100% / ${experiences.length})` }}
@@ -48,10 +48,10 @@ const Experiences = () => {
                 delay: 0.15,
               }}
             ></motion.div>
-            <div className=" absolute lg:top-0 bottom-0 opacity-20 lg:left-[1px] left-0 z-[10] bg-grey4 lg:w-[2px] w-full lg:h-full h-[2px]  rounded-full" />
+            <div className=" absolute lg:top-0 bottom-0 lg:left-[1px] left-0 z-[10] bg-grey4 lg:w-[2px] w-full lg:h-full h-[2px]  rounded-full" />
             <motion.div
               className={
-                "absolute lg:hidden inline left-0 bottom-0 h-[3px] rounded-full bg-primary z-[20] "
+                "absolute lg:hidden inline left-0 bottom-0 h-[3px] rounded-full dark:bg-primary bg-tertiary z-[20] "
               }
               animate={{ x: `${100 * selected}%` }}
               style={{ width: `calc(100% / ${experiences.length})` }}
@@ -140,10 +140,8 @@ const ExperienceTitle = ({ label, selected, setSelected, index }) => {
 
   return (
     <div
-      className={`relative w-full py-[2%] z-[20] ${
-        selected === index
-          ? "text-primary bg-grey4 bg-opacity-20"
-          : "text-primary opacity-50"
+      className={`relative w-full py-[2%] z-[20]  bg-opacity-20 ${
+        selected === index ? " bg-grey4" : ""
       }`}
     >
       <motion.div
@@ -151,7 +149,11 @@ const ExperienceTitle = ({ label, selected, setSelected, index }) => {
         onClick={() => {
           setSelected(index);
         }}
-        className={`cursor-pointer font-[500] w-full  transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight `}
+        className={`cursor-pointer font-[500] w-full  transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight ${
+          selected === index
+            ? "dark:text-primary text-tertiary"
+            : "dark:text-primary text-grey2"
+        }`}
       >
         {label}
       </motion.div>

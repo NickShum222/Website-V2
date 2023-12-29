@@ -139,7 +139,7 @@ const Contact = () => {
                 n4shum@uwaterloo.ca
                 <span
                   className={
-                    "max-w-0 group-hover:max-w-full block bg-grey2 transition-all duration-400 ease-in h-[3px] rounded-full"
+                    "max-w-0 group-hover:max-w-full block bg-grey2 transition-all duration-400 ease-in lg:h-[3px] h-[2px] rounded-full"
                   }
                 />
               </div>
@@ -167,7 +167,7 @@ const Contact = () => {
                       {name}
                       <span
                         className={
-                          "max-w-0 group-hover:max-w-full block bg-grey2 transition-all duration-400 ease-in h-[3px] rounded-full"
+                          "max-w-0 group-hover:max-w-full block bg-grey2 transition-all duration-400 ease-in lg:h-[3px] h-[2px] rounded-full"
                         }
                       />
                     </div>

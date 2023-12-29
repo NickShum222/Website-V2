@@ -14,7 +14,7 @@ import { useState, useEffect, useContext } from "react";
 import dynamic from "next/dynamic";
 import { Section, SEO, Navbar } from "@/components";
 // import {AnimatePresence} from "framer-motion";
-const Landing = dynamic(() => import("@/sections/Landing"))
+const Landing = dynamic(() => import("@/sections/Landing"));
 const LandingSub = dynamic(() => import("@/sections/LandingSub"));
 const About = dynamic(() => import("@/sections/About"));
 const Services = dynamic(() => import("@/sections/Services"));
@@ -36,29 +36,29 @@ export default function Home() {
     <div
       className={`flex flex-col max-w-[100svw] overflow-x-clip ${theme} relative`}
     >
-        <SEO theme={theme} />
-        <Navbar/>
-        <Section theme="light" setTheme={setTheme}>
-          <Landing/>
-        </Section>
-        <Section theme="dark" setTheme={setTheme}>
-          <LandingSub />
-        </Section>
-        <Section theme="light" setTheme={setTheme}>
-          <About />
-        </Section>
-        <Section theme="light" setTheme={setTheme}>
-          <Services />
-        </Section>
-        <Section theme="dark" setTheme={setTheme}>
-          <Experiences />
-        </Section>
-        <Section theme="light" setTheme={setTheme}>
-          <Projects />
-        </Section>
-        <Section theme="light" setTheme={setTheme}>
-          <Contact />
-        </Section>
+      <SEO theme={theme} />
+      <Navbar />
+      <Section theme="light" setTheme={setTheme}>
+        <Landing />
+      </Section>
+      <Section theme="dark" setTheme={setTheme}>
+        <LandingSub />
+      </Section>
+      <Section theme="light" setTheme={setTheme}>
+        <About />
+      </Section>
+      <Section theme="light" setTheme={setTheme}>
+        <Services />
+      </Section>
+      <Section theme="light" setTheme={setTheme}>
+        <Experiences />
+      </Section>
+      <Section theme="dark" setTheme={setTheme}>
+        <Projects />
+      </Section>
+      <Section theme="light" setTheme={setTheme}>
+        <Contact />
+      </Section>
       {/*{loaded ? (*/}
       {/*        <Section theme="light" setTheme={setTheme}>*/}
       {/*          <Landing/>*/}

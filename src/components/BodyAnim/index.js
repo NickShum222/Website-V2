@@ -19,7 +19,7 @@ const slideUp = {
 
 const index = ({ children, className }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.9 });
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
   return (
     <motion.div
       ref={ref}

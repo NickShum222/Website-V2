@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import { Header } from "@/components";
 import { projects } from "@/constants";
 import Link from "next/link";
@@ -6,11 +6,9 @@ import Link from "next/link";
 const Projects = () => {
   const [active, setActive] = useState(null);
 
-
-
   return (
     <section
-    id="projects"
+      id="projects"
       className={`flex flex-col justify-start bg-primary dark:bg-secondary md:pb-[4%] pb-[40%] w-full`}
     >
       <Header
@@ -25,7 +23,6 @@ const Projects = () => {
               href={project.url}
               key={index}
               scroll={false}
-
               onMouseOver={() => {
                 setActive(index);
               }}
@@ -46,7 +43,7 @@ const Projects = () => {
         <div className="absolute top-0 left-0 w-full flex flex-col">
           {projects.map((project, index) => (
             <Link
-                scroll={false}
+              scroll={false}
               href={project.url}
               key={index}
               className={`bg-tertiary dark:bg-primary lg:py-[2%] py-[3%] border-t-[1px] border-solid dark:border-primary border-secondary lg:px-[6%] md:px-[64px] px-[24px] relative
@@ -65,7 +62,7 @@ const Projects = () => {
               }}
             >
               <div className="  flex h-full justify-between items-center">
-                <p className="font-[600] uppercase lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-tertiary">
+                <p className="font-[600] uppercase lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-secondary">
                   {project.name}
                 </p>
                 {/* <p className={"text-primary font-[500] hidden lg:inline text-[1.6vw]"}>{project.description}</p> */}
