@@ -89,7 +89,7 @@ const Experiences = () => {
             >
               <div className="font-[600] dark:text-primary text-secondary lg:text-experiencesHeading sm:text-[5.305vw] text-[7.952vw] md:leading-[1.1] leading-[1.2] tracking-tight w-full lg:mb-[0.5%] mb-[2%] ">
                 {experiences[selected].title} @{" "}
-                <span className="dark:text-primary text-secondary cursor-pointer underline lg:decoration-[4px] decoration-[2px] ">
+                <span className="dark:text-primary text-tertiary cursor-pointer underline lg:decoration-[4px] decoration-[2px] ">
                   {experiences[selected].company}
                 </span>
               </div>
