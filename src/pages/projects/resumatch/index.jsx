@@ -83,10 +83,10 @@ const index = () => {
               elevates the job application process.
             </p>
             <div className={"flex justify-start gap-8 w-full mt-[6%]"}>
-              <Link
-                scroll={false}
-                href={"https://github.com/NickShum222/Website-V1"}
-                target="_blank"
+              <div
+                // scroll={false}
+                // href={"https://github.com/NickShum222/Website-V1"}
+                // target="_blank"
                 className={
                   "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
                 }
@@ -99,7 +99,7 @@ const index = () => {
                     "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
                   }
                 />
-              </Link>
+              </div>
             </div>
           </div>
         </div>
