@@ -100,7 +100,7 @@ const Experiences = () => {
                 {experiences[selected].description.map((description, index) => (
                   <li
                     key={index}
-                    className=" text-grey4 lg:text-aboutParagraph font-[200] md:text-[2.576vw] text-[5.089vw] leading-[1.3]"
+                    className=" text-grey2 dark:text-grey4 lg:text-aboutParagraph font-[200] md:text-[2.576vw] text-[5.089vw] leading-[1.3]"
                   >
                     {description}
                   </li>
@@ -109,7 +109,7 @@ const Experiences = () => {
               <div className="font-[400] dark:text-grey3 text-grey2 tracking-tight lg:text-experiencesSub sm:text-[3.980vw] text-[6.361vw] leading-[1.2]">
                 Tools:
               </div>
-              <div className=" text-grey4 lg:text-aboutParagraph font-[200] md:text-[2.576vw] text-[5.089vw] leading-[1.3]">
+              <div className=" text-grey2 dark:text-grey4 lg:text-aboutParagraph font-[200] md:text-[2.576vw] text-[5.089vw] leading-[1.3]">
                 {experiences[selected].tools}
               </div>
             </motion.div>
