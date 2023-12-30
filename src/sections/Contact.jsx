@@ -161,9 +161,9 @@ const Contact = () => {
                     target="_blank"
                   >
                     <IconComponent
-                      className={`lg:text-contactSub  md:text-[4.576vw] text-[6.361vw] `}
+                      className={`lg:text-contactSub  md:text-[4.576vw] text-[6.361vw]`}
                     />
-                    <div className="group lg:text-aboutParagraph md:text-[3.576vw] text-[4.589vw] leading-[1] font-[400] tracking-tight">
+                    <div className="group lg:text-aboutParagraph md:text-[3.576vw] text-[5.089vw] leading-[1] font-[400] tracking-tight">
                       {name}
                       <span
                         className={

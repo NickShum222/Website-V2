@@ -62,9 +62,9 @@ const Experiences = () => {
               }}
             ></motion.div>
             {experiences.map((experience, index) => {
-              const start = index / experiences.length;
-              const end = start + 1 / experiences.length;
-              const middle = (start + end) / 2;
+              // const start = index / experiences.length;
+              // const end = start + 1 / experiences.length;
+              // const middle = (start + end) / 2;
               return (
                 <ExperienceTitle
                   key={index}
