@@ -12,6 +12,7 @@
     "@emailjs/browser": "^3.11.0",
     "@material-tailwind/react": "^2.1.5",
     "@studio-freight/lenis": "^1.0.29",
+    "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.1",
     "formik": "^2.4.5",
     "framer-motion": "^10.16.12",
