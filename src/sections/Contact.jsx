@@ -135,7 +135,7 @@ const Contact = () => {
               target="_blank"
               className="group transition-all duration-400"
             >
-              <div className="lg:text-aboutParagraph md:text-[3.576vw] text-[4.589vw] font-[400] tracking-tight leading-[1.2] text-grey2">
+              <div className="lg:text-aboutParagraph md:text-[3.576vw] text-[5.089vw] font-[400] tracking-tight leading-[1.2] text-grey2">
                 n4shum@uwaterloo.ca
                 <span
                   className={

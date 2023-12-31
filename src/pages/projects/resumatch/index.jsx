@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BsArrowUpRight, BsArrowLeft } from "react-icons/bs";
 
-const tools = ["Firebase", "React", "Django", "SQLite", "TailwindCSS", "Figma"];
+const tools = ["Firebase", "AWS S3", "React", "Django", "SQLite", "TailwindCSS", "Figma"];
 
 const index = () => {
   return (
@@ -74,13 +74,12 @@ const index = () => {
                 "w-full text-primary leading-[1.4] font-[300] lg:text-[1.3em] md:text-[1.3em] text-[1.2em] mt-[3%]"
               }
             >
-              Employing Firebase for authentication, Resumatch seamlessly
+              Employing Firebase for authentication, ResuMatch seamlessly
               manages job applications with a React.js and Tailwind CSS
               frontend, delivering an intuitively designed interface. On the
               backend, Django Rest Framework orchestrates the application's
               functionality, while SQLite serves as the robust database
-              foundation. The result is a secure, efficient web application that
-              elevates the job application process.
+              foundation.
             </p>
             <div className={"flex justify-start gap-8 w-full mt-[6%]"}>
               <div
