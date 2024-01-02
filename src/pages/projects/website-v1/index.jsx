@@ -77,11 +77,7 @@ const index = () => {
                 "w-full text-primary leading-[1.4] font-[300] lg:text-[1.3em] md:text-[1.3em] text-[1.2em] mt-[3%]"
               }
             >
-              Leveraging Next.js, React.js, and Tailwind CSS, the frontend
-              provides a responsive, visually engaging interface for an optimal
-              user experience. The backend, powered by Express and Node.js
-              ensures the application follows the OAuth 2.0 protocol, allowing
-              secure, user-protected fetch api calls to the Spotify API.
+              As my first major frontend project, I wanted to explore the capabilities of Next.js, especially with the recent release of Next 13 featuring the new app directory. With easy navigation, visitors can explore my work and get in touch through displayed contact information. The website is also optimized for mobile responsiveness, ensuring a seamless experience across devices.
             </p>
             <div
               className={
