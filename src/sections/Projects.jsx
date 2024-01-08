@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Header } from "@/components";
 import { projects } from "@/constants";
+import { FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
 
 const Projects = () => {
@@ -61,10 +62,11 @@ const Projects = () => {
                 setActive(null);
               }}
             >
-              <div className="  flex h-full justify-between items-center">
+              <div className="  flex h-full justify-start items-center gap-6">
                 <p className="font-[600] uppercase lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-secondary">
                   {project.name}
                 </p>
+                <FiExternalLink className="text-primary dark:text-secondary lg:inline hidden text-[5vw]" />
                 {/* <p className={"text-primary font-[500] hidden lg:inline text-[1.6vw]"}>{project.description}</p> */}
               </div>
             </Link>
