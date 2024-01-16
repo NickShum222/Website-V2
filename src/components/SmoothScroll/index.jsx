@@ -22,6 +22,7 @@ const index = ({ children }) => {
         if (targetElement) {
           targetElement.scrollIntoView({
             behavior: "smooth",
+            block: 'start'
           });
         }
       });

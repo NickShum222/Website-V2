@@ -119,6 +119,9 @@ const index = () => {
             "flex flex-col justify-center items-center lg:w-[50%] w-full gap-8"
           }
         >
+          {/* <video controls muted loop className="w-full">
+            <source src="../../../../public/images/spotitrack/SpotiTrackDemo.mp4" />
+          </video> */}
           <Image
             src={picture1}
             fit="true"

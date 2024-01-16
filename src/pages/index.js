@@ -11,6 +11,7 @@ import { useState, useEffect, useContext } from "react";
 //     Experiences,
 //     Contact
 // } from "@/sections";
+// import { Loading } from "@/sections";
 import dynamic from "next/dynamic";
 import { Section, SEO, Navbar } from "@/components";
 // import {AnimatePresence} from "framer-motion";
@@ -21,6 +22,7 @@ const Services = dynamic(() => import("@/sections/Services"));
 const Projects = dynamic(() => import("@/sections/Projects"));
 const Experiences = dynamic(() => import("@/sections/Experiences"));
 const Contact = dynamic(() => import("@/sections/Contact"));
+const Footer = dynamic(() => import("@/components/Footer"));
 
 export default function Home() {
   // const [loaded, setLoaded] = useContext(Load);
@@ -59,55 +61,57 @@ export default function Home() {
       <Section theme="light" setTheme={setTheme}>
         <Contact />
       </Section>
-      {/*{loaded ? (*/}
-      {/*        <Section theme="light" setTheme={setTheme}>*/}
-      {/*          <Landing/>*/}
-      {/*        </Section>*/}
-      {/*) : (*/}
-      {/*  <div*/}
-      {/*    className={`w-[100dvw] relative ${*/}
-      {/*      !active ? "h-[100svh] overflow-y-clip" : ""*/}
-      {/*    }`}*/}
-      {/*  >*/}
-      {/*    <div className="absolute top-0 left-0 h-full w-full">*/}
-      {/*      <Loading />*/}
-      {/*    </div>*/}
-      {/*    <div*/}
-      {/*      className="landing  w-full"*/}
-      {/*      style={{*/}
-      {/*        clipPath: active ? "inset(0 0 0 0)" : "inset(50% 0 50% 0)",*/}
-      {/*      }}*/}
-      {/*    >*/}
-      {/*      <Section theme="light" setTheme={setTheme}>*/}
-      {/*        <Landing />*/}
-      {/*      </Section>*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*)}*/}
+      <Footer />
 
-      {/*{(active || loaded) && (*/}
-      {/*  <>*/}
-      {/*    <Navbar/>*/}
-      {/*    <Section theme="dark" setTheme={setTheme}>*/}
-      {/*      <LandingSub />*/}
-      {/*    </Section>*/}
-      {/*    <Section theme="light" setTheme={setTheme}>*/}
-      {/*      <About />*/}
-      {/*    </Section>*/}
-      {/*    <Section theme="light" setTheme={setTheme}>*/}
-      {/*      <Services />*/}
-      {/*    </Section>*/}
-      {/*    <Section theme="dark" setTheme={setTheme}>*/}
-      {/*      <Experiences />*/}
-      {/*    </Section>*/}
-      {/*    <Section theme="light" setTheme={setTheme}>*/}
-      {/*      <Projects />*/}
-      {/*    </Section>*/}
-      {/*    <Section theme="light" setTheme={setTheme}>*/}
-      {/*      <Contact />*/}
-      {/*    </Section>*/}
-      {/*  </>*/}
-      {/*)}*/}
+      {/* {loaded ? (
+        <Section theme="light" setTheme={setTheme}>
+          <Landing />
+        </Section>
+      ) : (
+        <div
+          className={`w-[100dvw] relative ${
+            !active ? "h-[100svh] overflow-y-clip" : ""
+          }`}
+        >
+          <div className="absolute top-0 left-0 h-full w-full">
+            <Loading />
+          </div>
+          <div
+            className="landing w-full"
+            style={{
+              clipPath: active ? "inset(0 0 0 0)" : "inset(50% 0 50% 0)",
+            }}
+          >
+            <Section theme="light" setTheme={setTheme}>
+              <Landing />
+            </Section>
+          </div>
+        </div>
+      )}
+
+      {(active || loaded) && (
+        <>
+          <Navbar />
+          <Section theme="dark" setTheme={setTheme}>
+            <LandingSub />
+          </Section>
+          <Section theme="light" setTheme={setTheme}>
+            <About />
+          </Section>
+          <Section theme="light" setTheme={setTheme}>
+            <Services />
+          </Section>
+          <Section theme="dark" setTheme={setTheme}>
+            <Experiences />
+          </Section>
+          <Section theme="light" setTheme={setTheme}>
+            <Projects />
+          </Section>
+          <Section theme="light" setTheme={setTheme}>
+            <Contact />
+          </Section>
+        </>
+      )} */}
     </div>
   );
 }

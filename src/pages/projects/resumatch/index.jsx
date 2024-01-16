@@ -4,7 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { BsArrowUpRight, BsArrowLeft } from "react-icons/bs";
 
-const tools = ["Firebase", "AWS S3", "React", "Django", "SQLite", "TailwindCSS", "Figma"];
+const tools = [
+  "Firebase",
+  "AWS S3",
+  "React",
+  "Django",
+  "SQLite",
+  "TailwindCSS",
+  "Figma",
+];
 
 const index = () => {
   return (
@@ -80,12 +88,30 @@ const index = () => {
               backend, Django Rest Framework orchestrates the application's
               functionality, while SQLite serves as the robust database
               foundation.
+              
+              AWS S3 is used to securely store and access resume data.
             </p>
+            {/* <ul
+              className={
+                "w-full text-primary leading-[1.4] font-[300] lg:text-[1.3em] md:text-[1.3em] text-[1.2em] mt-[3%]"
+              }
+            >
+              <li>
+                Allow users to upload cover letters
+              </li>
+              <li>
+                Allow users to schedule interview dates/general deadlines with
+                built-in calendar page
+              </li>
+              <li>
+                Chatbot used to critique users' resume
+              </li>
+            </ul> */}
             <div className={"flex justify-start gap-8 w-full mt-[6%]"}>
-              <div
-                // scroll={false}
-                // href={"https://github.com/NickShum222/Website-V1"}
-                // target="_blank"
+              <a
+                scroll={false}
+                href={"https://github.com/NickShum222/Resu-Match"}
+                target="_blank"
                 className={
                   "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
                 }
@@ -98,7 +124,7 @@ const index = () => {
                     "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
                   }
                 />
-              </div>
+              </a>
             </div>
           </div>
         </div>

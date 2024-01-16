@@ -8,19 +8,18 @@ import TextAnim from "./TextAnim";
 import BodyAnim from "./BodyAnim";
 import BodyAnim2 from "./BodyAnim2";
 import Footer from "./Footer";
+import Landing from "./Landing";
 
-
-
-
-export { 
-    Section,
-    Button,
-    Navbar,
-    SmoothScroll,
-    SEO,
-    Header,
-    TextAnim,
-    BodyAnim,
-    BodyAnim2,
-    Footer
+export {
+  Section,
+  Button,
+  Navbar,
+  SmoothScroll,
+  SEO,
+  Header,
+  TextAnim,
+  BodyAnim,
+  BodyAnim2,
+  Footer,
+  Landing,
 };
