@@ -3,6 +3,9 @@ import { SEO } from "@/components";
 import Link from "next/link";
 import Image from "next/image";
 import { BsArrowUpRight, BsArrowLeft } from "react-icons/bs";
+import picture1 from "../../../../public/images/resumatch/ResuMatchLanding.webp";
+import picture2 from "../../../../public/images/resumatch/ResuMatchSignUp.webp";
+import picture3 from "../../../../public/images/resumatch/ResuMatchLogin.webp";
 
 const tools = [
   "Firebase",
@@ -87,9 +90,8 @@ const index = () => {
               frontend, delivering an intuitively designed interface. On the
               backend, Django Rest Framework orchestrates the application's
               functionality, while SQLite serves as the robust database
-              foundation.
-              
-              AWS S3 is used to securely store and access resume data.
+              foundation. AWS S3 is used to securely store and access resume
+              data.
             </p>
             {/* <ul
               className={
@@ -133,24 +135,24 @@ const index = () => {
             "flex flex-col justify-center items-center lg:w-[50%] w-full gap-8"
           }
         >
-          {/* <Image
+          <Image
             src={picture1}
             fit="true"
             placeholder="blur"
-            alt={"Website-V1 Landing Page"}
+            alt={"ResuMatch Landing Page"}
           />
           <Image
             src={picture2}
             fit="true"
             placeholder="blur"
-            alt={"Website-V1 Projects Page"}
+            alt={"ResuMatch Signup Page"}
           />
           <Image
             src={picture3}
             fit="true"
             placeholder="blur"
-            alt={"Website-V1 Contact Page"}
-          /> */}
+            alt={"ResuMatch Login Page"}
+          />
           <div
             className={"w-full flex justify-between items-center lg:hidden "}
           >
