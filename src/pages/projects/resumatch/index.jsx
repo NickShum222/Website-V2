@@ -6,6 +6,7 @@ import { BsArrowUpRight, BsArrowLeft } from "react-icons/bs";
 import picture1 from "../../../../public/images/resumatch/ResuMatchLanding.webp";
 import picture2 from "../../../../public/images/resumatch/ResuMatchSignUp.webp";
 import picture3 from "../../../../public/images/resumatch/ResuMatchLogin.webp";
+import picture4 from "../../../../public/images/resumatch/ResuMatchDashboard.webp";
 
 const tools = [
   "Firebase",
@@ -152,6 +153,12 @@ const index = () => {
             fit="true"
             placeholder="blur"
             alt={"ResuMatch Login Page"}
+          />
+          <Image
+            src={picture4}
+            fit="true"
+            placeholder="blur"
+            alt={"ResuMatch Dashboard"}
           />
           <div
             className={"w-full flex justify-between items-center lg:hidden "}

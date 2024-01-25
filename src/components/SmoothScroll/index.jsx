@@ -10,24 +10,24 @@ const index = ({ children }) => {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
+    const handleClick = (targetElement) => {
+      if (targetElement) {
+        const scrollToOptions = {
+          offset: 0,
+          lerp: 0.1,
+          duration: 1.5,
+          easing: (rawValue) => rawValue,
+          immediate: false,
+          lock: false,
+          force: false,
+        };
+
+        lenis.scrollTo(targetElement, scrollToOptions);
+      }
+    };
 
     requestAnimationFrame(raf);
   }, []);
-  useEffect(() => {
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: "smooth",
-            block: 'start'
-          });
-        }
-      });
-    });
-  },[])
   return children;
 };
 
