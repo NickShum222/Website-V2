@@ -1,5 +1,5 @@
 import "@/styles/globals.scss";
-// import localFont from "next/font/local";
+import localFont from "next/font/local";
 import { DM_Sans } from "next/font/google";
 
 // const satoshi = localFont({
@@ -42,14 +42,14 @@ export default function App({ Component, pageProps }) {
             window.scrollTo({ top: 0 });
           }}
         >
-          {/*<main className={`${satoshi.variable} font-sans`} key={router.pathname}>*/}
+          {/* <main className={`${satoshi.variable} font-sans`} key={router.pathname}> */}
           <main
             className={`${dm_sans.variable} font-sans`}
             key={router.pathname}
           >
             <Component {...pageProps} />
             <SpeedInsights />
-            <Analytics/>
+            <Analytics />
             <motion.div
               className="fixed z-[200] top-0 left-0 w-full h-[100dvh] bg-tertiary origin-bottom"
               initial={{ scaleY: 0 }}
