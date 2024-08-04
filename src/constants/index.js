@@ -52,6 +52,16 @@ export const socials = [
 
 export const experiences = [
   {
+    id: "IBM",
+    title: "Software Developer",
+    company: "IBM",
+    date:"May 2024 - Aug 2024",
+    description:["ADFAD"],
+    tools: "Python"
+
+  },
+
+  {
     id: "CI Tech",
     title: "Full Stack Developer",
     company: "CI Technologies",

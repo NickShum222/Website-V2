@@ -65,7 +65,7 @@ const Contact = () => {
               Want to say hello? Feel free to reach out!
             </BodyAnim2>
             <BodyAnim2 className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[200] md:text-[2.576vw] text-[5.089vw] leading-[1.3] ">
-              I am looking for Summer 2024 internship opportunities.
+              I am looking for Winter 2025 internship opportunities.
             </BodyAnim2>
           </div>
 
