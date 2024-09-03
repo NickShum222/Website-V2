@@ -56,8 +56,8 @@ export const experiences = [
     title: "Software Developer",
     company: "IBM",
     date:"May 2024 - Aug 2024",
-    description:["ADFAD"],
-    tools: "Python"
+    description:["Developed AI-powered solutions and implemented Retrieval Augmented Generation (RAG) techniques to streamline insurance processes for IBM clients"],
+    tools: "Python, LangChain, Apache Spark, Azure Synapse"
 
   },
 
