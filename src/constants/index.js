@@ -62,9 +62,9 @@ export const experiences = [
   },
 
   {
-    id: "CI Tech",
+    id: "Versaterm",
     title: "Full Stack Developer",
-    company: "CI Technologies",
+    company: "Versaterm",
     date: "Sept 2023 - Dec 2023",
     description: [
       "Designed and developed multiple web features for the company's services, IAPro, BlueTeam and EIPro, currently in use by over 950 law enforcement agencies across North America.",
