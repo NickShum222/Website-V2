@@ -79,7 +79,7 @@ const index = () => {
                     initial="initial"
                     animate="enter"
                     className={
-                      "text-primary overflow-y-clip h-auto px-[2%] uppercase font-[600] lg:text-[5rem] md:text-[4.5em] sm:text-[10.092vw] text-[11.427vw] leading-[1] py-4 "
+                      "text-light_text overflow-y-clip h-auto px-[2%] uppercase font-[600] lg:text-[5rem] md:text-[4.5em] sm:text-[10.092vw] text-[11.427vw] leading-[1] py-4 "
                     }
                   >
                     {navLink.id}
@@ -90,7 +90,7 @@ const index = () => {
                       custom={0.75}
                       initial="initial"
                       animate="enter"
-                      className="text-primary italic py-4 ml-[-1%] font-[300] lg:text-[1.6rem] md:text-[1.1rem]"
+                      className="text-light_text italic py-4 ml-[-1%] font-[300] lg:text-[1.6rem] md:text-[1.1rem]"
                     >
                       0{index}.
                     </motion.p>
