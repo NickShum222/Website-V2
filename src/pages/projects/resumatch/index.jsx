@@ -35,7 +35,7 @@ const index = () => {
               scroll={false}
               href={"/"}
               className={
-                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
+                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-light_text font-[500] py-[1.25%] "
               }
             >
               <div className="flex items-center gap-1">
@@ -43,14 +43,14 @@ const index = () => {
               </div>
               <span
                 className={
-                  "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
+                  "max-w-0 group-hover:max-w-full block bg-light_text transition-all duration-350 ease-in h-[2px]"
                 }
               />
             </Link>
           </div>
           <div
             className={
-              "lg:text-[5.5em] md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight font-[600] text-primary text-wrap"
+              "lg:text-[5.5em] md:text-[10vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight font-[600] text-light_text text-wrap"
             }
           >
             RESUMATCH
@@ -64,7 +64,7 @@ const index = () => {
               <div
                 key={index}
                 className={
-                  "lg:text-[1.2em] md:text-[1.1em] text-[0.8em] mb-[1.5%] border-[1px] border-solid rounded-full mr-[1%] border-primary text-primary px-3 py-1 lg:font-[600] font-[500] leading-[1] uppercase text-center"
+                  "lg:text-[1.2em] md:text-[1.1em] text-[0.8em] mb-[1.5%] border-[1px] border-solid rounded-full mr-[1%] border-light_text text-light_text px-3 py-1 lg:font-[600] font-[500] leading-[1] uppercase text-center"
                 }
               >
                 {tool}
@@ -74,7 +74,7 @@ const index = () => {
           <div className={"flex flex-col justify-start w-full mb-[3%]"}>
             <p
               className={
-                "w-full text-primary leading-[1.4] font-[500] lg:text-[1.3em] md:text-[1.3em] text-[1.2em]"
+                "w-full text-light_text leading-[1.4] font-[500] lg:text-[1.3em] md:text-[1.3em] text-[1.2em]"
               }
             >
               ResuMatch is a web application designed to streamline your job
@@ -83,7 +83,7 @@ const index = () => {
             </p>
             <p
               className={
-                "w-full text-primary leading-[1.4] font-[300] lg:text-[1.3em] md:text-[1.3em] text-[1.2em] mt-[3%]"
+                "w-full text-light_text leading-[1.4] font-[300] lg:text-[1.3em] md:text-[1.3em] text-[1.2em] mt-[3%]"
               }
             >
               Employing Firebase for authentication, ResuMatch seamlessly
@@ -96,7 +96,7 @@ const index = () => {
             </p>
             {/* <ul
               className={
-                "w-full text-primary leading-[1.4] font-[300] lg:text-[1.3em] md:text-[1.3em] text-[1.2em] mt-[3%]"
+                "w-full text-light_text leading-[1.4] font-[300] lg:text-[1.3em] md:text-[1.3em] text-[1.2em] mt-[3%]"
               }
             >
               <li>
@@ -116,7 +116,7 @@ const index = () => {
                 href={"https://github.com/NickShum222/Resu-Match"}
                 target="_blank"
                 className={
-                  "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
+                  "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-light_text font-[500] py-[1.25%] "
                 }
               >
                 <div className="flex items-center gap-1">
@@ -124,7 +124,7 @@ const index = () => {
                 </div>
                 <span
                   className={
-                    "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
+                    "max-w-0 group-hover:max-w-full block bg-light_text transition-all duration-350 ease-in h-[2px]"
                   }
                 />
               </a>
@@ -167,26 +167,26 @@ const index = () => {
               scroll={false}
               href={"/"}
               className={
-                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
+                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-light_text font-[500] py-[1.25%] "
               }
             >
               <p>Go Back</p>
               <span
                 className={
-                  "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
+                  "max-w-0 group-hover:max-w-full block bg-light_text transition-all duration-350 ease-in h-[2px]"
                 }
               />
             </Link>
             <a
               href={"#spotitrack"}
               className={
-                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-primary font-[500] py-[1.25%] "
+                "lg:text-[1.3em] md:text-[1.3em] text-[1.2em] group text-center text-grey3 transition-all duration-350 hover:text-light_text font-[500] py-[1.25%] "
               }
             >
               <p>Scroll Top</p>
               <span
                 className={
-                  "max-w-0 group-hover:max-w-full block bg-primary transition-all duration-350 ease-in h-[2px]"
+                  "max-w-0 group-hover:max-w-full block bg-light_text transition-all duration-350 ease-in h-[2px]"
                 }
               />
             </a>
