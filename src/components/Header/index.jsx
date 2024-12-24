@@ -27,11 +27,13 @@ const index = ({ title, index, className }) => {
         <motion.h4
           variants={fadeIn}
           initial="initial"
-          delay={1.95}
+          delay={2.05}
           animate={isInView ? "enter" : "initial"}
           className="text-tertiary dark:text-light_text lg:text-headingIndexClamp md:text-[3.125vw]
                 sm:text-[3.980vw] text-[5.089vw]
-                italic tracking-tighter font-[300] leading-[0.9] lg:mt-[1.2%] md:mt-[1.6%] sm:mt-[1.7%] mt-[1.8%]"
+                italic tracking-tighter font-[300] leading-[0.9]
+                lg:mt-[0.5%] md:mt-[1.3%] sm:mt-[0.8%] mt-[1.3%]
+                "
         >
           {index}
         </motion.h4>
@@ -39,7 +41,7 @@ const index = ({ title, index, className }) => {
           <motion.h2
             variants={slideUp}
             initial="initial"
-            delay={1.8}
+            delay={1.9}
             animate={isInView ? "enter" : "initial"}
             className={
               "uppercase lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.9] tracking-tighter font-[600] text-tertiary dark:text-light_text"
@@ -52,7 +54,7 @@ const index = ({ title, index, className }) => {
             initial="initial"
             animate={isInView ? "enter" : "initial"}
             className={
-              "w-full bg-tertiary dark:bg-primary h-[2px] mt-[3%] overflow-x-hidden"
+              "w-full bg-tertiary dark:bg-light_text h-[2px] mt-[3%] overflow-x-hidden"
             }
           />
         </div>

@@ -30,7 +30,7 @@ const Projects = () => {
               onMouseLeave={() => {
                 setActive(null);
               }}
-              className={`z-10 lg:py-[2%] py-[3%]  border-t-[1px] border-solid border-secondary dark:border-primary lg:px-[6%] md:px-[64px] px-[24px]
+              className={`z-10 lg:py-[2%] py-[3%]  border-t-[1px] border-solid border-secondary dark:border-light_text lg:px-[6%] md:px-[64px] px-[24px]
           ${index === 2 ? "border-b-[1px]" : ""} cursor-pointer `}
             >
               <p
@@ -47,7 +47,7 @@ const Projects = () => {
               scroll={false}
               href={project.url}
               key={index}
-              className={`bg-tertiary dark:bg-primary lg:py-[2%] py-[3%] border-t-[1px] border-solid dark:border-primary border-secondary lg:px-[6%] md:px-[64px] px-[24px] relative
+              className={`bg-tertiary dark:bg-light_text lg:py-[2%] py-[3%] border-t-[1px] border-solid dark:border-light_text border-secondary lg:px-[6%] md:px-[64px] px-[24px] relative
           ${
             index === 2 ? "border-b-[1px]" : ""
           } description z-20 cursor-pointer`}
@@ -63,7 +63,7 @@ const Projects = () => {
               }}
             >
               <div className="  flex h-full justify-start items-center gap-6">
-                <p className="font-[600] uppercase lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-primary dark:text-secondary">
+                <p className="font-[600] uppercase lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight text-light_text dark:text-secondary">
                   {project.name}
                 </p>
                 {/* <FiExternalLink className="text-primary dark:text-secondary lg:inline hidden text-[5vw]" /> */}
