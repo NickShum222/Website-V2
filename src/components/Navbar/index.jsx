@@ -20,34 +20,34 @@ const index = () => {
   const { scrollYProgress } = useScroll();
   const [showNav, setShowNav] = useState(true);
   const [active, setActive] = useState(false);
-  const [nav, setNav] = useState(false);
-  const container = useRef(null);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [navPosition, setNavPosition] = useState({ x: 0, y: 0 });
+  // const [nav, setNav] = useState(false);
+  // const container = useRef(null);
+  // const [position, setPosition] = useState({ x: 0, y: 0 });
+  // const [navPosition, setNavPosition] = useState({ x: 0, y: 0 });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     const prev = scrollYProgress.getPrevious();
     if (latest > prev) {
       setShowNav(false);
       setActive(false);
-      setNav(false);
+      // setNav(false);
     } else {
       setShowNav(true);
     }
   });
-  const handleMouse = (e) => {
-    const { clientX, clientY } = e;
-    const { height, width, left, top } =
-      container.current.getBoundingClientRect();
-    const middleX = clientX - (left + width / 2);
-    const middleY = clientY - (top + height / 2);
-    setPosition({ x: middleX / 2, y: middleY / 2 });
-    setNavPosition({ x: middleX / 4, y: middleY / 4 });
-  };
-  const reset = () => {
-    setPosition({ x: 0, y: 0 });
-    setNavPosition({ x: 0, y: 0 });
-  };
+  // const handleMouse = (e) => {
+  //   const { clientX, clientY } = e;
+  //   const { height, width, left, top } =
+  //     container.current.getBoundingClientRect();
+  //   const middleX = clientX - (left + width / 2);
+  //   const middleY = clientY - (top + height / 2);
+  //   setPosition({ x: middleX / 2, y: middleY / 2 });
+  //   setNavPosition({ x: middleX / 4, y: middleY / 4 });
+  // };
+  // const reset = () => {
+  //   setPosition({ x: 0, y: 0 });
+  //   setNavPosition({ x: 0, y: 0 });
+  // };
   return (
     <>
       <AnimatePresence mode="wait">
@@ -72,7 +72,7 @@ const index = () => {
                   <motion.a
                     onClick={() => {
                       setActive(false);
-                      setNav(false);
+                      // setNav(false);
                     }}
                     href={navLink.link}
                     variants={navSlideUp}
@@ -116,51 +116,51 @@ const index = () => {
             animate="enter"
             exit="exit"
           >
-            <motion.div
-              ref={container}
-              onMouseMove={handleMouse}
-              onMouseLeave={reset}
-              animate={{ x: position.x, y: position.y }}
-              transition={{
-                type: "spring",
-                stiffness: 200,
-                damping: 10,
-                mass: 1,
+            {/* <div
+              // ref={container}
+              // onMouseMove={handleMouse}
+              // onMouseLeave={reset}
+              // animate={{ x: position.x, y: position.y }}
+              // transition={{
+              //   type: "spring",
+              //   stiffness: 200,
+              //   damping: 10,
+              //   mass: 1,
+              // }}
+            > */}
+            <div
+              className="relative transition-transform duration-300 hover:scale-90 ease-in-out lg:w-[100px] md:w-[90px] sm:w-[80px] w-[70px] lg:h-[100px] md:h-[90px] sm:h-[80px] h-[70px] overflow-clip rounded-full shadow-3xl"
+              // onMouseEnter={() => {
+              //   if (!active) {
+              //     // setNav(true);
+              //   }
+              // }}
+              // onMouseLeave={() => {
+              //   if (!active) {
+              //     // setNav(false);
+              //   }
+              // }}
+              onClick={() => {
+                setActive(!active);
               }}
             >
               <div
-                className="relative lg:w-[100px] md:w-[90px] sm:w-[80px] w-[70px] lg:h-[100px] md:h-[90px] sm:h-[80px] h-[70px] overflow-clip rounded-full shadow-3xl"
-                onMouseEnter={() => {
-                  if (!active) {
-                    setNav(true);
-                  }
-                }}
-                onMouseLeave={() => {
-                  if (!active) {
-                    setNav(false);
-                  }
-                }}
-                onClick={() => {
-                  setActive(!active);
-                }}
+                className={`z-10 lg:w-[100px] md:w-[90px] sm:w-[80px] w-[70px] lg:h-[100px] md:h-[90px] sm:h-[80px] h-[70px]  bg-tertiary cursor-pointer flex justify-center rounded-full items-center`}
               >
-                <div
-                  className={`z-10 lg:w-[100px] md:w-[90px] sm:w-[80px] w-[70px] lg:h-[100px] md:h-[90px] sm:h-[80px] h-[70px]  bg-tertiary cursor-pointer flex justify-center rounded-full items-center`}
-                >
-                  <motion.div
-                    className={`${styles.burger} ${
-                      active ? styles.burgerActive : ""
-                    }`}
-                    animate={{ x: navPosition.x, y: navPosition.y }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 200,
-                      damping: 10,
-                      mass: 1,
-                    }}
-                  ></motion.div>
-                </div>
-                <AnimatePresence mode="wait">
+                <motion.div
+                  className={`${styles.burger} ${
+                    active ? styles.burgerActive : ""
+                  }`}
+                  // animate={{ x: navPosition.x, y: navPosition.y }}
+                  // transition={{
+                  //   type: "spring",
+                  //   stiffness: 200,
+                  //   damping: 10,
+                  //   mass: 1,
+                  // }}
+                ></motion.div>
+              </div>
+              {/* <AnimatePresence mode="wait">
                   {nav && (
                     <motion.div
                       variants={navActive}
@@ -169,12 +169,11 @@ const index = () => {
                       exit="exit"
                       className={`z-10 absolute top-[100%] lg:w-[100px] md:w-[90px] sm:w-[80px] w-[70px] lg:h-[100px] md:h-[90px] sm:h-[80px] h-[70px] bg-[#121212] cursor-pointer rounded-full flex justify-center items-center `}
                     >
-                      {/* <div className={styles.burger}></div> */}
                     </motion.div>
                   )}
-                </AnimatePresence>
-              </div>
-            </motion.div>
+                </AnimatePresence> */}
+            </div>
+            {/* </div> */}
           </motion.nav>
         )}
       </AnimatePresence>

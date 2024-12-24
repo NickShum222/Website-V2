@@ -87,9 +87,9 @@ const Experiences = () => {
               animate="enter"
               exit="exit"
             >
-              <div className="font-[600] dark:text-primary text-secondary lg:text-experiencesHeading sm:text-[5.305vw] text-[7.952vw] md:leading-[1.1] leading-[1.2] tracking-tight w-full lg:mb-[0.5%] mb-[2%] ">
+              <div className="font-[600] dark:text-light_text text-secondary lg:text-experiencesHeading sm:text-[5.305vw] text-[7.952vw] md:leading-[1.1] leading-[1.2] tracking-tight w-full lg:mb-[0.5%] mb-[2%] ">
                 {experiences[selected].title} @{" "}
-                <span className="dark:text-primary text-tertiary cursor-pointer underline lg:decoration-[4px] decoration-[2px] ">
+                <span className="dark:text-light_text text-tertiary cursor-pointer underline lg:decoration-[4px] decoration-[2px] ">
                   {experiences[selected].company}
                 </span>
               </div>
@@ -151,8 +151,8 @@ const ExperienceTitle = ({ label, selected, setSelected, index }) => {
         }}
         className={`cursor-pointer font-[500] w-full  transition-colors duration-[300ms] lg:text-[2.083vw] sm:text-[3.980vw] text-[5.089vw] leading-[1.2] tracking-tight ${
           selected === index
-            ? "dark:text-primary text-tertiary"
-            : "dark:text-primary text-grey2"
+            ? "dark:text-light_text text-tertiary"
+            : "dark:text-light_text text-grey2"
         }`}
       >
         {label}

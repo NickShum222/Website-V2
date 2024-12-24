@@ -34,7 +34,7 @@ const Projects = () => {
           ${index === 2 ? "border-b-[1px]" : ""} cursor-pointer `}
             >
               <p
-                className={`text-tertiary uppercase dark:text-primary lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight font-[600]`}
+                className={`text-tertiary uppercase dark:text-light_text lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.8] tracking-tight font-[600]`}
               >
                 {project.name}
               </p>

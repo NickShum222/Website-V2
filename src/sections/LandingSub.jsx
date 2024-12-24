@@ -10,10 +10,10 @@ const LandingSub = () => {
 
   const words = paragraph.split(" ");
   return (
-    <div className="min-h-[175dvh] relative w-full" ref={element}>
+    <div className=" min-h-[175dvh] relative w-full" ref={element}>
       <div className=" dark:bg-secondary min-h-[100dvh] w-full flex justify-center items-center bg-primary sticky top-0">
         <div
-          className={`lg:px-[6%] md:px-[64px] px-[24px] dark:bg-secondary bg-primary flex flex-wrap justify-start 
+          className={` lg:px-[6%] md:px-[64px] px-[24px] dark:bg-secondary bg-primary flex flex-wrap justify-start 
         `}
         >
           {words.map((word, index) => {
@@ -55,7 +55,7 @@ const Character = ({ children, range, progress }) => {
   return (
     <motion.span
       style={{ opacity }}
-      className="lg:text-servicesTool md:text-[7.073vw] text-[7.952vw] md:leading-[1.2] leading-[1.3] tracking-tight dark:text-primary text-secondary font-[600]"
+      className="lg:text-servicesTool md:text-[7.073vw] text-[7.952vw] md:leading-[1.2] leading-[1.3] tracking-tight dark:text-light_text text-secondary font-[600]"
     >
       {children}
     </motion.span>

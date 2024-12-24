@@ -18,18 +18,18 @@ const Landing = () => {
   return (
     <motion.div
       id="landing"
-      className=" z-[50] select-none flex flex-col w-full justify-between min-h-[100svh] bg-primary dark:bg-secondary lg:p-6 md:p-7 sm:p-5 p-3 relative"
+      className="z-[50] select-none flex flex-col w-full justify-between min-h-[100svh] bg-primary dark:bg-secondary lg:p-6 md:p-7 sm:p-5 p-3 relative"
     >
       <div className="flex z-10 flex-col justify-start items-start w-full lg:mt-[-1%]">
         <TextAnim
-          className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[600] tracking-tight text-tertiary dark:text-primary"
+          className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[600] tracking-tight text-tertiary dark:text-light_text"
           // delay={loaded ? 0: 2.4}
           delay={0.4}
         >
           SOFTWARE
         </TextAnim>
         <TextAnim
-          className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw]  font-[600] tracking-tight text-tertiary dark:text-primary lg:mt-[-2%]"
+          className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw]  font-[600] tracking-tight text-tertiary dark:text-light_text lg:mt-[-2%]"
           // delay={loaded ? 0 : 2.45}
           delay={0.45}
         >
@@ -51,7 +51,7 @@ const Landing = () => {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="landing-text overflow-clip uppercase text-tertiary dark:text-primary lg:text-[45px] md:text-[5.305vw] text-[5.361vw] leading-[1.2] font-medium whitespace-nowrap"
+              className="landing-text overflow-clip uppercase text-tertiary dark:text-light_text lg:text-[45px] md:text-[5.305vw] text-[5.361vw] leading-[1.2] font-medium whitespace-nowrap"
             >
               {landingText[currentIndex]}
             </motion.p>
@@ -60,14 +60,14 @@ const Landing = () => {
       </div>
       <div className="z-10 flex flex-col justify-end w-full items-end mb-[-1%]">
         <TextAnim
-          className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw]  font-[600] tracking-tight text-tertiary dark:text-primary "
+          className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw]  font-[600] tracking-tight text-tertiary dark:text-light_text "
           // delay={loaded ? 0 : 2.4}
           delay={0.4}
         >
           NICK
         </TextAnim>
         <TextAnim
-          className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw]  font-[600] tracking-tight text-tertiary dark:text-primary lg:-mr-3 md:-mr-2
+          className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw]  font-[600] tracking-tight text-tertiary dark:text-light_text lg:-mr-3 md:-mr-2
           -mr-1 lg:mt-[-3%]
           "
           // delay={loaded ? 0 : 2.43}

@@ -61,7 +61,7 @@ const Contact = () => {
               "flex flex-col w-full items-start lg:gap-3 md:gap-2 gap-1 mb-4"
             }
           >
-            <BodyAnim2 className="lg:text-servicesTech md:text-[4.969vw] text-[7.939vw] text-center leading-[1.1] font-[600] text-secondary dark:text-primary">
+            <BodyAnim2 className="lg:text-servicesTech md:text-[4.969vw] text-[7.939vw] text-center leading-[1.1] font-[600] text-secondary dark:text-light_text">
               Want to say hello? Feel free to reach out!
             </BodyAnim2>
             <BodyAnim2 className="text-grey2 dark:text-grey3 lg:text-aboutParagraph font-[200] md:text-[2.576vw] text-[5.089vw] leading-[1.3] ">
@@ -127,7 +127,7 @@ const Contact = () => {
         </div>
         <div className="flex flex-col items-end justify-end lg:w-[28%] lg:gap-8 md:gap-6 gap-4 w-full">
           <BodyAnim className="flex flex-col items-start w-full">
-            <div className="font-[600] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] ">
+            <div className="font-[600] text-secondary dark:text-light_text tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] ">
               Contact details
             </div>
             <Link
@@ -146,7 +146,7 @@ const Contact = () => {
             </Link>
           </BodyAnim>
           <BodyAnim className="flex flex-col items-start w-full">
-            <div className="font-[600] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] lg:mb-[6%] mb-[2%]">
+            <div className="font-[600] text-secondary dark:text-light_text tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw] lg:mb-[6%] mb-[2%]">
               My Socials
             </div>
             <div className="w-full flex flex-col justify-start items-start lg:gap-4 md:gap-2 gap-1 ">
@@ -177,7 +177,7 @@ const Contact = () => {
             </div>
           </BodyAnim>
           <BodyAnim className="flex flex-col items-start w-full gap-2">
-            <div className="font-[600] text-secondary dark:text-primary tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw]">
+            <div className="font-[600] text-secondary dark:text-light_text tracking-tight leading-[1.3] lg:text-experiencesHeading md:text-[4.969vw] text-[6.939vw]">
               My Resume
             </div>
             <Link

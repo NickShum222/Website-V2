@@ -42,21 +42,16 @@ export default function App({ Component, pageProps }) {
             window.scrollTo({ top: 0 });
           }}
         >
-          {/* <main className={`${satoshi.variable} font-sans`} key={router.pathname}> */}
           <main
-            className={`${dm_sans.variable} font-sans`}
+            className={`${dm_sans.variable} font-sans relative min-h-screen`}
             key={router.pathname}
           >
-            <Component {...pageProps} />
-            <SpeedInsights />
-            <Analytics />
-            <motion.div
-              className="fixed z-[200] top-0 left-0 w-full h-[100dvh] bg-tertiary origin-bottom"
-              initial={{ scaleY: 0 }}
-              animate={{ scaleY: 0 }}
-              exit={{ scaleY: 1 }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            ></motion.div>
+            <div className="noise" />
+            <div className="relative z-[1]">
+              <Component {...pageProps} />
+              <SpeedInsights />
+              <Analytics />
+            </div>
             {loaded && (
               <motion.div
                 className="fixed z-[200] top-0 left-0 w-full h-[100dvh] bg-tertiary origin-top"

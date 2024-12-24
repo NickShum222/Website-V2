@@ -29,7 +29,7 @@ const index = ({ title, index, className }) => {
           initial="initial"
           delay={1.95}
           animate={isInView ? "enter" : "initial"}
-          className="text-tertiary dark:text-primary lg:text-headingIndexClamp md:text-[3.125vw]
+          className="text-tertiary dark:text-light_text lg:text-headingIndexClamp md:text-[3.125vw]
                 sm:text-[3.980vw] text-[5.089vw]
                 italic tracking-tighter font-[300] leading-[0.9] lg:mt-[1.2%] md:mt-[1.6%] sm:mt-[1.7%] mt-[1.8%]"
         >
@@ -42,7 +42,7 @@ const index = ({ title, index, className }) => {
             delay={1.8}
             animate={isInView ? "enter" : "initial"}
             className={
-              "uppercase lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.9] tracking-tighter font-[600] text-tertiary dark:text-primary"
+              "uppercase lg:text-headingLgClamp md:text-[8.7vw] sm:text-[10.092vw] text-[12.427vw] leading-[0.9] tracking-tighter font-[600] text-tertiary dark:text-light_text"
             }
           >
             {title}

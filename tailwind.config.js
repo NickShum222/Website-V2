@@ -11,7 +11,7 @@ module.exports = withMT({
   theme: {
     extend: {
       boxShadow: {
-        '3xl': '0 35px 60px -5px rgba(0, 0, 0, 0.4)',
+        "3xl": "0 35px 60px -5px rgba(0, 0, 0, 0.4)",
       },
       colors: {
         primary: "#E4E5E7",
@@ -20,6 +20,7 @@ module.exports = withMT({
         grey2: "#444545",
         grey3: "#B6B7B9",
         grey4: "#89898B",
+        light_text: "#c5c3bf"
       },
       fontFamily: {
         sans: ["var(--font-dm_sans)"],
@@ -36,8 +37,10 @@ module.exports = withMT({
         contactHeading: "clamp(24px, 4.522vw, 86.488px)",
         contactSub: "clamp(20px, 2.925vw, 55.575px)",
         contactForm: "clamp(16px, 2.083vw, 39.577px)",
-        landingBg: "clamp(16px, 50vw, 950px)"
-
+        landingBg: "clamp(16px, 50vw, 950px)",
+      },
+      backgroundImage: {
+        noise: "url(../../public/noise.png)",
       },
       darkMode: "class",
     },
