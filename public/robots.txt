@@ -1,0 +1,11 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.nickshum.ca/sitemap.xml
+
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+Crawl-delay: 1 

@@ -34,11 +34,30 @@ export default function Home() {
   //   }, 2350);
   //   return () => clearTimeout(timeoutId);
   // }, []);
+
+  // Add JSON-LD structured data
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Nick Shum",
+    url: "https://www.nickshum.ca",
+    jobTitle: "Software Developer",
+    sameAs: [
+      // Add your social media profiles here
+      "https://github.com/your-github",
+      "https://linkedin.com/in/your-linkedin",
+    ],
+  };
+
   return (
     <div
       className={`flex flex-col max-w-[100svw] overflow-x-clip ${theme} relative`}
     >
       <SEO theme={theme} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navbar />
       <Section theme="light" setTheme={setTheme}>
         <Landing />
