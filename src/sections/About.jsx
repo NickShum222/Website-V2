@@ -11,7 +11,7 @@ const About = () => {
     >
       <Header title={"about"} index={"01."} />
       <div className="flex md:flex-row flex-col md:justify-between justify-center items-start lg:gap-0 md:gap-4 gap-6 relative">
-        <div className="lg:w-[45%] md:w-[50%] w-[100%] rounded-[7px] relative md:inline hidden shadow-2xl">
+        <div className="lg:w-[45%] md:w-[50%] w-[100%] rounded-[7px] relative md:inline hidden">
           <Image
             src={picture1}
             loading="lazy"
@@ -19,6 +19,7 @@ const About = () => {
             height={1000}
             placeholder="blur"
             alt="Profile Photo"
+            className="shadow-2xl"
             style={{ objectFit: "contain", borderRadius: "7px" }}
           />
         </div>

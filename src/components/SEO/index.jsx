@@ -6,7 +6,6 @@ const index = ({ theme }) => {
   const router = useRouter();
   const path = router.pathname;
 
-  // Add more dynamic meta information
   const title = "Nick Shum | Software Developer";
   const description =
     "Full-stack software developer specializing in web development, React, and modern JavaScript applications. View my portfolio, projects, and experience.";
@@ -27,7 +26,6 @@ const index = ({ theme }) => {
       />
       <meta name="robots" content="index, follow" />
 
-      {/* OpenGraph Meta Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
@@ -35,19 +33,16 @@ const index = ({ theme }) => {
       <meta property="og:image" content={`${siteUrl}/og-image.jpg`} />
       <meta property="og:site_name" content="Nick Shum Portfolio" />
 
-      {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={`${siteUrl}/og-image.jpg`} />
 
-      {/* Keywords */}
       <meta
         name="keywords"
         content="Nick Shum, Software Developer, Web Development, React, JavaScript, Full Stack Developer, Portfolio"
       />
 
-      {/* Favicon */}
       <link rel="icon" href="/favicon/favicon48.ico" sizes="any" />
       <link rel="icon" href="/favicon/favicon144.png" type="image/png" />
       <link rel="apple-touch-icon" href="/favicon/favicon180.png" />
