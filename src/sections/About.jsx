@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Header, BodyAnim2 } from "@/components";
-import picture1 from "../../public/ProfilePhotoDesktop.webp";
-import picture2 from "../../public/ProfilePhotoMobile.webp";
+import picture3 from "../../public/Profile2025.webp";
+import picture4 from "../../public/Profile2025Mobile.webp";
 
 const About = () => {
   return (
@@ -13,7 +13,7 @@ const About = () => {
       <div className="flex md:flex-row flex-col md:justify-between justify-center items-start lg:gap-0 md:gap-4 gap-6 relative">
         <div className="lg:w-[45%] md:w-[50%] w-[100%] rounded-[7px] relative md:inline hidden">
           <Image
-            src={picture1}
+            src={picture3}
             loading="lazy"
             width={1000}
             height={1000}
@@ -25,7 +25,7 @@ const About = () => {
         </div>
         <div className="w-full relative md:hidden inline shadow-lg">
           <Image
-            src={picture2}
+            src={picture4}
             loading="lazy"
             width={1000}
             height={1000}
