@@ -20,7 +20,7 @@ const Landing = () => {
       id="landing"
       className="z-[50] select-none flex flex-col w-full justify-between min-h-[100svh] bg-primary dark:bg-secondary lg:p-6 md:p-7 sm:p-5 p-3 relative"
     >
-      <div className="flex z-10 flex-col justify-start items-start w-full lg:mt-[-1%]">
+      <div className="flex z-10 flex-col justify-start items-start w-full ">
         <TextAnim
           className="lg:text-[150px] md:text-[12.564vw] text-[14.532vw] font-[600] tracking-tight text-tertiary dark:text-light_text"
           // delay={loaded ? 0: 2.4}
