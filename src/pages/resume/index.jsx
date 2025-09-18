@@ -5,7 +5,7 @@ const index = () => {
       <SEO theme={"dark"} />
       <div className="h-[100dvh]">
         <embed
-          src="ShumNickResume.pdf"
+          src="NickShumResume.pdf"
           height="100%"
           width="100%"
           type="application/pdf"

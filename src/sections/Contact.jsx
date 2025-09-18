@@ -33,7 +33,7 @@ const Contact = () => {
             process.env.NEXT_PUBLIC_SERVICE_ID,
             process.env.NEXT_PUBLIC_TEMPLATE_ID,
             values,
-            process.env.NEXT_PUBLIC_PUBLIC_KEY
+            process.env.NEXT_PUBLIC_PUBLIC_KEY,
           )
           .then(() => {
             setSubmit(true);
@@ -181,7 +181,7 @@ const Contact = () => {
               My Resume
             </div>
             <Link
-              href="/ShumNickResume.pdf"
+              href="/NickShumResume.pdf"
               target="_blank"
               rel="noreferrer noopener"
               className={"w-full"}

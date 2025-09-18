@@ -58,7 +58,7 @@ const Services = () => {
             </BodyAnim2>
             <BodyAnim>
               <Link
-                href="/ShumNickResume.pdf"
+                href="/NickShumResume.pdf"
                 target="_blank"
                 rel="noreferrer noopener"
               >
